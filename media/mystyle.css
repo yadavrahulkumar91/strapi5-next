@@ -1,0 +1,22 @@
+.carousel {
+    width: 100%;
+   
+    /* Set the desired width */
+    /* background-color: #f0f0f0; */
+    /* Set the background color */
+}
+
+.media-carousel{
+
+    width:200px;
+}
+
+.carousel-slider{
+    height:200px;
+
+}
+
+.thumb{
+height: 100px;
+
+}
