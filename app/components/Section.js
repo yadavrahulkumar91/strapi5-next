@@ -1,65 +1,116 @@
-"use client"
 
 
-// pages/index.js
 
-import React, { useState, useEffect } from 'react';
+// // pages/index.js
+
+import React from 'react';
 import SectionList from '../components/SectionList';
-import SectionDetails from '../components/SectionDetails';
 
-const Home = () => {
-    const [sections, setSections] = useState([]);
-    const [selectedSection, setSelectedSection] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('http://localhost:1337/api/sections?populate=*', {
-                    // headers: {
-                    //     Authorization: 'Bearer YOUR_ACCESS_TOKEN', // Replace with your actual access token
-                    // },
-                });
 
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+// const getData = async () => {
+//           try {
+//               const response = await fetch('http://localhost:1337/api/sections?populate=*', {
+//                   // headers: {
+//                   //     Authorization: 'Bearer YOUR_ACCESS_TOKEN', // Replace with your actual access token
+//                   // },
+//               });
 
-                const data = await response.json();
-                setSections(data.data);
-                setLoading(false);
-            } catch (error) {
-                setError(error);
-                setLoading(false);
-            }
-        };
+//               if (!response.ok) {
+//                   throw new Error('Network response was not ok');
+//               }
 
-        fetchData();
-    }, []);
+//              const data = response.json();
+           
+//               console.log(data);
+//           } catch (error) {
+//             console.log(error); 
+//           }
+//       };
 
-    const handleSectionClick = (section) => {
-        setSelectedSection(section);
-    };
+// const Home = async () => {
 
-    if (loading) {
-        return <div>Loading...</div>;
+
+
+//     const section = await getData();
+//   console.log(section);
+
+//     return (
+//         <div className="container">
+//             This is the container
+//             {/* <SectionList sections={section}/> */}
+//             {section}
+   
+          
+//         </div>
+//     );
+// };
+
+// export default Home;
+
+
+
+// const getData = async () => {
+//     try {
+//         const response = await fetch('http://localhost:1337/api/sections?populate=*', {
+//             // headers: {
+//             //     Authorization: 'Bearer YOUR_ACCESS_TOKEN', // Replace with your actual access token
+//             // },
+//         });
+
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+
+//         const data = await response.json(); // Add 'await' here
+
+//         console.log(data);
+//         return data; // Return the data
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
+
+
+
+// const Home = async () => {
+//     const section = await getData();
+//     console.log(section);
+
+//     return (
+//         <div className="container">
+//             This is the container
+//             {/* <SectionList sections={section}/> */}
+//             {section}
+//         </div>
+//     );
+// };
+
+
+
+const getData = async () => {
+    try {
+        const response = await fetch('http://127.0.0.1:1337/api/sections?populate=*');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw error;
     }
-
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
-
-    if (sections.length === 0) {
-        return <div>No data available</div>;
-    }
-
-    return (
-        <div className="container">
-            <SectionList sections={sections} onSectionClick={handleSectionClick} />
-            <SectionDetails selectedSection={selectedSection} />
-        </div>
-    );
 };
 
-export default Home;
+
+export default async function Page() {
+    const data = await getData()
+    const sections = data.data;
+console.log(sections);
+    return <main>Hi garmi
+        <p></p>
+
+        <SectionList sections={sections} /> 
+
+
+    </main>
+}

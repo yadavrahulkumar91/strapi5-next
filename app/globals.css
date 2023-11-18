@@ -25,3 +25,10 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+
+.header{
+  font-size: 35px;
+  background-color: brown;
+  height:10vh;
+}

@@ -13,8 +13,8 @@ const SectionDetails = ({ selectedSection }) => {
                     <img
                         src={a+selectedSection.attributes.section_pic.data[0].attributes.url}
                         alt={selectedSection.attributes.section_pic.data[0].attributes.name}
-                        width={selectedSection.attributes.section_pic.data[0].attributes.width}
-                        height={selectedSection.attributes.section_pic.data[0].attributes.height}
+                        width="200px"
+                        // height={selectedSection.attributes.section_pic.data[0].attributes.height}
                     />
                 </div>
             ) : (
