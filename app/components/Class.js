@@ -12,7 +12,7 @@ export default function Class ({ classes }) {
                 {classes.data.map((classItem) => (
                     <li key={classItem.id} className="border-b-4">
 
-                        <Link href={`/${classItem.id}`}>
+                        <Link href={`/class/${classItem.id}`}>
                         <strong>Class Name:</strong> {classItem.attributes.Class_name}
                         <br />
                         <strong>Created At:</strong> {classItem.attributes.createdAt}
