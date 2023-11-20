@@ -1,0 +1,2180 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  height: 100vh; 
+  overflow: auto;
+  counter-reset: table-counter;
+  
+}
+
+ */
+
+
+
+/* Customize the scrollbar for the body */
+body::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #999; /* Change the color of the scrollbar thumb */
+  border-radius: 4px; /* Adjust the border radius as needed */
+  transition: background-color 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the color of the scrollbar thumb on hover */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #111; /* Change the color of the scrollbar thumb on focus */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Change the color of the scrollbar track */
+}
+/* Style for page header */
+header {
+  background-color: #1abc9c;
+ padding-top:5px;
+height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position:sticky;
+  top: 0;
+  z-index:999;
+}
+.left-box-container{
+  margin-left:-80px;
+  align-self: flex-end;
+  margin-bottom:5px;
+}
+
+
+
+header .lesson-no-box h1{
+  color:#000000;
+  font-size: 20px;
+  
+}
+.lesson-no-box {
+
+  background-color: rgb(189, 145, 63); /* Adjust the color as desired */
+  padding-bottom:5px;
+  padding-top:5px;
+  padding-left:3px;
+  padding-right:3px;
+  align-self: flex-end;
+  
+  border-top-right-radius: 10px; 
+
+  
+
+
+  
+  height: 30px;
+  width:auto;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    color:#000000;
+    font-size: 30px;
+    font-weight:600;
+}
+
+
+.header-center {
+  align-self:flex-end;
+  margin-left:-25px;
+
+}
+
+.unit-left-lesson{
+  display:flex;
+  align-self: flex-end;
+}
+
+
+.unit-left{
+  background-color: orange;
+  width:19px;
+  height:55px;
+  border-top-right-radius: 10px; 
+}
+
+.unit-name-box{
+
+
+ 
+  background-color:orange;
+ color:#000000;
+ 
+  width: 150px;
+ padding-left:5px;
+ padding-right:5px;
+ 
+ border-top-right-radius: 10px;
+
+ overflow-y: hidden;
+ height:17px;
+ 
+
+ 
+}
+
+
+
+.lesson-title{
+  padding-left: 10px;
+  padding-right:10px;
+ margin-top:30px;
+ background-color: orange;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+font-size: 30px;
+text-align: center;
+ min-width:420px;
+ max-width:80%;
+ align-content: center;
+ align-self: center;
+ width:100%;
+}
+
+/* .lesson-title h1{
+  color: black;
+  text-transform: uppercase;
+  text-shadow: 5px;
+  
+} */
+
+
+.lesson-name{
+  padding-left: 10px;
+  padding-right:10px;
+ margin-bottom:10px;
+
+ background-color: orange;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+
+ /* min-width:420px; */
+ min-width:80%;
+ max-width:80%;
+ align-self: center;
+
+
+ color: black;
+  text-transform: uppercase;
+  text-shadow: 5px;
+  font-weight: 700;
+  font-size:20px;
+}
+
+
+.tab-bar{
+
+}
+
+/* CSS for the active and inactive tabs */
+.tab {
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: lightgray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  display:none;
+  }
+  .active-tab {
+  background-color: #ffffff;
+  }
+
+
+  .sub-tab {
+    /* display: inline-block; */
+    padding: 2px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sub-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .sub-tab.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+    
+  
+  
+
+
+/* Style for main content section */
+/* .container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom:0;
+  height: 100vh;
+  padding-right: 10px;
+  padding-left: 0px;
+   background-color: #ffffff; 
+   box-shadow: 10px 0px 10px -5px #ccc, -10px 0px 10px -5px #ccc;
+
+
+
+  overflow-y: auto;
+
+  
+}
+ */
+
+.text-and-image {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  flex: 1; 
+}
+
+.image {
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.small-image{
+  width:256px;
+}
+
+.xsmall-image{
+  width: 100px;
+}
+
+.xxsmall-image{
+  width: 60px;
+}
+
+.left{
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+ 
+}
+
+.image-left{
+  float:left;
+  margin: 5px;
+  border:solid 1px;
+}
+
+.image-right{
+ 
+   
+    float: right; 
+    margin: 5px;
+    border:solid 1px;
+   
+ 
+}
+
+
+
+
+  /* Customize the scrollbar for the container */
+  .container::-webkit-scrollbar {
+    width: 8px; /* Adjust the width as needed */
+    
+  }
+
+
+
+ 
+
+  .container::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Change the color of the scrollbar thumb */
+    border-radius: 4px; /* Adjust the border radius as needed */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+
+  .container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the color of the scrollbar thumb on hover */
+
+  
+    
+  }
+
+  .container::-webkit-scrollbar-thumb:focus {
+    background-color: #555; /* Change the color of the scrollbar thumb on hover */
+   
+  }
+  
+  .container::-webkit-scrollbar-thumb:active {
+    background-color: #111; /* Change the color of the scrollbar thumb on focus */
+  }
+  
+
+  
+  .container::-webkit-scrollbar-thumb:hover,
+  .container::-webkit-scrollbar-thumb:focus,
+  .container::-webkit-scrollbar-thumb:active {
+    transform: scaleX(1.5); /* Scale the scrollbar thumb horizontally */
+  }
+
+
+
+
+
+
+
+  .container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Change the color of the scrollbar track */
+  }
+
+
+
+
+
+
+main {
+  display:flex;
+
+}
+
+/* Style for heading of main content */
+.container h1 {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: black;
+  background-color: #d0d0d0; 
+  text-transform: uppercase;
+}
+
+
+
+
+
+.container h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+  color: #1abc9c;
+  background-color: #f2f2f2; 
+  }
+  
+  .container h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #8d1515;
+
+
+
+ 
+  }
+  
+  .container h4 {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #1010db;
+
+
+  }
+  
+  .container h5 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #999;
+
+ 
+  }
+  
+  .container h6 {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #ccc;
+
+
+  }
+
+/* Style for paragraph text of main content */
+.container p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000000;
+  margin-top: 3px;
+  margin-bottom: 1px;
+  text-align: justify;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  margin-left:2%;
+
+  text-indent: 30px;
+}
+
+/* Style for image in main content */
+.container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+/* Style for footer */
+footer {
+  background-color: #1abc9c;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  /* position:sticky; */
+  bottom: 0;
+}
+
+/* Style for links in footer */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+/* 
+
+table {
+  border-collapse: collapse;
+ 
+  margin-bottom: 20px;
+}
+
+
+
+  .table-listing {
+    margin: 0;
+    padding-left: 15px;
+  
+  }
+
+caption {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  th {
+  background-color: #c2c2c2;
+  font-weight: bold;
+  text-align: center;
+  }
+
+
+ */
+
+
+
+
+
+/* Apply basic styling to the table */
+.overflow-scroll table {
+ /* border: 1.5px solid black; */
+  border-collapse:collapse;  
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+table caption {
+  counter-increment: table-counter;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  /* padding: 10px; */
+  /* background-color: #007BFF; */
+  /* color: #fff; */
+}
+
+
+table caption::before {
+  content: "Table No " counter(table-counter) ": ";
+}
+
+.overflow-scroll table thead {
+  background-color: #999;
+  color: #ffffff;
+}
+
+.overflow-scroll table thead  tr{
+  background-color: #999;
+  color: #fff;
+  border-bottom: 2px solid #000000;
+}
+
+.overflow-scroll table thead th {
+  text-align: center;
+}
+
+.overflow-scroll table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+.overflow-scroll table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+
+
+.overflow-scroll table tbody tr {
+
+  transition: background-color 0.2s ease-in-out;
+  border: 2px solid #ddd;
+}
+
+
+
+.overflow-scroll tr:nth-child(even) {
+  background-color: #f2f2f2;
+  }
+
+  .overflow-scroll table tfoot {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.overflow-scroll table tfoot td {
+  font-weight: bold;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl; 
+  /* 'rl' stands for 'right-to-left', making text flow from top to bottom */
+  /* text-orientation: upright;  */
+  /* Keeps the text upright instead of rotating it */
+  white-space: nowrap; 
+  /* Prevents text from wrapping to new lines */
+  /* Optional: You can add other styling properties as needed */
+  font-weight: bold;
+  text-align: center;
+  color:gray;
+  background-color: #ccc;
+}
+
+.overflow-scroll{
+  height: 100%; /* take up full height of container */
+  overflow-x: auto; /* add scrolling functionality */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container ol,
+.container ul {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 0%;
+}
+
+
+
+
+
+
+/* Custom style for the ordered list */
+ol {
+  /* margin-left: 30px;
+  padding-left: 0; */
+}
+
+/* Style for list items */
+ol li {
+  margin-bottom: 10px;
+  margin-left:-15px;
+  padding-left: -10px;
+  line-height: 1;
+  /* color: #333;  */
+}
+
+
+
+/* Optional: If you want to change the number color */
+ol li::marker {
+  /* color: #007BFF;  */
+}
+
+
+
+/* Custom style for the unordered list */
+ul {
+  /* margin-left: 0px;
+  padding-left: 10px; */
+}
+
+/* Style for list items */
+ul li {
+  margin-bottom: 10px;
+  margin-left:-15px;
+  padding-left: -10px;
+  line-height: 1;
+  color: #333; /* Change the text color */
+}
+
+/* Add a little animation on hover for fun */
+/* ul li:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+} */
+
+/* Optional: If you want to change the bullet point color */
+ul li::marker {
+  color: #007BFF; /* Change the bullet point color */
+}
+
+
+
+
+p {
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+margin: 10px 0;
+}
+
+/* CSS for the container boxes */
+  
+
+
+
+.qa-block {
+  margin: 20px 0;
+  counter-reset: qa-subquestion-counter;
+  
+}
+
+.qa-question {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0%;
+  display:flex;
+ 
+    background-color: bisque;
+}
+.qa-question::before {
+  content: "Q.";
+  font-weight: bold;
+  margin-right: 2px;
+}
+.qa-q{
+  margin:0%;
+}
+.qa-answer {
+  font-size: 18px;
+  line-height: 1.5;
+  display: flex;
+ 
+  margin-top:0%;
+}
+.qa-answer::before {
+  content: "➾";
+  font-weight: bold;
+  margin-right: 5px;
+}
+.qa-answer strong {
+  font-weight: bold;
+  color: #ff5722;
+}
+.qa-answer h3{
+  margin-top:1%;
+  margin-bottom:0%;
+}
+.qa-answer ol{
+  margin-top:0%;
+  margin-bottom:0%;
+}
+
+.qa-a{
+  margin:0%;
+  text-align: justify;
+}
+.question-number {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.right-text {
+  font-size: small;
+  float: right;
+  margin-top: 7px;
+  margin-left: 3px;
+}
+
+
+
+
+
+
+/*  Media preview container */
+.media-container {
+  display: inline-block;
+  width: auto;
+  /* margin: 10px; */
+  cursor: pointer;
+  width:100%;
+  border: 1px solid #ccc; /* Sets a 1px solid border with a gray color */
+  border-radius:1%;
+  padding: 10px; /* Adds some padding inside the border */
+  margin-bottom: 20px; /* Adds some spacing between each media container */
+  
+}
+
+.media-source {
+  display:flex;
+  /* height:70%; */
+  justify-content: center;
+
+}
+
+
+.media-source picture {
+  /* display: inline-block; */
+  justify-content: center;
+}
+
+.media-source img {
+  /* max-width: 100%; */
+  height: auto;
+  margin:0px;
+  border-radius:50%;
+
+}
+
+.media-details {
+  display: block;
+  /* padding: 10px; */
+  background-color: #f5f5f5;
+
+}
+.media-details h3 {
+  justify-content: center;
+}
+
+
+/* Preview mode styles */
+.preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9999;
+  display: none;
+}
+
+.preview-image {
+  max-width: 90%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preview-details {
+  max-width: 100%;
+  /* max-height: 20%; */
+  overflow-y: auto;
+  position: absolute;
+  bottom: 2%;
+  
+  
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  background-color: #f5f5f5;
+  
+  opacity: 0.8;
+  border-radius: 5px;
+}
+
+.close-preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0a0707;
+  border: solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.collapse-preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0a0707;
+  border: solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.uncollapse-preview {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0a0707;
+  border: solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.preview-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  padding-right: 50px;
+  margin-right: 50px;
+
+  color: #fff;
+}
+
+.preview-nav button {
+  background-image: linear-gradient(to left, #a1a1a1, #ffffff);
+  border: none;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  outline:brown;
+  color: #0a0707;
+  font-size: 15%;
+  height: 90%;
+  width: 3%;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.preview-nav button:focus {
+  outline: none;  
+}
+
+/* Collapsible details styles */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-content.open {
+  max-height: 300px;
+  /* Adjust this value to your desired height */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Anatomy CSS */
+
+
+
+
+
+/* Bone */
+.bone {
+  color: #000000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Cartilage */
+.cartilage {
+  color: #808080;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Joint */
+.joint {
+  color: #0000FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+/* Fissure */
+.fissure {
+  color: #800000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Sulcus */
+.sulcus {
+  color: #008000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Canal */
+.canal {
+  color: #FF00FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+/* Foramen */
+.foramen {
+  color: #800080;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fossa {
+  color: #800000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+
+/* Bone Process */
+.bone-process {
+  color: #000000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Lobe */
+.lobe {
+  color: #FF4500;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Gyri */
+.gyri {
+  color: #FFA500;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Muscle */
+.muscle {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Ligament */
+.ligament {
+  color: #008000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Tendon */
+.tendon {
+  color: #FFA500;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Fascia */
+.fascia {
+  color: #A52A2A;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.bursae {
+  color: #1bae14;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+/* Nerve */
+.nerve {
+  color: #FF00FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Artery */
+.artery {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Vein */
+.vein {
+  color: #0000FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Blood Component */
+.blood-component {
+  color: #800080;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Organ */
+.organ {
+  color: #800000;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Gland */
+.gland {
+  color: #FF1493;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Anatomical terminologies  */
+
+.plane {
+  color: #0a0b0b;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+
+/* Sidebar */
+
+.menu-toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.menu-toggle-btn i {
+  font-size: 20px;
+  color: #333;
+}
+
+
+
+.sidebar {
+  width: 225px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -205px;
+  background-color: #f4f4f4;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding:0px;
+  transition: left 0.3s ease-in-out;
+  display:flex;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.line{
+  height:20px;
+  width:100%;
+  background-color:black;
+}
+
+/* 
+.sidebar {
+  width: 220px;
+  background-color: #f9f9f9;
+  padding-top: 20px;
+  transform: translateX(-200px);
+  transition: transform 0.3s ease;
+  color: green;
+  overflow: scroll;
+  display: flex;
+  position:fixed;
+
+
+  height: 100vh;
+  top: 0;
+
+
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  color: red;
+  width: 20%;
+} */
+
+.contentPage{
+  width:200px;
+  /* overflow-x:hidden; */
+}
+.toggleButton{
+  z-index: 100;
+  width:25px;
+}
+
+.page{
+  display:flex;
+}
+
+.main-content{
+  margin-left: 25px;
+}
+
+
+.show-sidebar{
+  transform: translateX(0);
+  color:red;
+  width: 20%;
+}
+
+
+  /* Customize the scrollbar */
+  .sidebar::-webkit-scrollbar {
+    width: 0px; /* Adjust the width as needed */
+
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Change the color of the scrollbar thumb */
+    border-radius: 4px; /* Adjust the border radius as needed */
+  }
+
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the color of the scrollbar thumb on hover */
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:active {
+    background-color: #111; /* Change the color of the scrollbar thumb on focus */
+  }
+  
+
+  .sidebar::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Change the color of the scrollbar track */
+  }
+
+
+
+.h1{
+  margin-left: 1px;
+}
+
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-left: 5%;
+ 
+}
+
+@media screen  and (max-width: 768px){
+  .sidebar{
+    display:fixed;
+    position:absolute;
+    height:100hv;
+    margin-top:95px;
+    width:80%;
+  }
+}
+
+
+.activity-toggle-btn {
+  /* position: absolute; */
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.activity-toggle-btn i {
+  font-size: 20px;
+  color: #333;
+}
+
+.activity-section {
+  width:0px;
+  background-color: #f9f9f9;
+  padding-top: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  /* color:green; */
+  overflow:scroll;
+  display:flexbox;
+
+ 
+  position: relative;
+  height: 100vh; 
+  top: 0;
+}
+
+.show-activity-section {
+  transform: translateX(-0%);
+  /* color:red; */
+  width:40%;
+}
+
+.activity-section::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+  
+}
+
+
+.activity-section::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Change the color of the scrollbar thumb */
+  border-radius: 4px; /* Adjust the border radius as needed */
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.activity-section::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the color of the scrollbar thumb on hover */
+
+
+  
+}
+
+.activity-section::-webkit-scrollbar-thumb:focus {
+  background-color: #555; /* Change the color of the scrollbar thumb on hover */
+ 
+}
+
+.activity-section::-webkit-scrollbar-thumb:active {
+  background-color: #111; /* Change the color of the scrollbar thumb on focus */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hh1> h1 {
+ padding:0px;
+ margin:0px;
+  font-size:26px;
+  counter-increment: h1-counter;
+  display: flex;
+  counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter;
+  
+
+
+}
+
+.hh1> h1:before {
+  content: counter(h1-counter, upper-alpha) ".";
+  margin-right: 5px;
+
+  
+}
+
+
+.hh2>  h2 {
+  padding:0px;
+  margin:0px;
+  font-size:24px;
+
+  counter-increment: h2-counter;
+  display: flex;
+  counter-reset: h3-counter h4-counter h5-counter h6-counter;
+
+}
+
+.hh2> h2:before {
+  content: counter(h2-counter, upper-roman) ".";
+  margin-right: 5px;
+}
+
+.hh3> h3 {
+  padding:0px;
+  margin:0px;
+  font-size:22px;
+
+  counter-increment: h3-counter;
+  display: flex;
+  counter-reset: h4-counter h5-counter h6-counter;
+
+
+}
+
+.hh3>  h3:before {
+  content: counter(h3-counter, decimal) ".";
+  margin-right: 5px;
+}
+
+
+.hh4>  h4 {
+  padding:0px;
+  margin:0px;
+  font-size:20px;
+
+  counter-increment: h4-counter;
+  display: flex;
+  counter-reset: h5-counter h6-counter;
+
+
+}
+
+.hh4>  h4:before {
+  content: counter(h4-counter, lower-alpha) ".";
+  margin-right: 5px;
+}
+
+.hh5>  h5 {
+  padding:0px;
+  margin:0px;
+  font-size:18px;
+
+  counter-increment: h5-counter;
+  display: flex;
+  counter-reset: h6-counter;
+
+  
+}
+
+.hh5>  h5:before {
+  content: counter(h5-counter, lower-roman) ".";
+  margin-right: 5px;
+}
+
+
+.hh6>  h6 {
+  padding:0px;
+  margin:0px;
+  font-size:16px;
+
+  counter-increment: h6-counter;
+  display: flex;
+}
+
+.hh6>  h6:before {
+  content: counter(h6-counter, lower-alpha) ")";
+  margin-right: 5px;
+}
+
+
+
+
+
+
+.activity-section-div h1{
+  font-size:20px;
+  font-weight:lighter;
+}
+
+.activity-section-div h2{
+  font-size:18px;
+  font-weight:lighter;
+}
+
+.activity-section-div h3{
+  font-size:16px;
+  font-weight:lighter;
+}
+
+.activity-section-div h4{
+  font-size:15px;
+  font-weight:lighter;
+}
+
+.activity-section-div h5{
+  font-size:14px;
+  font-weight:lighter;
+}
+
+.activity-section-div h6{
+  font-size:13px;
+  font-weight:lighter;
+}
+
+
+
+
+
+.h1 > a {
+  font-size: 20px;
+  color: #000000; /* Dark green */
+  counter-increment: h1-a-counter;
+  display: inline-flex;
+
+}
+
+.h1 > a:before {
+  content: counter(h1-a-counter, upper-alpha) ".";
+  margin-right: 5px;
+}
+
+.h2 >a {
+  font-size: 18px;
+  color: #008040; /* Medium green */
+  counter-increment: h2-a-counter;
+  display: inline-flex;
+}
+
+.h2 > a:before {
+  content: counter(h2-a-counter, upper-roman) ".";
+  margin-right: 5px;
+}
+
+
+.h3 > a {
+  font-size: 16px;
+  color: #00994d; /* Light green */
+  counter-increment: h3-a-counter;
+  display: inline-flex;
+}
+
+.h3 > a:before {
+  content: counter(h3-a-counter, decimal) ".";
+  margin-right: 5px;
+}
+
+
+.h4 > a {
+  font-size: 14px;
+  color: #00b366; /* Bright green */
+  counter-increment: h4-a-counter;
+  display: inline-flex;
+}
+
+.h4 > a:before {
+  content: counter(h4-a-counter, lower-alpha) ".";
+  margin-right: 5px;
+}
+
+.h5 > a {
+  font-size: 12px;
+  color: #00cc7a; /* Lighter green */
+  counter-increment: h5-a-counter;
+  display: inline-flex;
+}
+
+.h5 > a:before {
+  content: counter(h5-a-counter, lower-roman) ".";
+  margin-right: 5px;
+}
+
+.h6 > a {
+  font-size: 10px;
+  color: #00e68a; /* Pale green */
+  counter-increment: h6-a-counter;
+  display: inline-flex;
+}
+
+.h6 > a:before {
+  content: counter(h6-a-counter, lower-alpha) ")";
+  margin-right: 5px;
+}
+
+
+
+a {
+  color: #3366cc; /* Sets the text color to a nice blue */
+  text-decoration: none; /* Removes the default underline */
+  transition: color 0.3s ease; /* Adds a smooth transition effect for color change */
+}
+
+a:hover {
+  color: #ff3366; /* Changes the text color to a vibrant pink on hover */
+  text-decoration: underline; /* Adds an underline on hover */
+}
+
+
+
+.focused-section {
+  font-weight: bold;
+  color: blue;
+  font-size: 50px;
+}
+
+
+
+/* Add a transition effect to internal links */
+a[href^="#"] {
+  transition: all 0.3s ease;
+}
+
+/* Apply different transitional effects based on the direction */
+a[href^="#"]:hover {
+  transform: translateY(-3px); /* Move up */
+}
+
+a[href^="#"]:active {
+  transform: translateY(3px); /* Move down */
+}
+
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a transition effect to the body */
+body {
+  transition: transform 0.3s ease;
+}
+
+/* Apply different transitional effects based on the direction */
+body.move-up {
+  transform: translateY(-20px); /* Move body up */
+}
+
+body.move-down {
+  transform: translateY(20px); /* Move body down */
+}
+
+
+.hh1{
+  margin-left: 1%;
+}
+.hh2,
+.hh3,
+.hh4,
+.hh5,
+.hh6 {
+  margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 2px; /* Reduce the padding for small screens */
+    font-size:smaller;
+  }
+  /*
+  header h1{
+    font-size:x-large;
+  }
+  .container{
+    padding: 15px;
+  }
+  .tab-bar{
+    font-size: smaller;
+  }
+  */
+  .lesson-name{
+    margin-left:0px;
+    
+    min-width: none;
+    
+  }
+
+  .tab-bar{
+    max-width: 60%;
+    }
+  
+}
+
+
+@media screen and (max-width: 950px) {
+  .container {
+    max-width:90%;
+  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.node {
+  fill: #faaaaa; /* Customize the fill color of nodes */
+  stroke: #c11cb6; /* Customize the stroke color of nodes */
+  stroke-width: 10px; /* Customize the stroke width of nodes */
+  background-color: #2196f3; /* Customize the background color of nodes */
+  color: #ffffff; /* Customize the text color of nodes */
+  border-radius: 8px; /* Customize the border radius of nodes */
+  border: 2px solid #12da16; /* Customize the border of nodes */
+
+}
+
+.selected-node {
+  fill: #ff9800; /* Customize the fill color of selected nodes */
+  stroke: #ffffff; /* Customize the stroke color of selected nodes */
+  stroke-width: 10px; /* Customize the stroke width of selected nodes */
+  background-color: #ff9800; /* Customize the background color of selected nodes */
+  color: #ffffff; /* Customize the text color of selected nodes */
+  border: 2px solid #a70606; /* Customize the border of selected nodes */
+  border-radius: 8px; /* Customize the border radius of selected nodes */
+
+}
+
+.link {
+  fill: none; /* Remove the fill color of links */
+  stroke: #bdbdbd; /* Customize the stroke color of links */
+  stroke-width: 1px; /* Customize the stroke width of links */
+  stroke-dasharray: 2 2; /* Add dashed line effect to links */
+  marker-end: url(#arrowMarker); /* Customize the arrow marker for links */
+}
+
+
+
+
+.qa-a h1 {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #333; */
+  /* margin-bottom: 10px; */
+  background-color: white;
+}
+
+.qa-a h2 {
+  font-size: 16px;
+  font-weight: bold;
+  /* color: #555; */
+  /* margin-bottom: 8px; */
+  background-color: white;
+}
+
+.qa-a h3 {
+  font-size: 14px;
+  font-weight: bold;
+  /* color: #777; */
+  /* margin-bottom: 6px; */
+}
+
+.qa-a h4 {
+  font-size: 12px;
+  font-weight: bold;
+  /* color: #888; */
+  /* margin-bottom: 4px; */
+}
+
+.qa-a h5 {
+  font-size: 10px;
+  font-weight: bold;
+  /* color: #999; */
+  /* margin-bottom: 2px; */
+}
+
+.qa-a h6 {
+  font-size: 8px;
+  font-weight: bold;
+  /* color: #aaa; */
+  /* margin-bottom: 1px; */
+}
+
+
+.qa-subquestion {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #555; */
+  /* margin-bottom: 8px; */
+  margin-left:5px;
+}
+
+
+.qa-subquestion {
+  counter-increment: qa-subquestion-counter;
+  display: flex;
+  
+
+
+}
+
+.qa-subquestion:before {
+  content: counter(qa-subquestion-counter, lower-alpha) ")";
+  margin-right: 5px;
+
+  
+}
+
+
+@page {
+  /* Set the background color for the printing header and footer */
+  @top-left {
+    content: "";
+    background-color: #f2f2f2;
+  }
+
+  /* Add page number to the printing header */
+  @top-right {
+    content: "Page " counter(page);
+  }
+
+  /* Set the background color for the printing footer */
+  @bottom-center {
+    content: "";
+    background-color: #f2f2f2;
+  }
+}
+
+
+
+
+.definition {
+  font-weight: bold; /* Make the text bold */
+  color: #000000; /* Set the text color to a blue shade (adjust to your preference) */
+  font-style: italic; /* Italicize the text */
+  /* Add more styles as per your requirement */
+}
+
+/* Apply general styling to blockquote */
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  border-left: 4px solid #ccc; /* Add a left border for emphasis */
+  padding-left: 15px; /* Space between the border and the text */
+  margin: 20px 0; /* Vertical margin (top and bottom) */
+  margin-top: 5px; /* Decrease top margin */
+  margin-bottom: 10px; /* Decrease bottom margin */
+}
+
+
+.chart-heading {
+  color: black;
+  font-weight: bold;
+  /* border: 1px solid rgb(4, 200, 239);
+  background-color: rgb(112, 242, 244); */
+  /* text-decoration: underline; */
+  font-size: 18px;
+  margin: 5px;
+  padding:-10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-transform: uppercase;
+}
+
+.lowercase{
+  text-transform: lowercase;
+}
+.chart-class-heading{
+  font-weight: bold;
+  font-size: 16px;
+  margin:0px;
+  /* text-transform: lowercase;
+  text-transform:capitalize; */
+  align-self: flex-start; /* Aligns this item to the top */
+}
+
+.chart-subclass-heading{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.chart-list>ol {
+  padding-left: 10px; 
+  text-align: left;
+  padding-left:15px;
+  margin:0px;
+  font-size:15px;
+}
+
+.chart{
+  border: 1px solid black;
+  margin:10px;
+  padding:10px;
+  border-radius:5px;
+  overflow-x: auto;
+}
+
+/* .new-background{
+  background-color: #008000;
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+
+.MCQ-container {
+  counter-reset: question-counter;
+  margin:0px;
+  padding:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:8px;
+  width:100%;
+}
+.questions {
+  margin-bottom: 5px;
+  margin-top:5px;
+  margin-left: 5px;
+  padding:3px;
+ 
+
+          font-family: 'Pacifico', cursive;
+          font-family: 'Dancing Script', cursive;
+          font-family: 'Libre Baskerville';
+          font-family: 'Satisfy', cursive;
+          font-family: 'Source Serif Pro', serif;
+          color:black;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius:5px;
+
+}
+
+
+.questions > .question {
+  counter-increment: question-counter;
+  display: inline-flex;
+
+  font-size:20px;
+  font-weight: bold;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding:0px;
+}
+
+.questions > .question:before {
+  content: counter(question-counter, decimal) ".";
+  margin-right: 5px;
+}
+
+
+.choices {
+  margin-left: 20px;
+  font-size: 18px;
+  margin-top:0px;
+          display:block;
+    margin-bottom:0px;
+    padding-top:0px;
+}
+
+
+.choice {
+  
+  counter-increment: h4-a-counter;
+  margin-bottom: 0px;
+  display: block;
+  align-items: center;
+  padding:0px;
+  
+}
+
+.choice:before {
+  content: counter(h4-a-counter, lower-alpha) "";
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+/* 
+.choice label {
+    margin-left: 10px;
+} */
+
+.choice input[type="radio"] {
+    appearance: none;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    
+    margin-right: 10px;
+    margin-left: -22px;
+    position: relative;
+    top: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.choice input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    
+    top: -0.5px;
+    left: -0.3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+
+}
+
+.answer {
+    margin-left: 20px;
+    font-weight: bold;
+    display: none;
+    font-family: 'Arima Madurai', cursive;
+
+
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.answer::before {
+    content: "Result:";
+    font-size: 15px;
+    white-space: pre;
+    font-weight: bold;
+    margin-right: 10px;
+    color: rgb(10, 3, 33);
+}
+
+.solution {
+    /* margin-left: 20px; */
+    font-style: normal;
+    display: none;
+    font-family: 'Arima Madurai', cursive;
+
+
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #555;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 5px;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+   
+}
+
+
+.solution::before {
+    content: "Solution:\a";
+    white-space: pre;
+    font-weight: bold;
+    margin-right: 10px;
+    color: rgb(10, 3, 33);
+}
+
+.check-button {
+    margin-top: 5px;
+    margin-left:15px;
+    margin-bottom:5px;
+    padding: 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.check-button:hover {
+    background-color: #3e8e41;
+}
+
+.check-button:active {
+    background-color: #295e2e;
+}
+
+.right-text {
+    font-size: small;
+    float: right;
+    margin-top: 7px;
+    margin-left: 3px;
+    display: none;
+}
+
+
+.correct-answer {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  /* color: green; */
+}
+
+.incorrect-answer {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  /* color: red; */
+}
+
+
+
+
+
+
+
+  .fa-cog{
+    margin-top:15px;
+    float: right;
+  }
+
+
+  .confusion{
+    background-color: yellow;
+  }
+
+  .chemical-reaction{
+    display:flex;
+    background-color: #ffffff;
+
+  }
+
+  .center{
+    align-self: center;
+  }
+
+
+  
+
+
+
+
+  .user-photo {
+    background-image: url('');
+    /* Set the user's photo URL here */
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-section {
+  position: absolute;
+  top: 5px; /* You can adjust the top position as needed */
+  right: 5px;
+}
+
+.clickable-profile {
+    display: block;
+    justify-self: center;
+}
+
+.user-name {
+    font-size: 15px;
+}
+
+
+
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+

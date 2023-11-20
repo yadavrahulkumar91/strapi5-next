@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-// import Header from './components/header'
+import Header from './components/header'
 
 import './globals.css'
 
@@ -12,11 +12,22 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  
   return (
     <>
-      {/* <Header /> */}
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        
+        {/* <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script> */}
+      </head>
+
+      <body className={inter.className}>
+        <Header />
+        {children}
+        
+        </body>
     </html>
     </>
   )
