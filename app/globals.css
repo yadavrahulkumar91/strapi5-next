@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,7 +28,7 @@
 
 
 .header{
-  font-size: 35px;
+  /* font-size: 35px; */
   background-color: brown;
-  height:10vh;
+  /* height:10vh; */
 }

@@ -1,0 +1,30 @@
+/* Footer.module.css */
+
+.footer {
+    /* Add any common styles for the entire footer here */
+}
+
+.footerRow {
+    /* Styles for the first row with text content */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.connectTitle,
+.chatTitle {
+    /* Styles for the section titles */
+    text-align: center;
+}
+
+.footerColumn {
+    /* Styles for each column */
+    text-align: center;
+}
+
+.socialIcons {
+    /* Styles for the social icons */
+    display: flex;
+    justify-content: center;
+}
+
+/* Add more specific styles as needed */

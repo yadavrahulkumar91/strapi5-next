@@ -5,27 +5,20 @@ import Link from 'next/link';
 
 export default function Class ({ classes }) {
     return (
-        <div>
+        <div className="">
             {/* <h1>Class Page</h1> */}
-            <ul>
+        
                 
                 {classes.data.map((classItem) => (
-                    <li key={classItem.id} className="border-b-4">
-
+                 
                         <Link href={`/class/${classItem.id}`}>
-                        <strong>Class Name:</strong> {classItem.attributes.Class_name}
-                        <br />
-                        <strong>Created At:</strong> {classItem.attributes.createdAt}
-                        <br />
-                        <strong>Updated At:</strong> {classItem.attributes.updatedAt}
-                        <br />
-                        <strong>Published At:</strong> {classItem.attributes.publishedAt}
-                        <br />
-                        <br />
+                    <div  className="p-6 border rounded-lg shadow-md ">
+                        <strong>Class: {classItem.attributes.Class_name}</strong>
+                      
+                </div>
                         </Link>
-                    </li>
                 ))}
-            </ul>
+           
         </div>
     );
 };

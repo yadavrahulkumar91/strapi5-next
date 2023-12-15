@@ -3,7 +3,7 @@
 "use client"
 
 import Link from 'next/link';
-import GetData from '../../components/GetData';
+import GetData from '../components/GetData';
 import React, { useState, useEffect } from 'react';
 
 async function coverPictureUrl(id) {
@@ -14,9 +14,9 @@ async function coverPictureUrl(id) {
         const Book = await GetData('/api/books/' + id + '/?populate=*');
         // const BookUrl = a + await Book.attributes.Cover_picture.data.attributes.url;
         const BookUrl = Book.attributes.Cover_picture?.data?.attributes?.url
-        ? a + Book.attributes.Cover_picture.data.attributes.url
-        : null;
-        
+            ? a + Book.attributes.Cover_picture.data.attributes.url
+            : null;
+
         console.log(BookUrl);
         return BookUrl;
     } catch (error) {
@@ -39,21 +39,23 @@ const BookList = ({ books }) => {
 
     return (
         <div>
-            {books.map((book, index) => (
-                <Link href={`/book/${book.id}`}>
-                <div key={book.id}>
-                    <h2>{book.attributes.Book_Name}</h2>
-                    <img
-                        src={coverUrls[index]}
-                        alt={`Cover for ${book.attributes.Book_Name}`}
-                        style={{ width: '50px', height: 'auto' }}
-                    />
-                    {/* <p>Created At: {book.attributes.createdAt}</p>
-                    <p>Updated At: {book.attributes.updatedAt}</p>
-                    <p>Published At: {book.attributes.publishedAt}</p> */}
-                </div>
-                </Link>
-            ))}
+            <ul>
+                {books.map((book, index) => (
+                    <Link href={`/book/${book.id}`}>
+                        <li className='p-0 m-0'>
+                            <div className='flex border-1 ' key={book.id}>
+                                <img
+                                    src={coverUrls[index]}
+                                    style={{ width: '10px', height: 'auto' }}
+                                />
+                                <div>{book.attributes.Book_Name}</div>
+
+                            </div>
+                        </li>
+                    </Link>
+
+                ))}
+            </ul>
         </div>
     );
 };
