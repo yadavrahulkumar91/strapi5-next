@@ -6,13 +6,13 @@ import GetData from '../../components/GetData';
 import React, { useState, useEffect } from 'react';
 
 async function coverPictureUrl(id) {
-    // const a = 'http://localhost:1337';
-    const a = 'https://gamechanger-f5da7.web.app';
 
     try {
         const Book = await GetData('/api/teachers/' + id + '/?populate=*');
-        const BookUrl = a + await Book.attributes.Profile_picture.data.attributes.url;
-        console.log(BookUrl);
+        const BookUrl = Book.attributes.Profile_picture?.data?.attributes?.url
+            ? (process.env.NEXT_PUBLIC_IMAGE_URL + Book.attributes.Profile_picture.data.attributes.url)
+            : null;
+
         return BookUrl;
     } catch (error) {
         console.error('Error:', error);
@@ -43,9 +43,6 @@ const BookList = ({ books }) => {
                             alt={`Cover for ${book.attributes.Book_Name}`}
                             style={{ width: '50px', height: 'auto' }}
                         />
-                        {/* <p>Created At: {book.attributes.createdAt}</p>
-                        <p>Updated At: {book.attributes.updatedAt}</p>
-                        <p>Published At: {book.attributes.publishedAt}</p> */}
                     </div>
                 </Link>
             ))}

@@ -7,11 +7,16 @@ import GetData from '../../components/GetData';
 import React, { useState, useEffect } from 'react';
 
 async function coverPictureUrl(id) {
-    const a = 'https://gamechanger-f5da7.web.app';
 
     try {
         const Book = await GetData('/api/practicals/' + id + '/?populate=*');
-        const BookUrl = a + await Book.attributes.Cover_picture.data.attributes.url;
+        // const BookUrl = process.env.NEXT_PUBLIC_IMAGE_URL + await Book.attributes.Cover_picture.data.attributes.url;
+
+        const BookUrl = Book.attributes.Cover_picture?.data?.attributes?.url
+            ? (process.env.NEXT_PUBLIC_IMAGE_URL + Book.attributes.Cover_picture.data.attributes.url)
+            : null;
+
+
         console.log(BookUrl);
         return BookUrl;
     } catch (error) {

@@ -5,7 +5,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
-
+import MCQ from './mcq'
 
 
 const LessonPage = ({ unit }) => {
@@ -34,7 +34,8 @@ const LessonPage = ({ unit }) => {
 
 
                     <h4>MCQs</h4>
-                    {lesson.MCQ.map(mcq => (
+                    <MCQ lesson ={lesson}/>
+                    {/* {lesson.MCQ.map(mcq => (
                         <div key={mcq.id}>
                             <p>{mcq.Question}</p>
                             <ul>
@@ -46,7 +47,7 @@ const LessonPage = ({ unit }) => {
                             <p>Correct Answer: {mcq.Correct_answer}</p>
                             <p>Explanation: {mcq.Explanation}</p>
                         </div>
-                    ))}
+                    ))} */}
 
                     <h4>Question Answers</h4>
                     {lesson.Question_answer.map(qa => (
