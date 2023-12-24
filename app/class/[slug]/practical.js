@@ -17,7 +17,6 @@ async function coverPictureUrl(id) {
             : null;
 
 
-        console.log(BookUrl);
         return BookUrl;
     } catch (error) {
         console.error('Error:', error);
@@ -40,10 +39,10 @@ const BookList = ({ books }) => {
     return (
         <div>
             {books.map((book, index) => (
-                <Link href={`/practical/${book.id}`}>
+                <Link key={book.id}  href={`/practical/${book.id}`}>
                     <div key={book.id}>
                         <h2>{book.attributes.Name}</h2>
-                        <img
+                        <img key={book.id}
                             src={coverUrls[index]}
                             alt={`Cover for ${book.attributes.Book_Name}`}
                             style={{ width: '50px', height: 'auto' }}

@@ -11,9 +11,9 @@ export default function Class ({ classes }) {
                 
                 {classes.data.map((classItem) => (
                  
-                        <Link href={`/class/${classItem.id}`}>
+                        <Link key={classItem.id} href={`/class/${classItem.id}`}>
                     <div  className="p-6 border rounded-lg shadow-md ">
-                        <strong>Class: {classItem.attributes.Class_name}</strong>
+                        <strong>{classItem.attributes.Class_name}</strong>
                       
                 </div>
                         </Link>

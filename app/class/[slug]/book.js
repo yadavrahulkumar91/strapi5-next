@@ -16,7 +16,7 @@ async function coverPictureUrl(id) {
             ? (process.env.NEXT_PUBLIC_IMAGE_URL + Book.attributes.Cover_picture.data.attributes.url)
         : null;
         
-        console.log(BookUrl);
+     
         return BookUrl;
     } catch (error) {
         console.error('Error:', error);
@@ -39,7 +39,7 @@ const BookList = ({ books }) => {
     return (
         <div>
             {books.map((book, index) => (
-                <Link href={`/book/${book.id}`}>
+                <Link key={book.id} href={`/book/${book.id}`}>
                 <div key={book.id}>
                     <h2>{book.attributes.Book_Name}</h2>
                     <img

@@ -17,7 +17,7 @@ export default async function Page() {
                 <div className='absolute'>
 
                     {classes.map((Class) => (
-                        <div className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
+                        <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
                             <div className="">{Class.attributes.Class_name}</div>
                             <div className="p-0 m-0 flex hidden group-hover:block group-focus:block" tabindex="0">
                                 {Class.attributes.books?.data && <Book books={Class.attributes.books.data} />}
@@ -29,12 +29,12 @@ export default async function Page() {
 
 
             <div className="group/1 " tabindex="0">
-                <p className="text-md" >Teachers</p>
+                <p className="text-md" >Home tuition tutors</p>
                 <div className='absolute'>
 
                     {classes.map((Class) => (
-                        <div className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
-                            <div className="">{Class.attributes.Class_name}</div>
+                        <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
+                            <div className="">Home tutor for {Class.attributes.Class_name}</div>
                             <div className="p-0 m-0 flex hidden group-hover:block group-focus:block" tabindex="0">
                                 {Class.attributes.books?.data && <Teacher books={Class.attributes.teachers.data} />}
                             </div>

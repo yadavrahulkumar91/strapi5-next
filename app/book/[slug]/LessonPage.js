@@ -4,6 +4,10 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
+
+import rehypeMathjax from 'rehype-mathjax'
+
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
 import MCQ from './mcq'
 
@@ -24,7 +28,7 @@ const LessonPage = ({ unit }) => {
                     {/* <ReactMarkdown  rehypePlugins={[rehypeRaw]} >{lesson.Lesson_content}</ReactMarkdown> */}
                     {/* <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{markdown}</ReactMarkdown>
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{markdown}</ReactMarkdown> */}
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{lesson.Lesson_content}</ReactMarkdown>
+                    <ReactMarkdown remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]} rehypePlugins={[rehypeRaw, rehypeKatex ]} >{lesson.Lesson_content}</ReactMarkdown>
 
                     {/* <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                         {lesson.Lesson_content}

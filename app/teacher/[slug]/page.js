@@ -1,40 +1,26 @@
-// const HomePage = async ({ params }) => {
-
-//     const url = '/api/teachers/' + params.slug + '?populate=*';
-//     const data = await GetData(url);
-
-//     return (
-//         <div>
-
-//         </div>
-//     );
-// };
-
-
-// export default HomePage;
-
-
-
-
-
-
 import React from 'react';
-import GetData from '../../components/GetData';
 import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
+import rehypeRaw from 'rehype-raw'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
+import axios from 'axios';
 
+export async function generateStaticParams() {
+    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/teachers/?populate=*`);
 
-// const a = 'http://localhost:1337';
-const a = 'https://gamechanger-f5da7.web.app';
+    return axiosData.map((data) => ({
+        slug: data.id.toString(), 
+    }));
+}
+
 
 const HomePage = async ({ params }) => {
-    // Assuming the API endpoint returns a teacher object
-    const url = '/api/teachers/' + params.slug + '?populate=*';
-    const teacherData = await GetData(url);
-    console.log(teacherData);
+    const { slug } = params;
 
-    // Ensure the data has loaded before rendering
-    if (!teacherData) {
+    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/teachers/${slug}?populate=*`);
+
+    if (!axiosData) {
         return <div>Loading...</div>;
     }
 
@@ -51,13 +37,13 @@ const HomePage = async ({ params }) => {
             Profile_picture,
             classes,
         },
-    } = teacherData;
+    } = axiosData;
 
     return (
         <div>
             {Profile_picture && (
                 <img
-                    src={a + Profile_picture.data.attributes.url}
+                    src={Profile_picture.data.attributes.url}
                     alt={Profile_picture.data.attributes.name}
                     width={300}
                 />
@@ -74,7 +60,7 @@ const HomePage = async ({ params }) => {
             </ul>
 
             <h2>Description:            </h2>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            <ReactMarkdown remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]} rehypePlugins={[rehypeRaw, rehypeKatex]} >
 
                 {Description || 'Not provided'}
             </ReactMarkdown>

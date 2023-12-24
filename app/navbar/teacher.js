@@ -17,7 +17,7 @@ async function coverPictureUrl(id) {
             ? a + Book.attributes.Profile_picture.data.attributes.url
             : null;
 
-        console.log(BookUrl);
+  
         return BookUrl;
     } catch (error) {
         console.error('Error:', error);
@@ -41,7 +41,7 @@ const BookList = ({ books }) => {
         <div>
             <ul>
                 {books.map((book, index) => (
-                    <Link href={`/teacher/${book.id}`}>
+                    <Link key={book.id} href={`/teacher/${book.id}`}>
                         <li className='p-0 m-0'>
                             <div className='flex border-1 ' key={book.id}>
                                 <img

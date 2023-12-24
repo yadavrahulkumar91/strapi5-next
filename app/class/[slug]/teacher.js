@@ -35,7 +35,7 @@ const BookList = ({ books }) => {
     return (
         <div>
             {books.map((book, index) => (
-                <Link href={`/teacher/${book.id}`}>
+                <Link key={book.id} href={`/teacher/${book.id}`}>
                     <div key={book.id}>
                         <h2>{book.attributes.Teacher_name}</h2>
                         <img

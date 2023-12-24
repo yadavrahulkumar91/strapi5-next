@@ -43,6 +43,16 @@ import rehypeRaw from 'rehype-raw';
 // const a = 'http://localhost:1337';
 const a = 'https://gamechanger-f5da7.web.app';
 
+export async function generateStaticParams() {
+    const posts = await fetch('http://127.0.0.1:1337/api/practicals?populate=*').then((res) => res.json())
+    const posts1 = await posts.data;
+
+    return posts1.map((post) => ({
+        slug: post.id.toString(), // Ensure that the slug is a string
+    }));
+}
+
+
 const TopicPage = ({ topic }) => {
     return (
         <div className='pt-5'>
@@ -109,8 +119,9 @@ const DataPage = ({ data }) => {
 };
 
 const HomePage = async ({ params }) => {
+    const { slug } = params;
 
-    const url = '/api/practicals/' + params.slug + '?populate=Unit.Topic.Picture';
+    const url = '/api/practicals/' + slug + '?populate=Unit.Topic.Picture';
     const Book = await GetData(url);
     const { attributes } = Book;
 

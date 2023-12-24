@@ -11,7 +11,7 @@ import GetData from './GetData';
 export default async function Page() {
     const url = '/api/sections?populate=*&sort=id:asc';
     const sections = await GetData(url);
-    // console.log(sections);
+
     return (
         <main>
             <div className="">
@@ -29,6 +29,7 @@ export default async function Page() {
                     //     backgroundColor: 'rgba(1, 255, 255, 0)',
                     //     backdropFilter: 'blur(50px)',
                     // }}
+                    key={section.id}
                     >
                         <h1>{section.attributes.section_name}</h1>
                         <div className="flex">
