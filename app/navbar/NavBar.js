@@ -2,6 +2,9 @@
 import React from 'react';
 import Book from './book'
 import Teacher from './teacher'
+import Link from 'next/link';
+
+
 // const a = 'http://localhost:1337';
 const a = 'https://gamechanger-f5da7.web.app';
 
@@ -13,11 +16,11 @@ export default async function Page() {
     return (
         <main>
             <div className="group/1 " tabindex="0">
-                <p className="text-md" >Books</p>
+                <p className="text-md mx-2 underline" >Books</p>
                 <div className='absolute'>
 
                     {classes.map((Class) => (
-                        <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
+                        <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block  hidden " tabindex="0">
                             <div className="">{Class.attributes.Class_name}</div>
                             <div className="p-0 m-0 flex hidden group-hover:block group-focus:block" tabindex="0">
                                 {Class.attributes.books?.data && <Book books={Class.attributes.books.data} />}
@@ -28,14 +31,16 @@ export default async function Page() {
             </div>
 
 
-            <div className="group/1 " tabindex="0">
+            <div className="group/1 mx-2 underline" tabindex="0">
+                <Link href={`/homeTuitionTutor`}>
                 <p className="text-md" >Home tuition tutors</p>
+                </Link>
                 <div className='absolute'>
 
                     {classes.map((Class) => (
                         <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
                             <div className="">Home tutor for {Class.attributes.Class_name}</div>
-                            <div className="p-0 m-0 flex hidden group-hover:block group-focus:block" tabindex="0">
+                            <div className="p-0 m-0 flex hidden group-hover:block" tabindex="0">
                                 {Class.attributes.books?.data && <Teacher books={Class.attributes.teachers.data} />}
                             </div>
                         </div>

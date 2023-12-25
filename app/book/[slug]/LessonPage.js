@@ -5,63 +5,48 @@ import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
-
-import rehypeMathjax from 'rehype-mathjax'
-
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
 import MCQ from './mcq'
 
 
 const LessonPage = ({ unit }) => {
-    const markdown = `The lift coefficient ($C_L$) is a dimensionless coefficient.
-    $$C_2$$
-    <p>Hi $c_2$<p>
-    `
-
     return (
         <div>
             {unit.Lesson.map(lesson => (
-                <div key={lesson.id} className='container' id={`lesson-${lesson.id}`}>
-                    <div className='line'></div>
-                    <div className='lesson-title'>{lesson.Lesson_name}</div>
-                    {/* <div dangerouslySetInnerHTML={{ __html: lesson.Lesson_content }} /> */}
-                    {/* <ReactMarkdown  rehypePlugins={[rehypeRaw]} >{lesson.Lesson_content}</ReactMarkdown> */}
-                    {/* <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{markdown}</ReactMarkdown>
-                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{markdown}</ReactMarkdown> */}
-                    <ReactMarkdown remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]} rehypePlugins={[rehypeRaw, rehypeKatex ]} >{lesson.Lesson_content}</ReactMarkdown>
+                <div key={lesson.id} className=' ' style={{ borderRadius: "1%", border: "2px solid black" }} id={`lesson-${lesson.id}`}>
+                    <div className='lesson-title sticky top-0 text-blue' style={{ position: "sticky" }}>{lesson.Lesson_name}</div>
+                    {lesson.video_url &&
+                        <iframe
+                            width="100%"
+                            height="100vh"
+                            src={lesson.video_url}
+                            frameBorder="0"
+                            allowFullScreen
+                            style={{ width: '100%', height: "60vh" }}
+                        ></iframe>
+                    }
+                    <hr style={{ width: '100%', borderColor: 'orange', borderWidth: '5px', padding:'0px', margin:'0px', offset:'0px' }} />
 
-                    {/* <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                        {lesson.Lesson_content}
-                    </ReactMarkdown> */}
+                    <div style={{ width: '100%', height: "95vh", overflow: "scroll",  }}>
 
-                    {/* <ReactMarkdown > {lesson.Lesson_content} </ReactMarkdown> */}
+                        <ReactMarkdown remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]} rehypePlugins={[rehypeRaw, rehypeKatex]}>{lesson.Lesson_content}</ReactMarkdown>
+                        <h4>MCQs</h4>
+                        <MCQ lesson={lesson} />
+
+                        <h4>Question Answers</h4>
+                        {lesson.Question_answer.map(qa => (
+                            <div key={qa.id}>
+                                <p>{qa.Question}</p>
+                                <p>Answer: </p>
+                                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{qa.Answer}</ReactMarkdown>
+
+                            </div>
+                        ))}
+                    </div>
 
 
-                    <h4>MCQs</h4>
-                    <MCQ lesson ={lesson}/>
-                    {/* {lesson.MCQ.map(mcq => (
-                        <div key={mcq.id}>
-                            <p>{mcq.Question}</p>
-                            <ul>
-                                <li>{mcq.Option_a}</li>
-                                <li>{mcq.Option_b}</li>
-                                <li>{mcq.Option_c}</li>
-                                <li>{mcq.Option_d}</li>
-                            </ul>
-                            <p>Correct Answer: {mcq.Correct_answer}</p>
-                            <p>Explanation: {mcq.Explanation}</p>
-                        </div>
-                    ))} */}
 
-                    <h4>Question Answers</h4>
-                    {lesson.Question_answer.map(qa => (
-                        <div key={qa.id}>
-                            <p>{qa.Question}</p>
-                            <p>Answer: </p>
-                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{qa.Answer}</ReactMarkdown>
 
-                        </div>
-                    ))}
                 </div>
             ))}
 

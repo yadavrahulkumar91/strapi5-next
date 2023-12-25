@@ -1,54 +1,19 @@
-
-// import React from 'react';
-// import CoverPage from './CoverPage';
-// import ContentPage from './ContentPage'
-// import Sidebar from './Sidebar';
-// import LessonPage from './LessonPage';
-// import GetData from '../../components/GetData';
-
-// const Page = async ({ params }) => {
-//     const url = '/api/practicals/' + params.slug + '?populate=Unit.Topic';
-//     const Book = await GetData(url);
-//     const { attributes } = Book;
-
-//     return (
-//         <div className='page'>
-//             <Sidebar units={attributes.Unit} />
-//             <div className='main-content'>
-//                 <CoverPage params={params} />
-//                 <ContentPage units={attributes.Unit} />
-//                 {attributes.Unit.map(unit => (
-
-//                     <LessonPage key={unit.id} unit={unit} />
-//                 ))}
-//             </div>
-
-
-//         </div>
-//     );
-// };
-
-// export default Page;
-
-
-// pages/index.js
-
 import React from 'react';
-import Image from 'next/image';
-import GetData from '../../components/GetData';
 import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
+import rehypeRaw from 'rehype-raw'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
+import axios from 'axios';
 
-
-// const a = 'http://localhost:1337';
-const a = 'https://gamechanger-f5da7.web.app';
+// import { PhotoProvider, PhotoView } from 'react-photo-view';
+// import 'react-photo-view/dist/react-photo-view.css';
 
 export async function generateStaticParams() {
-    const posts = await fetch('http://127.0.0.1:1337/api/practicals?populate=*').then((res) => res.json())
-    const posts1 = await posts.data;
+    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/practicals?populate=Unit.Topic.Picture`);
 
-    return posts1.map((post) => ({
-        slug: post.id.toString(), // Ensure that the slug is a string
+    return axiosData.map((data) => ({
+        slug: data.id.toString(),
     }));
 }
 
@@ -64,14 +29,18 @@ const TopicPage = ({ topic }) => {
                     topic.Picture.data.map((picture, index) => (
                         <div key={index} className=''>
                             {/* <div className="" tabIndex="0"> */}
+                            {/* <PhotoProvider>
+                                <PhotoView src={picture.attributes.url}> */}
                                 <img
-                                    src={a + picture.attributes.url}
+                                    src={picture.attributes.url}
                                     alt={picture.attributes.name}
                                     // fill={true}
                                     height={200}
                                     width='auto'
                                     className=''
                                 />
+                                {/* </PhotoView>
+                            </PhotoProvider> */}
                             {/* </div> */}
                             <div>Fig. {picture.attributes.caption}</div>
                         </div>
@@ -118,19 +87,19 @@ const DataPage = ({ data }) => {
     );
 };
 
-const HomePage = async ({ params }) => {
+export default async function page({ params }) {
     const { slug } = params;
 
-    const url = '/api/practicals/' + slug + '?populate=Unit.Topic.Picture';
-    const Book = await GetData(url);
-    const { attributes } = Book;
+    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/practicals/${slug}?populate=Unit.Topic.Picture`);
+
+    if (!axiosData) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <div>
-            <DataPage data={Book} />
+            <DataPage data={axiosData} />
         </div>
     );
-};
 
-
-export default HomePage;
+}

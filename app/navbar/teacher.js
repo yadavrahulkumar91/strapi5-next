@@ -14,7 +14,7 @@ async function coverPictureUrl(id) {
         const Book = await GetData('/api/teachers/' + id + '/?populate=*');
         // const BookUrl = a + await Book.attributes.Cover_picture.data.attributes.url;
         const BookUrl = Book.attributes.Profile_picture?.data?.attributes?.url
-            ? a + Book.attributes.Profile_picture.data.attributes.url
+            ? Book.attributes.Profile_picture.data.attributes.formats.thumbnail.url
             : null;
 
   
@@ -46,7 +46,7 @@ const BookList = ({ books }) => {
                             <div className='flex border-1 ' key={book.id}>
                                 <img
                                     src={coverUrls[index]}
-                                    style={{ width: '10px', height: 'auto' }}
+                                    style={{ width: '15px', height: 'auto', borderRadius:"100%" }}
                                 />
                                 <div>{book.attributes.Teacher_name}</div>
 

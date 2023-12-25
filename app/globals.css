@@ -1,6 +1,10 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@import 'tailwindcss/base.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -31,4 +35,46 @@
   /* font-size: 35px; */
   background-color: brown;
   /* height:10vh; */
+}
+
+/* styles/OneDriveFolderIcon.module.css */
+.folderIcon {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.folder {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: #3f51b5;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.back {
+  height: 32px;
+  width: 48px;
+  margin: 4px auto;
+}
+
+.folderText {
+  font-size: 14px;
+  font-weight: bold;
 }
