@@ -4,13 +4,38 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "app",
+      "public",
+      "jsconfig.json",
+      "next.config.js",
+      "package.json",
+      "postcss.config.js",
+      "README.md",
+      "tailwind.config.js",
+      "yarn-error.log",
+      "yarn.lock"
     ],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
+      // {
+      //   "source": "**/*.html",
+      //   "destination": "/$1"
+      // }
+    //   {
+    //     "source": "**",
+    //     "destination": "/$1.html"
+    //   }
     ]
+    // "redirects": [
+    //   {
+    //     "source": "/**",
+    //     "destination": "/",
+    //     "type": 301
+    //   }
+    // ]
   }
 }

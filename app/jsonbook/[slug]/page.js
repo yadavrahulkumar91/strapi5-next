@@ -8,8 +8,9 @@ import LessonPage from './LessonPage';
 import GetData from '../../components/GetData';
 import axios from 'axios';
 
+
 export async function generateStaticParams() {
-    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/books?populate=classes.books,books,Profile_picture`);
+    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks?populate=classes.jsonbooks,jsonbooks,Profile_picture`);
 
     return axiosData.map((data) => ({
         slug: data.id.toString(),
@@ -19,7 +20,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
     const { slug } = params;
 
-    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/books/${slug}?populate=Unit.Lesson.MCQ,Unit.Lesson.Question_answer`);
+    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks/${slug}?populate=unit.Lesson.MCQ,unit.Lesson.Question_answer`);
 
     if (!axiosData) {
         return <div>Loading...</div>;
@@ -28,11 +29,11 @@ export default async function Page({ params }) {
 
     return (
         <div className='page'>
-            <Sidebar units={attributes.Unit} />
+            <Sidebar units={attributes.unit} />
             <div className='main-content max-h-screen overflow-scroll '>
-                <CoverPage params={params} />
-                <ContentPage units={attributes.Unit} />
-                {attributes.Unit.map(unit => (
+                {/* <CoverPage params={params} /> */}
+                {/* <ContentPage units={attributes.Unit} /> */}
+                {attributes.unit.map(unit => (
 
                     <LessonPage key={unit.id} unit={unit} />
                 ))}

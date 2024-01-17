@@ -1,3 +1,4 @@
+// "use client"
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw'
@@ -5,9 +6,9 @@ import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import axios from 'axios';
+import { ImageViewerProvider } from '@lani.ground/react-image-viewer';
+import '@lani.ground/react-image-viewer/css';
 
-// import { PhotoProvider, PhotoView } from 'react-photo-view';
-// import 'react-photo-view/dist/react-photo-view.css';
 
 export async function generateStaticParams() {
     const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/practicals?populate=Unit.Topic.Picture`);
@@ -21,17 +22,14 @@ export async function generateStaticParams() {
 const TopicPage = ({ topic }) => {
     return (
         <div className='pt-5'>
-            <h1 className='text-lg'>{topic.Name}</h1>
-
-            {/* <h2>Labelled Picture</h2> */}
+            <h1 className='text-lg'>{topic.Name}</h1>             
             <div className='flex'>
-                {topic.Picture.data && topic.Picture.data.length > 0 ? (
+                             {topic.Picture.data && topic.Picture.data.length > 0 ? (
                     topic.Picture.data.map((picture, index) => (
                         <div key={index} className=''>
-                            {/* <div className="" tabIndex="0"> */}
-                            {/* <PhotoProvider>
-                                <PhotoView src={picture.attributes.url}> */}
-                                <img
+
+                           
+                            <img
                                     src={picture.attributes.url}
                                     alt={picture.attributes.name}
                                     // fill={true}
@@ -39,13 +37,12 @@ const TopicPage = ({ topic }) => {
                                     width='auto'
                                     className=''
                                 />
-                                {/* </PhotoView>
-                            </PhotoProvider> */}
-                            {/* </div> */}
+                               
+
                             <div>Fig. {picture.attributes.caption}</div>
                         </div>
                     ))
-                ) : null}
+                    ) : null}
 
             </div>
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
@@ -75,7 +72,17 @@ const DataPage = ({ data }) => {
     return (
         <div>
             <h1>{data.attributes.Name}</h1>
-
+            <ImageViewerProvider
+                // controller={{
+                //     prev: (
+                //         <button type="button" onClick={() => console.log('prev')}>
+                //             Prev
+                //         </button>
+                //     ),
+                //     next: <button type="button" onClick={() => console.log('next')}>Next</button>,
+                // }}
+                disabledGallery={false}
+            > 
             <ul>
                 {data.attributes.Unit.map((unit) => (
                     <li key={unit.id}>
@@ -83,6 +90,8 @@ const DataPage = ({ data }) => {
                     </li>
                 ))}
             </ul>
+            </ImageViewerProvider>
+
         </div>
     );
 };

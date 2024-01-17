@@ -16,8 +16,10 @@ export default async function Page() {
     return (
         <main>
             <div className="group/1 " tabindex="0">
-                <p className="text-md mx-2 underline" >Books</p>
-                <div className='absolute'>
+                <Link href={`/booklist`}>
+                    <p className="text-md" >Books</p>
+                </Link>
+                {/* <div className='absolute'>
 
                     {classes.map((Class) => (
                         <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block  hidden " tabindex="0">
@@ -27,15 +29,15 @@ export default async function Page() {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
             </div>
 
 
             <div className="group/1 mx-2 underline" tabindex="0">
                 <Link href={`/homeTuitionTutor`}>
-                <p className="text-md" >Home tuition tutors</p>
+                    <p className="text-md" >Home tuition tutors</p>
                 </Link>
-                <div className='absolute'>
+                {/* <div className='absolute'>
 
                     {classes.map((Class) => (
                         <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
@@ -45,7 +47,42 @@ export default async function Page() {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
+            </div>
+            <div className="group/1 mx-2 underline" tabindex="0">
+                <Link href={`/jsonbooklist`}>
+                    <p className="text-md" >Datbase Books</p>
+                </Link>
+                {/* <div className='absolute'>
+
+                    {classes.map((Class) => (
+                        <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
+                            <div className="">Home tutor for {Class.attributes.Class_name}</div>
+                            <div className="p-0 m-0 flex hidden group-hover:block" tabindex="0">
+                                {Class.attributes.books?.data && <Teacher books={Class.attributes.teachers.data} />}
+                            </div>
+                        </div>
+                    ))}
+                </div> */}
+            </div>
+            <div className="group/1 mx-2 underline" tabindex="0">
+                <Link href={`/syllabilist`}>
+                    <p className="text-md" >Syllabi</p>
+                </Link>
+                <Link href={`https://tunepal-my.sharepoint.com/:o:/g/personal/rahul_772422_puc_tu_edu_np/EksxlU-5qWdFt2CWbTPt2zQBDZ26btHP3tUjtaqCXk535A`}>
+                    <p className="text-md" >CEE Full Resorces</p>
+                </Link>
+                {/* <div className='absolute'>
+
+                    {classes.map((Class) => (
+                        <div key={Class.id} className="p-0 m-0 group hover:bg-sky-500  group-hover/1:block group-focus/1:block hidden " tabindex="0">
+                            <div className="">Home tutor for {Class.attributes.Class_name}</div>
+                            <div className="p-0 m-0 flex hidden group-hover:block" tabindex="0">
+                                {Class.attributes.books?.data && <Teacher books={Class.attributes.teachers.data} />}
+                            </div>
+                        </div>
+                    ))}
+                </div> */}
             </div>
 
         </main>

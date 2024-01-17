@@ -5,6 +5,7 @@ export default async function page ({ books })  {
 
     return (
         <div className='border border-black border-solid flex flex-wrap rounded-md'>
+            <h1>Teachers</h1>
             {books.map((book, index) => (
                 <Link key={book.id} href={`/teacher/${book.id}`}>
                     <div key={book.id} className='border border-black border-dashed m-1 rounded-md'>
