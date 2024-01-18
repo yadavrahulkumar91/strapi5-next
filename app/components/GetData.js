@@ -3,7 +3,7 @@
 
 export default async function getData(url) {
     try {
-        const response = await fetch('http://127.0.0.1:1337' + url);
+        const response = await fetch('https://author.rahulkumaryadav.com.np' + url);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

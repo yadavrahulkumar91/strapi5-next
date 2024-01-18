@@ -9,15 +9,6 @@ import axios from 'axios';
 
 
 
-// export async function generateStaticParams() {
-//     const posts = await fetch('http://127.0.0.1:1337/api/classes?populate=*').then((res) => res.json())
-//     const posts1 = await posts.data;
-
-//     return posts1.map((post) => ({
-//         slug: post.id.toString(),
-//     }));
-// }
-
 export async function generateStaticParams() {
     const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/classes?populate=*&pagination[pageSize]=200`);
     // const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/classes?populate=classes.books,books,Profile_picture&sort=id:asc`);
