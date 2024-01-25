@@ -29,12 +29,10 @@ const LessonPage = ({ unit }) => {
 
                     <div style={{ width: '100%', height: "95vh", overflow: "scroll",  }}>
 
-                        {/* <ReactMarkdown remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]} rehypePlugins={[rehypeRaw, rehypeKatex]}>{lesson.Lesson_content}</ReactMarkdown> */}
-                        {/* <div dangerouslySetInnerHTML={{ __html: lesson.Lesson_content }} suppressHydrationWarning={true} />
-                         */}
+                 
                         <PericardiumInfo pericardiumData={lesson.lesson_content} />
 
-                        <h4>MCQs</h4>
+                        <h4>MCQs </h4>
                         <MCQ lesson={lesson} />
 
                         <h4>Question Answers</h4>
