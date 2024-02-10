@@ -10,13 +10,13 @@ import { ImageViewerProvider } from '@lani.ground/react-image-viewer';
 import '@lani.ground/react-image-viewer/css';
 
 
-export async function generateStaticParams() {
-    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/practicals?populate=Unit.Topic.Picture`);
+// export async function generateStaticParams() {
+//     const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/practicals?populate=Unit.Topic.Picture`);
 
-    return axiosData.map((data) => ({
-        slug: data.id.toString(),
-    }));
-}
+//     return axiosData.map((data) => ({
+//         slug: data.id.toString(),
+//     }));
+// }
 
 
 const TopicPage = ({ topic }) => {

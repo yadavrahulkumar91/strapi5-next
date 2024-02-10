@@ -9,14 +9,14 @@ import axios from 'axios';
 
 
 
-export async function generateStaticParams() {
-    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/classes?populate=*&pagination[pageSize]=200`);
-    // const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/classes?populate=classes.books,books,Profile_picture&sort=id:asc`);
+// export async function generateStaticParams() {
+//     const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/classes?populate=*&pagination[pageSize]=200`);
+//     // const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/classes?populate=classes.books,books,Profile_picture&sort=id:asc`);
 
-    return axiosData.map((data) => ({
-        slug: data.id.toString(),
-    }));
-}
+//     return axiosData.map((data) => ({
+//         slug: data.id.toString(),
+//     }));
+// }
 
 
 export default async function Page({ params }) {

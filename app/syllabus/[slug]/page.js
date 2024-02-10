@@ -8,13 +8,13 @@ import React from 'react';
 // import GetData from '../../components/GetData';
 import axios from 'axios';
 
-export async function generateStaticParams() {
-    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/syllabi?populate=*`);
+// export async function generateStaticParams() {
+//     const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/syllabi?populate=*`);
 
-    return axiosData.map((data) => ({
-        slug: data.id.toString(),
-    }));
-}
+//     return axiosData.map((data) => ({
+//         slug: data.id.toString(),
+//     }));
+// }
 
 export default async function Page({ params }) {
     const { slug } = params;

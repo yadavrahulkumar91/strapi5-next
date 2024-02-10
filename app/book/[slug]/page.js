@@ -8,13 +8,13 @@ import LessonPage from './LessonPage';
 import GetData from '../../components/GetData';
 import axios from 'axios';
 
-export async function generateStaticParams() {
-    const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/books?populate=classes.books,books,Profile_picture`);
+// export async function generateStaticParams() {
+//     const { data: { data: axiosData } } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/books?populate=classes.books,books,Profile_picture`);
 
-    return axiosData.map((data) => ({
-        slug: data.id.toString(),
-    }));
-}
+//     return axiosData.map((data) => ({
+//         slug: data.id.toString(),
+//     }));
+// }
 
 export default async function Page({ params }) {
     const { slug } = params;
