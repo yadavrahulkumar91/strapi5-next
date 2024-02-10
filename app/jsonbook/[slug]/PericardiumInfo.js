@@ -5,7 +5,14 @@ import { Mermaid } from 'mdx-mermaid/Mermaid';
 import { Chart } from "react-google-charts";
 
 const PericardiumInfo = ({ pericardiumData }) => {
+    // const pericardiumData1 = JSON.parse(pericardiumData);
+
+    if (!pericardiumData) {
+        return <div>No data available</div>;
+    }
+
     const pericardiumData1 = JSON.parse(pericardiumData);
+
     return <div>{renderAttributes(pericardiumData1)}</div>;
 };
 export default PericardiumInfo;

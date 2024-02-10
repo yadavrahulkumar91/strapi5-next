@@ -32,7 +32,7 @@ const LessonPage = ({ unit }) => {
                         {/* <ReactMarkdown remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]} rehypePlugins={[rehypeRaw, rehypeKatex]}>{lesson.Lesson_content}</ReactMarkdown> */}
                         {/* <div dangerouslySetInnerHTML={{ __html: lesson.Lesson_content }} suppressHydrationWarning={true} />
                          */}
-                        <PericardiumInfo pericardiumData={lesson.Lesson_content} />
+                        <PericardiumInfo pericardiumData={lesson.lesson_content} />
 
                         <h4>MCQs</h4>
                         <MCQ lesson={lesson} />
@@ -47,13 +47,8 @@ const LessonPage = ({ unit }) => {
                             </div>
                         ))}
                     </div>
-
-
-
-
                 </div>
             ))}
-
         </div>
     );
 };
