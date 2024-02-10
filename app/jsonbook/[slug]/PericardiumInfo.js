@@ -45,6 +45,37 @@ function renderObject(key, value, isArray, isObject, level) {
             </div>
         );
     }
+    else if (/^table\d*$/.test(key)) {
+        return (
+            <div>
+                {(value && Array.isArray(value) && value.length > 0) ? value.map((table, tableIndex) => (
+                    <table key={tableIndex} border="1">
+                        <tbody>
+                            {table.data.map((row, rowIndex) => (
+                                <tr key={rowIndex}>
+                                    {row.map((cell, cellIndex) => (
+                                        rowIndex === 0 ? (
+                                            <th key={cellIndex}>{cell}</th>
+                                        ) : (
+                                            <td key={cellIndex}>
+                                                {Array.isArray(cell) ? (
+                                                    <ul>
+                                                        {cell.map((item, itemIndex) => (
+                                                            <li key={itemIndex}>{item}</li>
+                                                        ))}
+                                                    </ul>
+                                                ) : cell}
+                                            </td>
+                                        )
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                )) : null}
+            </div>
+        );
+    }
     else if (key === 'formula') {
         return (
             <MathJax.Provider key={key}>
@@ -53,20 +84,60 @@ function renderObject(key, value, isArray, isObject, level) {
                 </div>
             </MathJax.Provider>
         );
-    } else if (/^mermaid\d*$/.test(key)) {
+    } 
+    else if (/^mermaid\d*$/.test(key)) {
         return (value && Array.isArray(value) && value.length > 0) ? (
-            value.map((chartObject, index) => {
-                const { data } = chartObject;
+            // value.map((chartObject, index) => {
+            //     const { data } = chartObject;
 
-                if (Array.isArray(data)) {
-                    const mermaidChart = data.join('\n');
+            //     if (Array.isArray(data)) {
+            //         const mermaidChart = data.join('\n');
+            //         return <Mermaid key={index} chart={mermaidChart} />;
+            //     } else {
+            //         // Handle the case where data is not an array (optional)
+            //         console.error(`Invalid data format at index ${index}. Expected an array.`);
+            //         return null; // or handle it in a way that makes sense for your application
+            //     }
+            // })
+
+
+
+            // value.map((chartObject, index) => {
+            //     const { type, data } = chartObject;
+
+            //     if (type === 'graph TD' && Array.isArray(data) && data.length > 0) {
+            //         const mermaidChart = [
+            //             type,
+            //             ...data.map((item, i) => `${String.fromCharCode(65 + i)}["${item}"]`)
+            //         ].join('\n');
+
+            //         return <Mermaid key={index} chart={mermaidChart} />;
+            //     } else {
+            //         // Handle the case where the chart type is not supported, data is not an array, or data is empty (optional)
+            //         console.error(`Invalid chart object at index ${index}.`);
+            //         return null; // or handle it in a way that makes sense for your application
+            //     }
+            // })
+
+
+            value.map((chartObject, index) => {
+                const { type, data } = chartObject;
+
+                if (type === 'graph TD' && Array.isArray(data) && data.length > 0) {
+                    const mermaidChart = [
+                        type,
+                        ...data.map((item, i) => `${String.fromCharCode(65 + i)}["${i + 1}) ${item}"]`),
+                        ...data.slice(0, -1).map((_, i) => `${String.fromCharCode(65 + i)} --> ${String.fromCharCode(66 + i)}`)
+                    ].join('\n');
+
                     return <Mermaid key={index} chart={mermaidChart} />;
                 } else {
-                    // Handle the case where data is not an array (optional)
-                    console.error(`Invalid data format at index ${index}. Expected an array.`);
+                    // Handle the case where the chart type is not supported, data is not an array, or data is empty (optional)
+                    console.error(`Invalid chart object at index ${index}.`);
                     return null; // or handle it in a way that makes sense for your application
                 }
             })
+
         ) : null;
     }
     else if (key === 'google_chart') {
@@ -111,7 +182,7 @@ function renderArrayOrObjectContent(key, level, isArray, isObject) {
             // return <span>{Number(key) + 1}. </span>
         }
         else {
-            return <span>{Number(key) + 1}. </span>
+            return <span style={{ fontSize: '20px' }}>{Number(key) + 1}. </span>
         };
     }
 
@@ -121,13 +192,17 @@ function renderArrayOrObjectContent(key, level, isArray, isObject) {
                 <span
                     style={{
                         color: `hsl(330, 50%, ${level * 10}%)`,
+                        backgroundColor: level === 0 ? 'lightgrey' : null, // Set red background color for level 0
                         fontWeight: `${800 - level * 100}`,
+                        display: level === 0 ? 'block' : null,
+                        // padding: '5px',
                     }}
                     className={`font-medium hover:font-bold text-xl`}
                 >
                     {renderBulletin(level)}
                     {renderKey(key, level)}
                 </span>
+
             );
         }
     }
@@ -156,6 +231,9 @@ function renderKey(key, level) {
     }
     if (level === 0) {
         // Change to uppercase if level is 0
+         const style={
+            backgroundcolor :"red"
+         }
         formattedKey = formattedKey.toUpperCase().replace(/_/g, ' ');
     } else {
         // Change to title case if level is not 0
@@ -164,3 +242,26 @@ function renderKey(key, level) {
 
     return <span dangerouslySetInnerHTML={{ __html: formattedKey + ': ' }} />;
 }
+
+
+// function renderKey(key, level) {
+//     let formattedKey = key;
+//     let style = {}; // Declare style outside the if block
+
+//     if (key.endsWith('_sn')) {
+//         // Remove _sn and format to italic
+//         formattedKey = `<i>${formattedKey.replace(/_sn$/, '')}</i>`;
+//     }
+//     if (level === 0) {
+//         // Change to uppercase if level is 0
+//         style = {
+//             backgroundColor: "red" // Fix the camelCase for backgroundColor
+//         };
+//         formattedKey = formattedKey.toUpperCase().replace(/_/g, ' ');
+//     } else {
+//         // Change to title case if level is not 0
+//         formattedKey = formattedKey.replace(/\b\w/g, (c) => c.toUpperCase()).replace(/_/g, ' ');
+//     }
+
+//     return <span style={style} dangerouslySetInnerHTML={{ __html: formattedKey + ': ' }} />;
+// }
