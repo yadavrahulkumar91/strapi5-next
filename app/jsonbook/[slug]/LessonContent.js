@@ -5,7 +5,14 @@ import { Mermaid } from 'mdx-mermaid/Mermaid';
 import { Chart } from "react-google-charts";
 
 const PericardiumInfo = ({ pericardiumData }) => {
+    // const pericardiumData1 = JSON.parse(pericardiumData);
+
+    if (!pericardiumData) {
+        return <div>No data available</div>;
+    }
+
     const pericardiumData1 = JSON.parse(pericardiumData);
+
     return <div>{renderAttributes(pericardiumData1)}</div>;
 };
 export default PericardiumInfo;
@@ -95,26 +102,46 @@ function renderObject(key, value, isArray, isObject, level) {
     }
     else {
         return (
-            <div key={key} style={{ marginLeft: `${30}px`, }} className='border-l-2 border-indigo-500'>
-                {isArray ? <span>{Number(key) + 1}. </span> :
-                    (key !== 'parts' && key !== 'part') && (
-
-                        <div style={{ color: `hsl(330, 50%, ${level * 10}%)`, fontWeight: `${800 - level * 100}` }} className={`font-medium hover:font-bold text-xl`}>
-                            {renderBulletin(level)}
-                            {renderKey(key, level)}
-                        </div>
-                    )
-                }
-
+            <div key={key} style={{ marginLeft: `${30}px` }} className='border-l-2 border-indigo-500'>
+                {renderArrayOrObjectContent(key, level, isArray, isObject)}
                 {isObject ? renderAttributes(value, level + 1) : <span key={key} style={{ fontSize: '20px' }} dangerouslySetInnerHTML={{ __html: value }} />}
             </div>
         )
     }
-
-
-
 }
 
+
+
+function renderArrayOrObjectContent(key, level, isArray, isObject) {
+    if (isArray) {
+        if (isObject) {
+            return null
+            // return <span>{Number(key) + 1}. </span>
+        }
+        else {
+            return <span>{Number(key) + 1}. </span>
+        };
+    }
+
+    else {
+        if (key !== 'parts' && key !== 'part') {
+            return (
+                <span
+                    style={{
+                        color: `hsl(330, 50%, ${level * 10}%)`,
+                        fontWeight: `${800 - level * 100}`,
+                    }}
+                    className={`font-medium hover:font-bold text-xl`}
+                >
+                    {renderBulletin(level)}
+                    {renderKey(key, level)}
+                </span>
+            );
+        }
+    }
+
+    return null; 
+}
 
 function renderBulletin(level) {
     if (level === 0) {
@@ -135,7 +162,6 @@ function renderKey(key, level) {
         // Remove _sn and format to italic
         formattedKey = `<i>${formattedKey.replace(/_sn$/, '')}</i>`;
     }
-
     if (level === 0) {
         // Change to uppercase if level is 0
         formattedKey = formattedKey.toUpperCase().replace(/_/g, ' ');
@@ -144,5 +170,5 @@ function renderKey(key, level) {
         formattedKey = formattedKey.replace(/\b\w/g, (c) => c.toUpperCase()).replace(/_/g, ' ');
     }
 
-    return <span dangerouslySetInnerHTML={{ __html: formattedKey + ':' }} />;
+    return <span dangerouslySetInnerHTML={{ __html: formattedKey + ': ' }} />;
 }
