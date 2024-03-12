@@ -217,7 +217,7 @@ function renderArrayOrObjectContent(key, level, isArray, isObject) {
 
 function renderBulletin(level) {
     if (level === 0) {
-        return (<span># </span>)
+        return (<span>▢ </span>)
     } else if (level === 1) {
         return (<span>❖ </span>)
     } else if (level === 2) {
