@@ -30,7 +30,7 @@ const LessonPage = ({ unit }) => {
 
                     <div style={{ width: '100%', height: "95vh", overflow: "scroll", }}>
 
-                        <LessonContent pericardiumData={lesson.lesson_content} />
+                        <LessonContent jsonData={lesson.lesson_content} lessonName={lesson.Lesson_name} />
 
                         <h4>MCQs</h4>
                         <MCQ lesson={lesson} />
