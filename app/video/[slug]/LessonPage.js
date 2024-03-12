@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm'
 import 'katex/dist/katex.min.css'
 import MCQ from './mcq'
 import LessonContent from './LessonContent';
-import YourComponent from './YourComponent';
+// import YourComponent from './YourComponent';
 
 const LessonPage = ({ unit }) => {
     return (
