@@ -38,7 +38,9 @@ const LessonPage = ({ unit }) => {
                         <h4>Question Answers</h4>
                         {lesson.Question_answer.map(qa => (
                             <div key={qa.id}>
-                                <p>{qa.Question}</p>
+                                {/* <p>{qa.Question}</p>
+                                <p>{qa.Question}</p> */}
+                                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{qa.Question}</ReactMarkdown>
                                 <p>Answer: </p>
                                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]} >{qa.Answer}</ReactMarkdown>
 

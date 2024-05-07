@@ -33,7 +33,7 @@ const TopicPage = ({ topic }) => {
                                     src={picture.attributes.url}
                                     alt={picture.attributes.name}
                                     // fill={true}
-                                    height={200}
+                                    height={400}
                                     width='auto'
                                     className=''
                                 />

@@ -35,11 +35,21 @@ function renderObject(key, value, isArray, isObject, level) {
     }
     if (/^image\d*$/.test(key)) {
         return (
+            // <div>
+            //     {(value && Array.isArray(value) && value.length > 0) ? value.map((image, index) => (
+            //         <figure key={index} style={{ float: `${image.data.attributes.float ? image.data.attributes.float : null}`, marginRight: '10px' }}>
+            //             <img src={image.data.attributes.url} width={image.data.attributes.width ? image.data.attributes.width : 400} alt={`Image ${index + 1}`} />
+            //             <figcaption>Fig. <span key={index} dangerouslySetInnerHTML={{ __html: image.data.attributes.caption }} /></figcaption>
+            //         </figure>
+            //     )) : null}
+            // </div>
             <div>
                 {(value && Array.isArray(value) && value.length > 0) ? value.map((image, index) => (
-                    <figure key={index} style={{ float: `${image.data.attributes.float ? image.data.attributes.float : null}`, marginRight: '10px' }}>
-                        <img src={image.data.attributes.url} width={image.data.attributes.width ? image.data.attributes.width : 400} alt={`Image ${index + 1}`} />
-                        <figcaption>Fig. <span key={index} dangerouslySetInnerHTML={{ __html: image.data.attributes.caption }} /></figcaption>
+                    <figure key={index} 
+                    // style={{ float: `${image.data.attributes.float ? image.data.attributes.float : null}`, marginRight: '10px' }}
+                    >
+                        <img src={image.url} width={image.width ?  image.width : 400} alt={`Image ${index + 1}`} />
+                        <figcaption>Fig. <span key={index} dangerouslySetInnerHTML={{ __html: image.caption }} /></figcaption>
                     </figure>
                 )) : null}
             </div>
@@ -137,9 +147,8 @@ function renderObject(key, value, isArray, isObject, level) {
 
                     return <Mermaid key={index} chart={mermaidChart} />;
                 } else {
-                    // Handle the case where the chart type is not supported, data is not an array, or data is empty (optional)
-                    console.error(`Invalid chart object at index ${index}.`);
-                    return null; // or handle it in a way that makes sense for your application
+                            const mermaidChart = data.join('\n');
+                    return <Mermaid key={index} chart={mermaidChart} />;
                 }
             })
 
