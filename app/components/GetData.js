@@ -3,7 +3,8 @@
 
 export default async function getData(url) {
     try {
-        const response = await fetch('https://author.rahulkumaryadav.com.np' + url);
+  const response = await fetch(process.env.NEXT_PUBLIC_STRAPI_URL+url);
+
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
