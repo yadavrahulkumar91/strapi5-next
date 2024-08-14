@@ -1,64 +1,31 @@
+'use client'
 
+import React, { useState, useEffect } from 'react'
+import ContentPage from './ContentPage'
 
-"use client"
+export default function SideBar ({ units, setLessonId }) {
 
-import React, { useState } from 'react';
-import ContentPage from './ContentPage';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+  const [collapsed, setCollapsed] = useState(false)
+  const [toggled, setToggled] = useState(false)
+  const [open, setOpen] = useState(false)
 
-export default function SideBar({ units }) {
-    // const [showSidebar, setShowSidebar] = useState(false);
-
-    // const toggleSidebar = () => {
-    //     setShowSidebar(!showSidebar);
-    // };
-    const [collapsed, setCollapsed] = useState(false);
-    const [toggled, setToggled] = useState(false);
-
-    return (
-        <div className=''>
-                   <Sidebar collapsed={collapsed} collapsedWidth="60px" onBackdropClick={() => setToggled(false)} toggled={toggled} 
-                //    breakPoint="always"
-                   >
-                <button className="sb-button" onClick={() => setCollapsed(!collapsed)}>
-                    Collapse
-                </button>
-
-                <Menu renderExpandIcon={({ open }) => <span>{open ? '-' : '+'}</span>}>
-                    {units.map((unit, index) => (
-                        <div key={index}>
-                            <SubMenu defaultOpen label={unit.Unit_name} >
-                                {/* <h2>{unit.Unit_name}</h2> */}
-                                <ul>
-                                    {unit.Lesson.map((lesson, lessonIndex) => (
-                                        <li key={lessonIndex}>
-                                            <MenuItem>
-                                                <a href={`#lesson-${lesson.id}`}>{lesson.Lesson_name}</a>
-                                            </MenuItem>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                            </SubMenu>
-                        </div>
-                    ))}
-
-                </Menu>
-            </Sidebar>
-
-
-
-
-
-
-            {/* <button className="sb-button" onClick={() => setToggled(!toggled)}>
-                Toggle
-            </button> */}
-
-        </div>
-    );
-};
-
-
-
-
+  let lessonCounter=1;
+ 
+  return (
+    <div style={{ height: '95vh', overflow: 'scroll', width:'10%' }}>
+        <button className='sb-button' onClick={() => setCollapsed(!collapsed)}>Collapse</button>
+       <ol>
+          {units.map((unit, index) => (
+            <div key={unit.id}>
+                <h2>{unit.Unit_name}  <button onClick={()=>setToggled(!toggled)}>{toggled ? '-' : '+'}</button></h2>
+                {unit.Lesson.map((lesson, lessonIndex) => (
+                    <li style={{margin:"2px"}} id={lessonCounter++}  onClick={(e) => setLessonId(parseInt(e.target.id, 10))}>
+                      {lesson.Lesson_name}
+                    </li>        
+                ))}
+            </div>
+          ))}
+          </ol>
+    </div>
+  )
+}

@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "gamechanger-drive-91"
-  }
+    "hosting": "gamechanger-f5da7"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -15,7 +15,7 @@ export default async function Page() {
     const classes = await GetData(url);
     return (
         <main>
-            <div className="group/1 " tabindex="0">
+            <div className="group/1 " tabIndex="0">
                 <Link href={`/booklist`}>
                     <p className="text-md" >Books</p>
                 </Link>
@@ -33,7 +33,7 @@ export default async function Page() {
             </div>
 
 
-            <div className="group/1 mx-2 underline" tabindex="0">
+            <div className="group/1 mx-2 underline" tabIndex="0">
                 <Link href={`/homeTuitionTutor`}>
                     <p className="text-md" >Home tuition tutors</p>
                 </Link>
@@ -49,7 +49,7 @@ export default async function Page() {
                     ))}
                 </div> */}
             </div>
-            <div className="group/1 mx-2 underline" tabindex="0">
+            <div className="group/1 mx-2 underline" tabIndex="0">
                 <Link href={`/jsonbooklist`}>
                     <p className="text-md" >Datbase Books</p>
                 </Link>
@@ -65,7 +65,7 @@ export default async function Page() {
                     ))}
                 </div> */}
             </div>
-            <div className="group/1 mx-2 underline" tabindex="0">
+            <div className="group/1 mx-2 underline" tabIndex="0">
                 <Link href={`/syllabilist`}>
                     <p className="text-md" >Syllabi</p>
                 </Link>
