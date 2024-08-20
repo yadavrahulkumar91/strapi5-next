@@ -96,9 +96,9 @@ export default function RootLayout ({ children }) {
           <Header />
           <div 
           // style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}
-          className='flex overflow-x-scroll'>
+          className='flex '>
             <Sidebar />
-            <main className='overflow-x-auto w-full'>{children}</main>
+            <main className='w-full overflow-x-hidden'>{children}</main>
           </div>
           {/* <Footer /> */}
         </body>

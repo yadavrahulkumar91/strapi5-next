@@ -1,39 +1,98 @@
 // 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import MCQ from './mcq'
 import LessonContent from './lessonContent/lessonContent'
 import QA from './qa'
+import { MdOutlineFullscreen, MdFullscreenExit } from 'react-icons/md'
+import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go'
 
 const LessonPage = ({ lessons, lessonCounter, unitName }) => {
+  // useEffect(() => {
+  //   const script = document.createElement('script')
+  //   script.id = 'MathJax-script'
+  //   script.async = true
+  //   script.src =
+  //     'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js'
+  //   document.head.appendChild(script)
+
+  //   return () => {
+  //     document.head.removeChild(script)
+  //   }
+  // })
+
+  const [toggled, setToggled] = useState(true)
+
   useEffect(() => {
-    const script = document.createElement('script')
-    script.id = 'MathJax-script'
-    script.async = true
-    script.src =
-      'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js'
-    document.head.appendChild(script)
+    const element = document.getElementById('header')
+    if (element) {
+      if (toggled) {
+        element.style.display = 'block'
+      } else {
+        element.style.display = 'none'
+      }
+    }
 
     return () => {
-      document.head.removeChild(script)
+      // if (element) {
+      element.style.display = 'none' // Cleanup or reset if needed
+      // }
     }
-  })
+  }, [toggled])
+
+  const [toggled1, setToggled1] = useState(true)
+
+  useEffect(() => {
+    const element = document.getElementById('booksidebar')
+    if (element) {
+      if (toggled) {
+        element.style.display = 'block'
+      } else {
+        element.style.display = 'none'
+      }
+    }
+
+    return () => {
+      // if (element) {
+      element.style.display = 'none' // Cleanup or reset if needed
+      // }
+    }
+  }, [toggled])
 
   return (
     <>
       {lessons.map((lesson, i) => (
         <div
           key={lesson.id}
-          className='lesson p-0 m-0 w-screen overflow-scroll'
-          style={{ borderRadius: '1%', border: '2px solid black'}}
+          className='lesson p-0 m-0 top-10 overflow-y-scroll w-full'
+          style={{
+            borderRadius: '1%',
+            border: '2px solid black',
+            height: '100svh'
+          }}
           id={`lesson-${lessonCounter + i}`}
         >
-          {/* <span className='float-left text-lg'>{unitName}</span> */}
-          <h1
-            className='text-center sticky top-0 text-blue-600'
-            style={{ position: 'sticky' }}
-          >
-            {lessonCounter + i}. {lesson.Lesson_name}
-          </h1>
+          <div className='sticky top-0 flex justify-between'>
+            <button
+              className=''
+              onClick={() => {
+                setToggled1(!toggled1)
+              }}
+            >
+              {toggled ? <GoSidebarExpand /> : <GoSidebarCollapse />}
+            </button>
+            <span className='text-lg font-semibold ml-2'>{unitName}</span>
+            <span className='text-center font-bold text-2xl'>
+              {lessonCounter + i}. {lesson.Lesson_name}
+            </span>
+            <button
+              className='mr-2 text-2xl'
+              onClick={() => {
+                setToggled(!toggled)
+              }}
+            >
+              {toggled ? <MdOutlineFullscreen /> : <MdFullscreenExit />}
+            </button>
+          </div>
           {lesson.video_url && (
             <iframe
               // width='100%'

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import NavBar from './navbar'
 import Link from 'next/link'
+import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go'
+
 const Header = () => {
   const [toggled, setToggled] = useState(false)
 
@@ -18,7 +20,7 @@ const Header = () => {
 
     return () => {
       // if (element) {
-        element.style.display = 'none' // Cleanup or reset if needed
+      element.style.display = 'none' // Cleanup or reset if needed
       // }
     }
   }, [toggled])
@@ -31,32 +33,31 @@ const Header = () => {
   //   }
   // })
 
-
-
   return (
     <>
-      <div className='sticky top-0 backdrop-blur-sm'>
+      <div id='header' className='sticky top-0 backdrop-blur-sm'>
         <button
           className='fixed left-0 top-5'
           onClick={() => {
             setToggled(!toggled)
           }}
         >
-          {toggled ? <div>Hide </div> : <div>Show</div>}
+          {toggled ? <GoSidebarExpand /> : <GoSidebarCollapse />}
         </button>
-        <Link className=' justify-center  flex pt-2' href='/'>
-          <Image
-            src='/logo.svg'
-            width={40}
-            height={40}
-            alt='Picture of the author'
-            className='conten'
-          />
-          <span className='text-4xl font-bold font-serif text-[#efc75e] webkit stroke opacity-100'>
-            {' '}
-            GameChanger Academy
-          </span>
-        </Link>
+        <div className='justify-center  flex pt-2'>
+          <Link className='flex' href='/'>
+            <Image
+              src='/logo.svg'
+              width={30}
+              height={30}
+              alt='Picture of the author'
+              className='conten'
+            />
+            <span className='text-3xl font-bold font-serif text-[#efc75e] webkit stroke opacity-100'>
+              GameChanger Academy
+            </span>
+          </Link>
+        </div>
 
         <div className='user-section'>
           {/* {user ? (
