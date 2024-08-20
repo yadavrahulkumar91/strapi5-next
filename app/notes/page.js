@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Book from '../class/[slug]/jsonbook'; // Correct import statement
+import Book from '../class/[slug]/note'; // Correct import statement
 
 export default async function Page({ params }) {
     const { slug } = params;

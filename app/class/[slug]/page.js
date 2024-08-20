@@ -4,7 +4,7 @@ import Book from './book';
 import Syllabus from './syllabus';
 import Teacher from './teacher';
 import Practical from './practical'
-import Jsonbook from './jsonbook'
+import Jsonbook from './note'
 import axios from 'axios';
 
 
@@ -33,15 +33,15 @@ export default async function Page({ params }) {
     return (
         <div>
 
-            <h1>Class : {axiosData.attributes.Class_name} </h1>
+            <h1 className='text-center text-2xl'>Class : {axiosData.attributes.Class_name} </h1>
 
 
-            {axiosData.attributes.teachers?.data && <Teacher books={axiosData.attributes.teachers.data} />}
 
-            {axiosData.attributes.books?.data && <Book books={axiosData.attributes.books.data} />}
+            {/* {axiosData.attributes.books?.data && <Book books={axiosData.attributes.books.data} />} */}
             {axiosData.attributes.books?.data && <Jsonbook books={axiosData.attributes.jsonbooks.data} />}
             {axiosData.attributes.syllabi?.data && <Syllabus books={axiosData.attributes.syllabi.data} />}
             {axiosData.attributes.practicals?.data && <Practical books={axiosData.attributes.practicals.data} />}
+            {axiosData.attributes.teachers?.data && <Teacher books={axiosData.attributes.teachers.data} />}
 
             {/* <h1>Other Study Resorces</h1>
         <Link href={axiosData.attributes.onedrive_url} target="_blank" rel="noopener noreferrer" className="folderIcon">

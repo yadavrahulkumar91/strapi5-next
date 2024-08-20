@@ -6,7 +6,7 @@ export default function page ({ books }) {
     return (
         <div className='border border-black border-solid flex flex-wrap rounded-md my-1'>
             {books.map((book, index) => (
-                <Link key={book.id} href={`/jsonbook/${book.id}`}>
+                <Link key={book.id} href={`/note/${book.id}`}>
                     <div key={book.id} className='border border-black border-dashed m-1 rounded-md'>
                         <h2>{book.attributes.book_name}</h2>
                         {book.attributes.Cover_picture?.data?.attributes?.url && (

@@ -1,21 +1,109 @@
 
-import Section from './components/Section.js'
-// import { PhotoProvider, PhotoView } from 'react-photo-view';
-// import 'react-photo-view/dist/react-photo-view.css';
+import React from 'react'
 
-export default function Home() {
- 
+import Link from 'next/link'
+
+
+export default function Home () {
+
+
   return (
     <>
-    
-    {/* <main className="flex min-h-screen flex-col items-center justify-between p-24"> */}
-    <main className="flex flex-col items-center justify-between align-center">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium quae eius odit sit, accusantium suscipit quo quia, dolorem, esse nobis voluptatum? Illum et illo, at nostrum placeat harum voluptas!
+      </div>
 
-    <Section/>
-
-  
-    </main>
-
+     
     </>
   )
 }

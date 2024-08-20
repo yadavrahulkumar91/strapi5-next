@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    // images: { unoptimized: true },
-    // trailingSlash: true,
+    images: { unoptimized: true },
+    trailingSlash: true,
 };
 
 // const withPWA = require('next-pwa')({

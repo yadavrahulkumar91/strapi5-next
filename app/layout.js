@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import Header from './components/header'
-import Footer from './components/footer'
+// import Footer from './components/footer'
+import Sidebar from './components/sidebar.js'
 
 import './globals.css'
 
@@ -87,15 +88,20 @@ export default function RootLayout ({ children }) {
             name='viewport'
             content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
           />
-          
         </head>
-        <body className={inter.className}>
+        <body
+          // style={{ display: 'grid', gridTemplateRows: 'auto auto auto' }}
+          className={`${inter.className} h-screen`}
+          >
           <Header />
-          {children}
-
-          <Footer />
+          <div 
+          // style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}
+          className='flex overflow-x-scroll'>
+            <Sidebar />
+            <main className='overflow-x-auto w-full'>{children}</main>
+          </div>
+          {/* <Footer /> */}
         </body>
-        
       </html>
     </>
   )

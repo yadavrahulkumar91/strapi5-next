@@ -1,8 +1,6 @@
 import React from 'react';
 import GetData from '../../components/GetData';
 
-import './bookstyle.css';
-
 const CoverPage = async ({ params }) => {
     const url = '/api/books/' + params.slug + '?populate=Unit.Lesson.MCQ,Unit.Lesson.Question_answer';
     const Book = await GetData(url);
