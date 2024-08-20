@@ -29,7 +29,7 @@ export default function Unit ({ units }) {
   }, [activeLesson])
 
   return (
-    <div className='box-border flex'>
+    <div className='box-border flex w-full'>
       <Sidebar units={units} setActiveLesson={setActiveLesson} />
 
       {/* <div style={{ display: 'flex', width: '90%' }}> */}
@@ -49,7 +49,7 @@ export default function Unit ({ units }) {
           {getElementConten`t(activeLesson - 1)}
         </span> */}
       </button>
-      <div>
+      <div className='w-full'>
       {units.map(unit => (
         
         <>
@@ -59,14 +59,14 @@ export default function Unit ({ units }) {
             unitName={unit.Unit_name}
             lessonCounter={lessonCounter}
             />
-          <span className='w-0' style={{ display: 'none' }}>
+          <span className='hidden'>
             {(lessonCounter = lessonCounter + unit.Lesson.length)}
           </span>
         </>
       ))}
       </div>
       <button
-        className='text-xl p-0 border-2 w-5'
+        className='text-xl p-0 border-2 w-5 right-0'
         onClick={() => setActiveLesson(activeLesson + 1)}
         disabled={
           activeLesson >=

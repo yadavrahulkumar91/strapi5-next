@@ -44,7 +44,7 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
   useEffect(() => {
     const element = document.getElementById('booksidebar')
     if (element) {
-      if (toggled) {
+      if (toggled1) {
         element.style.display = 'block'
       } else {
         element.style.display = 'none'
@@ -56,7 +56,7 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
       element.style.display = 'none' // Cleanup or reset if needed
       // }
     }
-  }, [toggled])
+  }, [toggled1])
 
   return (
     <>
@@ -71,16 +71,18 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
           }}
           id={`lesson-${lessonCounter + i}`}
         >
-          <div className='sticky top-0 flex justify-between'>
-            <button
-              className=''
-              onClick={() => {
-                setToggled1(!toggled1)
-              }}
-            >
-              {toggled ? <GoSidebarExpand /> : <GoSidebarCollapse />}
-            </button>
+          <div className='h-16 sticky top-0 flex justify-between z-0 backdrop-blur-sm'>
+            <div >
+              <button
+                className=''
+                onClick={() => {
+                  setToggled1(!toggled1)
+                }}
+              >
+                {toggled1 ? <GoSidebarExpand /> : <GoSidebarCollapse />}
+              </button>
             <span className='text-lg font-semibold ml-2'>{unitName}</span>
+            </div>
             <span className='text-center font-bold text-2xl'>
               {lessonCounter + i}. {lesson.Lesson_name}
             </span>

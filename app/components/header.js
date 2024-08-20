@@ -36,14 +36,14 @@ const Header = () => {
   return (
     <>
       <div id='header' className='sticky top-0 backdrop-blur-sm'>
-        <button
+        {/* <button
           className='fixed left-0 top-5'
           onClick={() => {
             setToggled(!toggled)
           }}
         >
           {toggled ? <GoSidebarExpand /> : <GoSidebarCollapse />}
-        </button>
+        </button> */}
         <div className='justify-center  flex pt-2'>
           <Link className='flex' href='/'>
             <Image
