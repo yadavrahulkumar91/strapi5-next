@@ -7,6 +7,24 @@ import { MdOutlineFullscreen, MdFullscreenExit } from 'react-icons/md'
 import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go'
 
 const LessonPage = ({ lessons, lessonCounter, unitName }) => {
+  window.MathJax = {
+  tex: {
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+}
+;(function () {
+  var script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'
+  script.async = true
+  document.head.appendChild(script)
+})()
+
   // useEffect(() => {
   //   const script = document.createElement('script')
   //   script.id = 'MathJax-script'
@@ -23,21 +41,23 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
   const [toggled, setToggled] = useState(true)
 
   useEffect(() => {
-    const element = document.getElementById('header')
-    if (element) {
-      if (toggled) {
-        element.style.display = 'block'
-      } else {
-        element.style.display = 'none'
-      }
-    }
+  const elements = document.querySelectorAll('.fullscreen')
 
-    return () => {
-      // if (element) {
-      element.style.display = 'none' // Cleanup or reset if needed
-      // }
+  elements.forEach(element => {
+    if (toggled) {
+      element.style.display = 'block'
+    } else {
+      element.style.display = 'none'
     }
-  }, [toggled])
+  })
+
+  return () => {
+    elements.forEach(element => {
+      element.style.display = 'none' // Cleanup or reset if needed
+    })
+  }
+}, [toggled])
+
 
   const [toggled1, setToggled1] = useState(true)
 
@@ -71,8 +91,8 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
           }}
           id={`lesson-${lessonCounter + i}`}
         >
-          <div className='h-16 sticky top-0 flex justify-between z-0 backdrop-blur-sm'>
-            <div >
+          <div className='h-12 top-0 flex justify-between z-0 backdrop-blur-sm bg-orange-300'>
+            <div>
               <button
                 className=''
                 onClick={() => {
@@ -81,9 +101,9 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
               >
                 {toggled1 ? <GoSidebarExpand /> : <GoSidebarCollapse />}
               </button>
-            <span className='text-lg font-semibold ml-2'>{unitName}</span>
+              <span className='text-lg font-semibold ml-2'>{unitName}</span>
             </div>
-            <span className='text-center font-bold text-2xl'>
+            <span className='text-center font-bold text-2xl font-sans '>
               {lessonCounter + i}. {lesson.Lesson_name}
             </span>
             <button

@@ -35,25 +35,25 @@ const Header = () => {
 
   return (
     <>
-      <div id='header' className='sticky top-0 backdrop-blur-sm'>
-        {/* <button
-          className='fixed left-0 top-5'
+      <div id='header' className='fullscreen'>
+        <button
+          className='fixed left-5 top-5 text-[#785700] z-50 font-bold '
           onClick={() => {
             setToggled(!toggled)
           }}
         >
           {toggled ? <GoSidebarExpand /> : <GoSidebarCollapse />}
-        </button> */}
+        </button>
         <div className='justify-center  flex pt-2'>
-          <Link className='flex' href='/'>
+          <Link className='flex fixed left-1/2 -translate-x-1/2 ' href='/'>
             <Image
               src='/logo.svg'
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               alt='Picture of the author'
-              className='conten'
+              className='content backdrop-blur-sm rounded-tl-md rounded-tr-2xl rounded-bl-3xl rounded-br-md'
             />
-            <span className='text-3xl font-bold font-serif text-[#efc75e] webkit stroke opacity-100'>
+            <span className='text-[24px] leading-[24px] align-bottom font-bold font-serif text-[#efc75e] webkit stroke opacity-100 backdrop-blur-sm rounded-full'>
               GameChanger Academy
             </span>
           </Link>

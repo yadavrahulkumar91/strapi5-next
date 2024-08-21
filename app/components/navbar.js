@@ -22,9 +22,9 @@ export default function Page () {
   ]
 
   return (
-    <nav className='flex justify-center bg-[##ffd5ec]'>
+    <nav className='flex fixed left-1/2 -translate-x-1/2 top-9 gap-2'>
       {links.map((link, i) => {
-        return <Link key={i} className='px-5 font-bold text-[#785700] hover:underline ' href={link.url}>{link.name}</Link>
+        return <Link key={i} className='text-[16px] leading-[16px] backdrop-blur-sm font-bold text-[#785700] hover:underline rounded-full' href={link.url}>{link.name}</Link>
       })}
 
     </nav>

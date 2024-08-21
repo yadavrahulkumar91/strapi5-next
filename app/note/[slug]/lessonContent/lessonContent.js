@@ -9,8 +9,26 @@ import Html from './html'
 import Note from './note'
 
 const LessonContent = ({ lessonContent }) => {
-    const jsonLessonContent = JSON.parse(lessonContent)
-  return <div>{renderAttributes(jsonLessonContent)}</div>
+  const jsonLessonContent = JSON.parse(lessonContent)
+  // window.MathJax = {
+  //   tex: {
+  //     inlineMath: [
+  //       ['$', '$'],
+  //       ['\\(', '\\)']
+  //     ]
+  //   },
+  //   svg: {
+  //     fontCache: 'global'
+  //   }
+  // }
+  // ;(function () {
+  //   var script = document.createElement('script')
+  //   script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'
+  //   script.async = true
+  //   document.head.appendChild(script)
+  // })()
+
+  return <div className='ml-[-30px]'>{renderAttributes(jsonLessonContent)}</div>
 }
 export default LessonContent
 
@@ -23,7 +41,11 @@ export const renderAttributes = (attributes, level = 0) => {
     return <div>{renderArray(attributes, level)}</div>
   } else if (typeof attributes == 'object') {
     return Object.entries(attributes).map(([key, value]) => {
-      return <div key={key}>{renderObject(key, value, level)}</div>
+      return (
+        <div key={key} className='ml-[30px]'>
+          {renderObject(key, value, level)}
+        </div>
+      )
     })
   } else {
     return <div>{attributes}</div>
@@ -72,7 +94,7 @@ function renderObject (key, value, level) {
 
 function elseFunction (key, value, level) {
   return (
-    <div key={key} style={{ marginLeft: `${30}px` }} className=''>
+    <div key={key} className=''>
       {renderKey(key, level)}
       {typeof value === 'object' ? (
         renderAttributes(value, level + 1)
@@ -92,7 +114,7 @@ function renderKey (key, level) {
     <span
       style={{
         color: `hsl(330, 50%, ${level * 10}%)`,
-        backgroundColor: level === 0 ? 'lightgrey' : null, 
+        backgroundColor: level === 0 ? 'lightgrey' : null,
         fontWeight: `${800 - level * 100}`,
         display: level === 0 ? 'block' : null
         // padding: '5px',

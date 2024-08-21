@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-function sidebarUnit ({ unit, setActiveLesson, lessonCounter }) {
+function SidebarUnit ({ unit, setActiveLesson, lessonCounter }) {
   
 
   const [open, setOpen] = useState(true)
@@ -28,4 +28,4 @@ function sidebarUnit ({ unit, setActiveLesson, lessonCounter }) {
   )
 }
 
-export default sidebarUnit
+export default SidebarUnit

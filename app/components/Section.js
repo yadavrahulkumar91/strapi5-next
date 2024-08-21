@@ -22,7 +22,7 @@ export default async function Page () {
 
   return (
 
-      <div className='w-60 h-full fixed left-0 overflow-x-scroll backdrop-blur-sm' id='section'>
+      <div className='w-60 h-full fixed left-0 top-0 overflow-x-scroll backdrop-blur-sm -z-100' id='section'>
         {axiosData.map(section => (
           <div className='pl-2' key={section.id}>
             <h1 className='text-xl w-1/12 whitespace-nowrap'>{section.attributes.section_name}</h1>

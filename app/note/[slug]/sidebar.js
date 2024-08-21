@@ -11,7 +11,7 @@ export default function SideBar ({ units, setActiveLesson }) {
     <div>
       <div
         id='booksidebar'
-        className='max-h-screen overflow-y-scroll w-[200px]'
+        className='max-h-screen overflow-y-scroll w-[200px] fullscreen'
       >
         <ol className='p-0'>
           {units.map((unit, index) => (

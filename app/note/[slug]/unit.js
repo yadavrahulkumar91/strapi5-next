@@ -34,7 +34,7 @@ export default function Unit ({ units }) {
 
       {/* <div style={{ display: 'flex', width: '90%' }}> */}
       <button
-        className='text-2xl p-0 border-2 w-5'
+        className='text-2xl p-0 border-2 w-5 fullscreen' 
         onClick={() => setActiveLesson(activeLesson - 1)}
         disabled={activeLesson <= 1}
       >
@@ -65,8 +65,8 @@ export default function Unit ({ units }) {
         </>
       ))}
       </div>
-      <button
-        className='text-xl p-0 border-2 w-5 right-0'
+      <button 
+        className='text-xl p-0 border-2 w-5 right-0 fullscreen'
         onClick={() => setActiveLesson(activeLesson + 1)}
         disabled={
           activeLesson >=

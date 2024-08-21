@@ -96,7 +96,7 @@ export default function RootLayout ({ children }) {
           <Header />
           <div 
           // style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}
-          className='flex '>
+          className='flex'>
             <Sidebar />
             <main className='w-full overflow-x-hidden'>{children}</main>
           </div>
