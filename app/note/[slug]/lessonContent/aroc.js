@@ -63,7 +63,7 @@ export default function Aroc({ data, layout_type }) {
   const containerStyle = { margin: "", pointerEvents: "none" };
 
   // Use layout_type prop instead of hardcoded layout
-  const layout = LayoutType[layout_type] || LayoutType.FISHBONE_1;
+  const layout = LayoutType[layout_type] || LayoutType.LINEAR;
 
   const debug = false;
 

@@ -1,10 +1,9 @@
-
-import React from "react";
+// "use client";
+// import React from "react";
 // import { Tree, TreeNode } from "react-organizational-chart";
 // import styled from "styled-components";
 // import { renderAttributes } from "./lessonContent";
-import AROC from "./aroc";
-// import OrgChart1 from './orgChart1'
+
 
 // const StyledNode = styled.div`
 //   overflow: hidden;
@@ -13,30 +12,9 @@ import AROC from "./aroc";
 //   border: 3px solid green;
 // `;
 
-const StyledTreeExample = ({ value }) => {
-  return value && Array.isArray(value) && value.length > 0
-    ? value.map((item, index) => (
-        <div className="" key={index}>
 
-          {/* {item.type ? (
-            <AROC data={item.data} layout_type={item.type} />
-          ) :
-            (<OrgChart1 item={item.data} />)
-          }
-          */}
-            <AROC data={item.data} layout_type={item.type} />
-       
-          <div className="">
-            {item.caption ? <span>Fig. {item.caption}</span> : null}
-          </div>
-        </div>
-      ))
-    : null;
-};
 
-export default StyledTreeExample;
-
-// function OrgChart({ item }) {
+// export default function OrgChart({ item }) {
 //   const renderTree = (node) => {
 //     if (!node.children || node.children.length === 0) {
 //       return (
@@ -44,16 +22,16 @@ export default StyledTreeExample;
 //           label={
 //             <StyledNode>
 //               <div className="text-xl font-semibold bg-green-300 px-2">
-//                 {node.name
+//                 {node.name}
+//                 {/* {node.name
 //                   ? renderAttributes(node.name, node.level ?? 2)
-//                   : null}
+//                   : null} */}
 //               </div>
-//               <div>
-//                 {" "}
+//               {/* <div>
 //                 {node.about
 //                   ? renderAttributes(node.about, node.level ?? 2)
 //                   : null}
-//               </div>
+//               </div> */}
 //             </StyledNode>
 //           }
 //         />
@@ -65,15 +43,16 @@ export default StyledTreeExample;
 //         label={
 //           <StyledNode>
 //             <div className="text-xl font-semibold bg-green-300 px-1">
-//               {node.name
+//               {node.name}
+//               {/* {node.name
 //                 ? renderAttributes(node.name, node.level ?? 2)
-//                 : null}
+//                 : null} */}
 //             </div>
-//             <div>
+//             {/* <div>
 //               {node.about
 //                 ? renderAttributes(node.about, node.level ?? 2)
 //                 : null}
-//             </div>
+//             </div> */}
 //           </StyledNode>
 //         }
 //       >
@@ -92,9 +71,9 @@ export default StyledTreeExample;
 //       label={
 //         <StyledNode>
 //           <div className="text-xl font-bold bg-green-300 px-1">{item.name}</div>
-//           <div>
+//           {/* <div>
 //             {item.about ? renderAttributes(item.about, item.level ?? 2) : null}
-//           </div>
+//           </div> */}
 //         </StyledNode>
 //       }
 //     >
