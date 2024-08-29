@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 import React, { useEffect, useState } from 'react'
 import MCQ from './mcq'
 import LessonContent from './lessonContent/lessonContent'
@@ -7,57 +7,47 @@ import { MdOutlineFullscreen, MdFullscreenExit } from 'react-icons/md'
 import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go'
 
 const LessonPage = ({ lessons, lessonCounter, unitName }) => {
-  window.MathJax = {
-  tex: {
-    inlineMath: [
-      ['$', '$'],
-      ['\\(', '\\)']
-    ]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-}
-;(function () {
-  var script = document.createElement('script')
-  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'
-  script.async = true
-  document.head.appendChild(script)
-})()
-
-  // useEffect(() => {
-  //   const script = document.createElement('script')
-  //   script.id = 'MathJax-script'
-  //   script.async = true
-  //   script.src =
-  //     'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js'
-  //   document.head.appendChild(script)
-
-  //   return () => {
-  //     document.head.removeChild(script)
-  //   }
-  // })
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ['$', '$'],
+            ['\\(', '\\)']
+          ]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      }
+      ;(function () {
+        var script = document.createElement('script')
+        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'
+        script.async = true
+        document.head.appendChild(script)
+      })()
+    }
+  }, [])
 
   const [toggled, setToggled] = useState(true)
 
   useEffect(() => {
-  const elements = document.querySelectorAll('.fullscreen')
+    const elements = document.querySelectorAll('.fullscreen')
 
-  elements.forEach(element => {
-    if (toggled) {
-      element.style.display = 'block'
-    } else {
-      element.style.display = 'none'
-    }
-  })
-
-  return () => {
     elements.forEach(element => {
-      element.style.display = 'none' // Cleanup or reset if needed
+      if (toggled) {
+        element.style.display = 'block'
+      } else {
+        element.style.display = 'none'
+      }
     })
-  }
-}, [toggled])
 
+    return () => {
+      elements.forEach(element => {
+        element.style.display = 'none' // Cleanup or reset if needed
+      })
+    }
+  }, [toggled])
 
   const [toggled1, setToggled1] = useState(true)
 
@@ -72,9 +62,9 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
     }
 
     return () => {
-      // if (element) {
+      if (element) {
       element.style.display = 'none' // Cleanup or reset if needed
-      // }
+      }
     }
   }, [toggled1])
 

@@ -38,14 +38,9 @@ export default async function Page ({ params }) {
 
   return (
     <>
-    {/* <div style={{display:"flex"}}> */}
-      {/* <Sidebar units={attributes.unit} /> */}
-        {/* <CoverPage params={params} /> */}
-        {/* <ContentPage units={attributes.Unit} /> */}
+
         <Unit units={attributes.unit}/>
-        
-      {/* </div> */}
-    {/* </div> */}
+
     </>
   )
 }

@@ -94,3 +94,15 @@
   opacity: 0.5;
   backdrop-filter: blur(40px);
 } */
+
+
+.hiddenScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hiddenScrollbar {
+  -ms-overflow-style: none;
+
+  scrollbar-width: none;
+
+}

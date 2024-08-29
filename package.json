@@ -10,8 +10,9 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@lani.ground/react-image-viewer": "^1.1.2",
+    "@lani.ground/react-image-viewer": "^1.2.1",
     "@lani.ground/react-outside-click-handler": "^1.1.2",
+    "awesome-react-org-chart": "^1.4.11",
     "axios": "^1.6.2",
     "mdx-mermaid": "^2.0.0",
     "mermaid": "^10.6.1",
@@ -26,6 +27,7 @@
     "react-icons": "^5.3.0",
     "react-markdown": "^9.0.1",
     "react-mathjax": "^1.0.1",
+    "react-organizational-chart": "^2.2.1",
     "react-photo-view": "^1.2.3",
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-spring": "^9.7.3",
@@ -33,7 +35,8 @@
     "rehype-mathjax": "^6.0.0",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0",
-    "remark-math": "^6.0.0"
+    "remark-math": "^6.0.0",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
