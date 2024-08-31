@@ -16,7 +16,7 @@ import AROC from './aroc'
 // let mcqId = 0
 
 const LessonContent = ({ lessonContent }) => {
-  const jsonLessonContent = JSON.parse(lessonContent)
+  // const jsonLessonContent = JSON.parse(lessonContent)
   // window.MathJax = {
   //   tex: {
   //     inlineMath: [
@@ -39,9 +39,7 @@ const LessonContent = ({ lessonContent }) => {
   //   }
   // }, [])
 
-  return (
-    <div className="ml-[-30px] ">{renderAttributes(jsonLessonContent)}</div>
-  );
+  return <div className="ml-[-30px] ">{renderAttributes(lessonContent)}</div>;
 }
 
 export default LessonContent

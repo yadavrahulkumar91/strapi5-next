@@ -2,28 +2,31 @@
 import React from 'react'
 
 import Link from 'next/link'
-
+import Carousel from './carousel'
 
 export default function Home () {
 
 
   return (
     <>
-      <main className="bg-gray-100 h-full">
+      <main className="bg-gray-100 h-full overflow-scroll">
         {/* Hero Section */}
-        <section className="bg-blue-600 text-white py-20">
+
+
+        <section className="py-20">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl font-bold">
-              Empowering Education, Changing Lives
+            <h1 className="text-xl font-bold">
+              Get ready crack MBBS Entrance Exam (MEC-CEE)
             </h1>
             <p className="mt-4 text-lg">
-              Free, effective learning resources, top tutors, and video lectures
-              tailored for the Nepali curriculum.
+              Free, effective learning resources, top tutors, video lectures, enough past questions
+              tailored to crack the exam.
             </p>
-            <button className="mt-8 bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-gray-100">
+            <Link href={'/class/19'} className="mt-8 font-semibold py-2 px-6 rounded-full border-2 border-solid border-black hover:grey">
               Start Learning Now
-            </button>
+            </Link>
           </div>
+          <Carousel/>
         </section>
 
         {/* About Us Section */}
@@ -83,21 +86,7 @@ export default function Home () {
         </section>
 
         {/* Call to Action Section */}
-        <section className="bg-blue-600 text-white py-16">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold">
-              Ready to Change Your Learning Journey?
-            </h2>
-            <p className="mt-4 text-lg">
-              Join thousands of students in accessing free, high-quality
-              educational resources today.
-            </p>
-            <button className="mt-8 bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-gray-100">
-              Get Started Now
-            </button>
-          </div>
-        </section>
-
+   
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-6">
           <div className="container mx-auto text-center">

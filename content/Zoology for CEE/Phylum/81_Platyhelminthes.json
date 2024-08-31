@@ -1,0 +1,607 @@
+{
+    "Introduction": {
+        "Members": "Members of Platyhelminthes are called Flat worms because they are dorsiventrally flattened.",
+        "Study": "Study of Platyhelminthes and Nemathelminthes is called Helminthology.",
+        "Diseases": "Diseases caused by Platyhelminthes and Aschelminthes is called Helminthic disease.",
+        "Habitat": {
+            "Parasitic": "Most members are Parasitic",
+            "Free-living": [
+                "Planaria (Water)",
+                "Bipalium (Land)"
+            ]
+        }
+    },
+    "General Characters": {
+        "First Appeared Characters": [
+            "Triploblastic animal",
+            "Bilateral symmetry",
+            "Cephalization (e.g., Head of Tapeworm – Scolex)",
+            "Brain is seen – Vestigial",
+            "Nervous organ is Primitive ladder-like",
+            "Tissue-organ level of Body-organization (e.g., Excretory organ is Flame cell)"
+        ],
+        "Body Cavity": "Acoelomate (Mesoderm split and filled with Parenchyma tissue)"
+    },
+    "Classification": {
+        "__table": [
+            {
+                "data": [
+                    [
+                        "Characters",
+                        "Turbellaria",
+                        "Trematoda (Flukeworms)",
+                        "Cestoda (Tapeworms)"
+                    ],
+                    [
+                        "Mode of Life",
+                        "Free-living",
+                        "Parasitic",
+                        "Exclusively endoparasitic"
+                    ],
+                    [
+                        "Alimentary canal",
+                        "Incomplete - Without Anus (Pharynx is present in Planaria which is protrusible/ everted)",
+                        "Incomplete - Without Anus",
+                        "Absent"
+                    ],
+                    [
+                        "Cilia",
+                        "Body is ciliated and Mucus-secreting gland",
+                        "Body is not ciliated",
+                        "Body is not ciliated"
+                    ],
+                    [
+                        "Body structure",
+                        "Unsegmented leaf like",
+                        "Unsegmented leaf like",
+                        "Segmented ribbon/ tape like"
+                    ],
+                    [
+                        "Adhesive organs",
+                        "No hooks nor sucker",
+                        [
+                            "No hooks",
+                            "Only Suckers present (For attachment and ingestion)",
+                            "Oral sucker/ Anterior sucker (Used for Ingestion and Attachment)",
+                            "Ventral sucker/ Posterior sucker/ Acetabulum (Used for Attachment only)"
+                        ],
+                        [
+                            "Both Hooks and Suckers (Only for attachment)",
+                            "1 Rostellum containing 18-32 hooks (Used for attachment only) [Note: Tapeworm feed through general body surface called as Osmotrophy]",
+                            "4 Suckers (Used only for attachment)"
+                        ]
+                    ],
+                    [
+                        "Receptors",
+                        [
+                            "Only present in Planaria",
+                            "1 pair of Auricular space (in Head) - Tastes the water (Gustatory organ or Chemoreceptor)",
+                            "1 pair of Eye spot: Unit Ocelli (in between the Auricular space) - Photoreceptor (Doesn’t form image, only detects the presence of light)"
+                        ],
+                        "X",
+                        "X"
+                    ],
+                    [
+                        "Development",
+                        "Direct",
+                        [
+                            "Indirect",
+                            "Liverfluke (Fasciola hepatica)",
+                            [
+                                "Miracidium - Infective stage to Secondary host (Snail) (Ciliated, Free swimming larva with X-shaped eyes)",
+                                "Sporocyst",
+                                "Redia",
+                                "Cercaria (Heart-shaped with bifid intestine)",
+                                "Metacercaria - Infective stage to Primary host (Sheep)"
+                            ],
+                            "Bloodfluke (Schistosoma)",
+                            [
+                                "Miracidium - Infective stage to Secondary host (Snail)",
+                                "Sporocyst",
+                                "Cercaria - Infective stage to Primary host (Man) [Redia and Metacercaria stages do not occur in blood fluke]"
+                            ]
+                        ],
+                        [
+                            "Indirect",
+                            "Taenia solium (Tapeworm)",
+                            [
+                                "Oncosphere - Infective stage to Secondary host (Pig)",
+                                "Hexacanth (with six hooks)",
+                                "Cysticercus (Bladder-worm) - Infective stage to Primary host (Man)"
+                            ]
+                        ]
+                    ],
+                    [
+                        "Examples",
+                        [
+                            "Planaria (Degesia)",
+                            "Bipalium"
+                        ],
+                        [
+                            "Fasciola hepatica/ Sheep liverfluke [P.H. = Sheep 🐑, S.H. = Snail 🐌]",
+                            "Schistosoma/ Human Blood fluke [P.H. = Man 👨, S.H. = Snail 🐌]",
+                            "Paragorimus westermani (Lung fluke)"
+                        ],
+                        [
+                            "Taenia solium/ Pork tapeworm [P.H.=Man 👨, S.H. = Pig 🐖]",
+                            "Taenia saginata (Beef tapeworm) [P.H = Man 👨; S.H = Cow 🐄/ Cattle]",
+                            "Echinococcus granulosa/ Dog tapeworm [P.H. = Dog 🐕, S.H. = Sheep 🐑, Man 👨, Cattle]",
+                            "Diphylobthrium latum (Fish tapeworm)",
+                            "Hymenolepis nana (Dwarf tapeworm)"
+                        ]
+                    ]
+                ]
+            }
+        ]
+    },
+    "Planaria": {
+        "Planaria": {
+            "Pharynx": "Planaria can evert its pharynx.",
+            "Behavior": {
+                "Gregarious": "Planaria live in groups.",
+                "Diet": "Omnivorous"
+            },
+            "Epidermis": {
+                "Rhabdites": "Presence of Rhabdites.",
+                "Type": "Syncytial epidermis"
+            },
+            "Genital Pore": "The genital pore lies posterior to the pharynx.",
+            "Regeneration": {
+                "Power": "Planaria have a remarkable power of regeneration.",
+                "Mechanism": {
+                    "Neoblasts": "Neoblasts from mesoderm help in regeneration.",
+                    "Processes": [
+                        "Epimorphosis",
+                        "Morphollaxis"
+                    ],
+                    "Lateral Polarity": "Planaria has lateral polarity. If the head is cut longitudinally into 2 or several parts along the middle line, each part grows into a complete head, forming a several-headed Planaria. This is heteromorphosis.",
+                    "Grafting": "Pieces of one Planaria can also be grafted into another."
+                }
+            },
+            "Reproduction": {
+                "Sexual": {
+                    "Hermaphroditism": "Planaria are hermaphrodite.",
+                    "Eggs": "Eggs are ectolecithal (i.e., yolk is deposited outside).",
+                    "Fertilization": "Internal",
+                    "Cleavage": "Spiral"
+                },
+                "Asexual": "Binary fission"
+            }
+        }
+    },
+    "Liver fluke": {
+        "Fasciola hepatica": {
+            "Residence": "Bile passages in the liver of sheep",
+            "Epidermis": {
+                "Type": "Syncytial"
+            },
+            "Excretory System": {
+                "Excretory Organ": "Flame cells (Solenocytes)",
+                "Connection": "Flame cells are connected to excretory canals by their canaliculi.",
+                "Excretory Products": [
+                    "CO2",
+                    "NH3",
+                    "Fatty acids"
+                ],
+                "Excretory Pore": "Opens at the extreme posterior end of the body."
+            },
+            "Reproduction": {
+                "Type": "Bisexual (Hermaphrodite)",
+                "Complexity": "Reproductive systems are extremely well-developed and quite complex.",
+                "Copulation": "Mid-dorsal part contains a minute pore for copulation.",
+                "__table": [
+                    {
+                        "data": [
+                            [
+                                "Male Reproductive Organs",
+                                "Female Reproductive Organs"
+                            ],
+                            [
+                                {
+                                    "1 pair of testes": [
+                                        "Highly branched",
+                                        "Tandem in position (i.e., lying one behind the other)"
+                                    ]
+                                },
+                                {
+                                    "Single ovary": [
+                                        "Situated in right half of body"
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "Cirrus (Muscular penis)": "Act as Male copulatory organ"
+                                },
+                                {
+                                    "Laurer’s canal": "Act as Temporary vagina (Appears only during Breeding season)"
+                                }
+                            ],
+                            [
+                                "",
+                                {
+                                    "Genital pore/ Gonopore": "(Located between the two suckers)"
+                                }
+                            ],
+                            [
+                                "",
+                                {
+                                    "Vitelline glands": [
+                                        "(i) Produces Yolk",
+                                        "(ii) Provides nutrition to eggs"
+                                    ],
+                                    "Mehlis gland/ Shell gland": [
+                                        "(i) Makes egg hard",
+                                        "(ii) Provides lubrication of egg for passage"
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "Life Cycle": {
+                "Type": "Digenetic",
+                "Primary Host": {
+                    "Host": "Sheep",
+                    "Disease": "Liver rot",
+                    "Related Disease": "Fasciolopsis is caused by Fasciola busci.",
+                    "Treatment": "Fasciola infection can be treated with the veterinary Fasciolide triclabendazole."
+                },
+                "Secondary Host": {
+                    "Host": "Snail",
+                    "Impact": "Fasciola is harmless to snails but is pathogenic in vertebrate hosts, including man (rarely)."
+                },
+                "Larval Stages": [
+                    "Sporocyst gives rise to Redia",
+                    "Redia to Cercaria",
+                    "Cercaria is transformed into Metacercaria"
+                ],
+                "Phenomenon": "This phenomenon is Polyembryony.",
+                "Alternation": [
+                    "Fasciola exhibits both alternation of generation and alternation of host."
+                ],
+                "Water Dependency": "Fasciola cannot complete its lifecycle in the absence of water due to the lack of snails."
+            }
+        }
+    },
+    "Blood fluke": {
+        "Schistosoma": {
+            "Species Infecting Humans": [
+                "Schistosoma haematobium",
+                "Schistosoma mansoni",
+                "Schistosoma japonicum"
+            ],
+            "Old Name": "Bilharzia",
+            "Discovery": {
+                "Discoverer": "Theodor Bilhartz (German parasitologist)",
+                "Significance": "Discovered S. haematobium responsible for urinary schistosomiasis.",
+                "Impact": "Schistosoma haematobium causes kidney damage."
+            },
+            "Location in Human Body": [
+                "Small branches of urinary bladder",
+                "Urinary tract",
+                "Mesenteric veins",
+                "Portal veins",
+                "Lymph nodes"
+            ],
+            "Reproduction": {
+                "Type": "Dioecious with well-defined sexual dimorphism",
+                "Male Characteristics": "Smaller and thicker",
+                "Female Characteristics": "Longer, slender, and cylindrical",
+                "Unique Feature": "Female is lodged in the Gynaecophoral canal of male."
+            },
+            "Life Cycle": {
+                "Type": "Digenetic",
+                "Primary Host": "Man",
+                "Secondary Host": "Balinus or other snails",
+                "Egg Development": "The eggs pass out from man with urine or faeces and hatch when they come in contact with water."
+            },
+            "Disease": {
+                "Name": "Schistosomiasis or Bilharziasis",
+                "Infection Method": "Caused by either penetration of Cercaria through the skin or by contaminated water.",
+                "Severe Condition": "Blood flukes sometimes produce a severe cercarial dermatitis called 'Swimmer's itch'."
+            },
+            "Symptoms": [
+                "Skin rash",
+                "Bronchial cough",
+                "Anaemia",
+                "Haematuria",
+                "Bloody stool"
+            ],
+            "Treatment": "Praziquantel"
+        }
+    },
+    "Tapeworm": {
+        "Tapeworm": {
+            "Body Structure": {
+                "Shape": "Elongated ribbon or tape-like segmented body (pseudometamerism)",
+                "Parts": [
+                    {
+                        "Part": "Head (Scolex)",
+                        "Features": [
+                            "Apical part of Scolex is Rostellum",
+                            "Rostellum bears two circles of chitinous hooks (28-32)",
+                            "Four suckers or Acetabula",
+                            "Suckers and hooks are for attachment with the host body"
+                        ]
+                    },
+                    {
+                        "Part": "Neck",
+                        "Features": [
+                            "Unsegmented part",
+                            "New segments are formed in this region (Budding zone or Proliferation zone)",
+                            "Narrowest part of the body"
+                        ]
+                    },
+                    {
+                        "Part": "Strobila",
+                        "Features": [
+                            "Main body made of 800-1000 similar rectangular segments called Proglottids",
+                            "Youngest segments lie near the neck, oldest lie at the rear end",
+                            "Three types of proglottids: Young (Male organs), Mature (Male and Female organs), Gravid (Branched uterus with fertilized eggs)",
+                            "Gravid proglottids detach one by one and pass out with host faeces (Apolysis)"
+                        ]
+                    }
+                ],
+                "Body Walls": {
+                    "Lacks": "Cellular epidermis",
+                    "Consists of": [
+                        "Cuticle (Parasitic adaptation)",
+                        "Musculature",
+                        "Parenchyma (Mesodermal tissue)",
+                        {
+                            "Outer Layer": "Cortical parenchyma with Lime secreting gland cells",
+                            "Inner Layer": "Medullary parenchyma with internal organs"
+                        }
+                    ],
+                    "Body Cavity": "Absent (Acoelomate)"
+                }
+            },
+            "Nutrition": {
+                "Type": "Osmotrophy",
+                "Details": [
+                    "No digestive system",
+                    "Depends on predigested food absorbed from host's gut through the cuticle",
+                    "Cuticle protects from host's digestive enzymes"
+                ]
+            },
+            "Respiration": {
+                "Type": "Anaerobic"
+            },
+            "Excretion": {
+                "System": "Longitudinal and cross-connecting excretory canals",
+                "Products": [
+                    "Ammonia",
+                    "Fatty acids"
+                ],
+                "Excretory Organs": "Flame cells"
+            },
+            "Reproduction": {
+                "Type": "Hermaphrodite",
+                "Details": [
+                    "A complete reproductive system occurs in each mature proglottid",
+                    "Fertilization can occur within the same proglottid or between proglottids of the same strobila",
+                    "Larval stages: Oncosphere, Hexacanth (with six hooks), Cysticercus (Bladder-worm)"
+                ]
+            },
+            "Life Cycle": [
+                "Each fertilized egg develops into Oncosphere larva within the proglottid",
+                "Oncospheres pass out through host faeces",
+                "Secondary host (Pig) ingests oncospheres",
+                "Hexacanth is released in pig's stomach, travels through blood, and encysts in muscles as Bladderworm (Cysticercus)",
+                "Humans get infected by eating raw or poorly cooked 'Measly pork' (infected pork)",
+                "Cysticercus in pig muscles can remain viable for several years",
+                "Cysticercus develops into an adult tapeworm in human intestine"
+            ]
+        },
+        "Taenia saginata": {
+            "Common Name": "Beef tapeworm",
+            "Host Details": [
+                "Primary host: Man",
+                "Secondary host: Cattle"
+            ],
+            "Differences": [
+                "Called 'Unarmed tapeworm' because the scolex does not possess hooks",
+                "More prevalent and longer than Taenia solium"
+            ],
+            "Diseases": [
+                {
+                    "Name": "Taeniasis",
+                    "Symptoms": [
+                        "Abdominal pain",
+                        "Nausea",
+                        "Anaemia",
+                        "Loss of appetite",
+                        "Indigestion",
+                        "Eosinophilia",
+                        "Nervous disorders"
+                    ],
+                    "Treatment": [
+                        "Yomesan",
+                        "Camoquin",
+                        "Antiphen"
+                    ]
+                },
+                {
+                    "Name": "Cysticercosis",
+                    "Details": [
+                        "Caused by bladderworm (Cysticercus)",
+                        "More dangerous than taeniasis",
+                        "Encystment occurs in organs such as cardiac muscle, liver, eyes, and brain"
+                    ]
+                }
+            ]
+        },
+        "__table": [
+            {
+                "data": [
+                    [
+                        "S.N.",
+                        "Taenia solium (Pork tapeworm)",
+                        "Taenia saginata (Beef tapeworm)",
+                        "Echinococcus granulosa (Dog tapeworm/ Hydatid worm)",
+                        "Diphylobothrium latum (Fish tapeworm)",
+                        "Hymenolepsis nana (Dwarf tapeworm)"
+                    ],
+                    [
+                        "Unique",
+                        "",
+                        "Longest tapeworm in human",
+                        "",
+                        "Shortest tapeworm in human"
+                    ],
+                    [
+                        "1. Residence of Adult tapeworm",
+                        "Small intestine of human",
+                        "Small intestine of human",
+                        "Small intestine of dog, wolf, jackal, hyena, fox",
+                        ""
+                    ],
+                    [
+                        "2. Residence of Larva",
+                        "Muscles of Pig/ Brain or Eye muscles of human",
+                        "Muscles of cow or buffalo",
+                        "Liver/ Lungs/ Muscles of sheep/ human",
+                        ""
+                    ],
+                    [
+                        "3. Primary host/ Definite host",
+                        "Human",
+                        "Human",
+                        "Canine animals like dog, wolf, jackal, etc.",
+                        "• Trigenetic",
+                        "Human"
+                    ],
+                    [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "A) Human"
+                    ],
+                    [
+                        "4. Secondary host",
+                        "Pig",
+                        "Cow/ Buffalo",
+                        "Sheep/ Human/ Cattle",
+                        "B) Fish",
+                        "The life cycle is simple without any intermediate host but flour beetles and fleas may serve as the intermediate host."
+                    ],
+                    [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "C) Cyclops"
+                    ],
+                    [
+                        "6. Size",
+                        "2-3 meter",
+                        "5-8 meter",
+                        "4-6 millimeter",
+                        ""
+                    ],
+                    [
+                        "5. Human acts as",
+                        "Definitive + Intermediate host",
+                        "Definite host",
+                        "Intermediate host",
+                        ""
+                    ],
+                    [
+                        "7. Scolex",
+                        "- Presence of Rostellum with hooks + hooklets",
+                        "- Absent",
+                        "- Absent",
+                        ""
+                    ],
+                    [
+                        "",
+                        "- Suckers present",
+                        "- Present",
+                        "- Present",
+                        ""
+                    ],
+                    [
+                        "8. No. of proglottids",
+                        "900-1000",
+                        "1800-2000",
+                        "3 or 4",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        "",
+                        "- Immature = 1",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        "",
+                        "- Mature = 1",
+                        ""
+                    ],
+                    [
+                        "",
+                        "",
+                        "",
+                        "- Gravid = 1 or 2",
+                        ""
+                    ],
+                    [
+                        "9. Mode of Transmission",
+                        "- By measly meat of pig;",
+                        "By meat of cow/ buffalo",
+                        "- By contaminated food/ water;",
+                        ""
+                    ],
+                    [
+                        "",
+                        "- By contaminated water/ food (Cystericercosis)",
+                        "",
+                        "- By direct contact with infected dogs",
+                        ""
+                    ],
+                    [
+                        "10. Infective stage",
+                        "Cystercercus cellulosae",
+                        "Cystercercus bovis",
+                        "Hydatid cyst (Hexacanth larva)",
+                        ""
+                    ],
+                    [
+                        "11. Diseases",
+                        "- Adult = Taeniasis",
+                        "- Adult = Taeniasis",
+                        "- Adult = ………",
+                        ""
+                    ],
+                    [
+                        "",
+                        "- Larva = Cystercercosis",
+                        "- Larva = ……",
+                        "- Larva = Hydatid disease/ Echinococcosis",
+                        ""
+                    ],
+                    [
+                        "12. Eggs",
+                        "Are infective",
+                        "Not infective",
+                        "Are infective",
+                        ""
+                    ],
+                    [
+                        "13. Susceptibility",
+                        "Both vegetarians and Non-vegetarians are affected",
+                        "Only non-vegetarians are affected",
+                        "All (Including those in contact with dogs are affected",
+                        ""
+                    ]
+                ]
+            }
+        ]
+    }
+}

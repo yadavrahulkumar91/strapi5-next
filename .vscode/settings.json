@@ -2,5 +2,7 @@
     "editor.wordWrapColumn": 300,
     "editor.wordWrap": "wordWrapColumn",
     "compile-hero.disable-compile-files-on-did-save-code": true,
-    "livePreview.defaultPreviewPath": "/out/index.html"
+    "livePreview.defaultPreviewPath": "/out/index.html",
+    "files.autoSave": "off",
+    "editor.formatOnSave": true
 }

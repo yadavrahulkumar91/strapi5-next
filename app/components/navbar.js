@@ -8,7 +8,7 @@ export default function Page () {
       url: '/homeTuitionTutor'
     },
     {
-      name: 'Notes',
+      name: 'Courses',
       url: '/notes'
     },
     {
@@ -24,7 +24,7 @@ export default function Page () {
   return (
     <nav className='flex gap-2'>
       {links.map((link, i) => {
-        return <Link key={i} className='text-[16px] leading-[16px] backdrop-blur-sm font-bold text-[#785700] hover:underline rounded-full' href={link.url}>{link.name}</Link>
+        return <Link key={i} className='text-lg font-bold text-[#785700] hover:underline rounded-full' href={link.url}>{link.name}</Link>
       })}
 
 

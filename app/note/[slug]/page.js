@@ -26,10 +26,10 @@ export default async function Page ({ params }) {
 
 
   const {
-    data: { data: axiosData }
+    data: { data: axiosData },
   } = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks/${slug}?populate=unit.Lesson.MCQ,unit.Lesson.Question_answer.Asked_year,unit.Lesson.Question_answer.Marks`
-  )
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks/${slug}?populate=unit.Lesson.MCQ.Asked_year,unit.Lesson.Question_answer.Asked_year,unit.Lesson.Question_answer.Marks`
+  );
 
   if (!axiosData) {
     return <div>Loading...</div>

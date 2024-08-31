@@ -90,16 +90,16 @@ export default function RootLayout({ children }) {
           />
         </head>
         <body
-          style={{ display: "grid", gridTemplateRows: "auto auto" }}
+          style={{ display: "grid", gridTemplateRows: "40px auto" }}
           className={`${inter.className} h-screen w-screen`}
         >
           <Header/>
           <div
             // style={{ display: "grid", gridTemplateColumns: "auto auto" }}
-            className="overflow-scroll"
+            className="overflow-scroll hiddenScrollbar h-full"
           >
             {/* <Sidebar /> */}
-            <main className="">{children}</main>
+            <>{children}</>
           </div>
           {/* <Footer /> */}
         </body>

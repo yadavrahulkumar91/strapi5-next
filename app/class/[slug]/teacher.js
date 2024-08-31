@@ -4,25 +4,26 @@ import Link from 'next/link';
 export default async function page ({ books })  {
 
     return (
-        <div className='border border-black border-solid flex flex-wrap rounded-md'>
-            <h1>Teachers</h1>
-            {books.map((book, index) => (
-                <Link key={book.id} href={`/teacher/${book.id}`}>
-                    <div key={book.id} className='border border-black border-dashed m-1 rounded-md'>
-                        <h2>{book.attributes.Teacher_name}</h2>
-                        {book.attributes.Profile_picture?.data?.attributes?.url && (
-                            <img
-                                key={book.id}
-                                src={book.attributes.Profile_picture.data.attributes.url}
-                                alt={`Cover for ${book.attributes.Book_Name}`}
-                                style={{ width: '50px', height: 'auto' }}
-                                className='rounded-md'
-                            />
-                        )}
-                    </div>
-                </Link>
-            ))}
-        </div>
+      <div className="flex flex-wrap ml-2 ">
+        {books.map((book, index) => (
+          <Link key={book.id} href={`/teacher/${book.id}`}>
+            <div key={book.id} className="m-1 w-[200px]">
+              {book.attributes.Profile_picture?.data?.attributes?.url && (
+                <img
+                  key={book.id}
+                  src={book.attributes.Profile_picture.data.attributes.url}
+                  alt={`Cover for ${book.attributes.Book_Name}`}
+                  style={{ width: "150px", height: "150px" }}
+                  className="m-auto rounded-full"
+                />
+              )}
+              <h2 className="text-center text-lg text-[#587c1f]">
+                {book.attributes.Teacher_name}
+              </h2>
+            </div>
+          </Link>
+        ))}
+      </div>
     );
 };
 

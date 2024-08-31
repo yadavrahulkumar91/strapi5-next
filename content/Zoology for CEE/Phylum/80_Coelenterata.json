@@ -1,0 +1,235 @@
+{
+  "General Characters": {
+    "Habitat": "Aquatic, mostly marine except few freshwater forms like <i>Hydra</i>",
+    "Habit": "Sessile or free swimming, Solitary or Colonial",
+    "Grade of Organization": "Tissue grade of organization",
+    "Symmetry": "Radial symmetry except <i>Sea anemone</i> which is Biradial symmetrical.",
+    "Germ layers": "Diploblastic",
+    "Body plan": "Blind sac body plan",
+    "Body wall": {
+      "__p": "Consists of 2 cellular layers surrounding the Mesogloea",
+      "Epidermis (Outer epithelium)": "",
+      "Gastrodermis (Inner epithelium)": [
+        "Lines the gastrovascular cavity"
+      ],
+      "Mesogloea": [
+        "Extracellular gelatinous layer.",
+        "Ranges from a thin, noncellular basal lamina to thick, fibrous, jelly-like, connective tissue with or without mesenchymal cells."
+      ]
+    },
+    "Gastrovascular cavity/ Coelenteron": [
+      "This cavity serves as gut (for digestion of food) and as circulatory system (for circulation of digested body).",
+      "Opens to outside at one end of body to form a mouth.",
+      "Mouth serves both in ingestion and egestion.",
+      "Anus is absent."
+    ]
+  },
+  "Polymorphism": {
+    "__p": "The occurrence of structurally and functionally different types of individuals, called <b>zooids</b>, within the same organism during its life history is called Polymorphism.",
+    "9 types": {
+      "Trophozooid/ Gastrozooid": "Feeding ",
+      "Gonophore": "Sessile medusae",
+      "Gonozooid": "Gonophore production",
+      "Dactylozooid": "Protection, food caption",
+      "Tentaculozooid": "Same as dactylozooid",
+      "Nematophore": "Food capture",
+      "Pneumatophore": "Float",
+      "Nectophore": "Swimming",
+      "Phyllozooid": "Protective cover"
+    }
+  },
+  "Nematocyst": {
+    "Cnidocyte/ Cnidoblast": "It is cell of cnidarians containing cnide.",
+    "Cnide": [
+      "Cnide are cellular organelles of cnidocyte.",
+      "It is capable of eversion from cnidocyte.",
+      "It is of 3 types of which one type is Nematocyst."
+    ]
+  },
+  "Nutrition": [
+    "Cnidarians are carnivorous.",
+    "Digestion is extracellular and intracellular."
+  ],
+  "Skeleton": [
+    "Either calvareous or horny",
+    "External (Exoskeleton) or Internal (Endoskeleton)"
+  ],
+  "Locomotion": "Brought about by smooth muscle fibres.",
+  "Respiratory, Circulatory and Excretory systems are absent.": "",
+  "Nervous system": [
+    "Nervous system is a collection of multipolar and bipolar nerve cells forming an irregular net or plexus."
+  ],
+  "Reproduction": {
+    "Asexual methods": [
+      "Budding",
+      "Strobilation"
+    ],
+    "Sexual methods": [
+      "Indirect development by formation of <b>Planula</b> larva."
+    ]
+  },
+  "Metagenesis/ Alternation of generation": {
+    "__p": "Alternation of polypoid and medusoid generation occurs.",
+    "__table": [
+      {
+        "data": [
+          [
+            "Polypoid generation",
+            "Medusoid generation"
+          ],
+          [
+            "Asexual generation",
+            "Sexual generation"
+          ],
+          [
+            "No gonads is formed.",
+            "Gonads are present."
+          ],
+          [
+            "Sessile",
+            "Free swimming"
+          ],
+          [
+            "Body is cylindrical with a long stalk.",
+            "Body is umbrella, cup shaped with reduced stalk."
+          ],
+          [
+            "Mesogloea is thin.",
+            "Mesogloea is thick."
+          ],
+          [
+            "Mouth is located in Hypostome.",
+            "Mouth is located in Manubrium."
+          ],
+          [
+            "Diploid",
+            "Diploid"
+          ]
+        ]
+      }
+    ]
+  },
+  "Classification": {
+    "__table": [
+      {
+        "data": [
+          [
+            "Characters",
+            "Hydrozoa (Water)",
+            "Scyphozoa (Cup shaped Medusa)",
+            "Anthozoa (Flower shaped)"
+          ],
+          [
+            "Habitat",
+            "Few fresh water and most are marine",
+            "Marine",
+            "Marine"
+          ],
+          [
+            "Zooids",
+            "Both Polyp and Medusa. In Hydra only Polyp. In Obelia both Polyp and Medusa are present (So Metagenesis)",
+            "Medusa",
+            "Polyp"
+          ],
+          [
+            "Mesogloea",
+            "Thin (Dominant) Without chamber",
+            "Thick Without chamber",
+            "Thin Chambered"
+          ],
+          [
+            "Metagenesis",
+            "Yes (Both Polyp and Medusa form of zooid present in their life cycle)",
+            "No",
+            "No"
+          ],
+          [
+            "Polymorphism",
+            "Yes. E.g.: Physalia (Portuguese man of war):",
+            "No",
+            ""
+          ],
+          [
+            "Examples",
+            [
+              "Hydra",
+              "Obelia (Sea fur)",
+              "Physalia (Portuguese man of war)",
+              "Velella (Little sail)",
+              "Porpita (Blue button)",
+              "Mililipora (Fire coral)",
+              "Bougainvilla (a plant also with same name)"
+            ],
+            [
+              "Aurelia (Jellyfish)"
+            ],
+            [
+              "Metridium (Sea anemone)",
+              "Adamsia (Sea anemone)",
+              "Alcyonium (Dead man's finger)",
+              "Gorgonia (Sea fan)",
+              "Pennatula (Sea pen/ Sea feather)",
+              "Fungia (Mushroom coral)",
+              "Heliopora (Blue coral)",
+              "Astraea (Star coral)",
+              "Madrepora (Horny coral)",
+              "Tubipora (Organ pipe coral)",
+              "Corallium (Precious Red coral/ Coral stone)",
+              "Meandrina (Brain coral)",
+              "Virgularia (Walking stick)",
+              "Charybdaea (Sea wasp)"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "Cells": {
+    "__table": [
+      {
+        "data": [
+          [
+            "Cell Type",
+            "Epidermis",
+            "Gastrodermis"
+          ],
+          [
+            "Epitheliomuscular cells",
+            "Present - Contractile cells that help in movement",
+            "Absent"
+          ],
+          [
+            "Interstitial cells",
+            "Present - Undifferentiated cells that can develop into other cell types",
+            "Absent"
+          ],
+          [
+            "Nerve cells",
+            "Present - Form nerve nets for simple sensory functions",
+            "Present - Similar nerve nets found, coordinating with epidermal nerve nets"
+          ],
+          [
+            "Cnidocytes",
+            "Present - Stinging cells used for defense and prey capture",
+            "Absent"
+          ],
+          [
+            "Gland cells",
+            "Absent",
+            "Present - Secrete digestive enzymes into the gastrovascular cavity"
+          ],
+          [
+            "Nutrient cells",
+            "Absent",
+            "Present - Absorb nutrients from digested food"
+          ],
+          [
+            "Mucous cells",
+            "Present - Secrete mucus to protect the body surface",
+            "Present - Secrete mucus for protection and aid in digestion"
+          ]
+        ]
+      }
+    ]
+  }
+}

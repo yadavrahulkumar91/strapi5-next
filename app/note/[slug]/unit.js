@@ -29,7 +29,7 @@ export default function Unit ({ units }) {
   }, [activeLesson])
 
   return (
-    <div className='box-border flex w-full'>
+    <div className='box-border flex w-full h-full'>
       <Sidebar units={units} setActiveLesson={setActiveLesson} />
 
       {/* <div style={{ display: 'flex', width: '90%' }}> */}
@@ -49,7 +49,7 @@ export default function Unit ({ units }) {
           {getElementConten`t(activeLesson - 1)}
         </span> */}
       </button>
-      <div className='w-full'>
+      {/* <div className='w-full h-full'> */}
       {units.map(unit => (
         
         <>
@@ -64,7 +64,7 @@ export default function Unit ({ units }) {
           </span>
         </>
       ))}
-      </div>
+      {/* </div> */}
       <button 
         className='text-xl p-0 border-2 w-5 right-0 fullscreen'
         onClick={() => setActiveLesson(activeLesson + 1)}

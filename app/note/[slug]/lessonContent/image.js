@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function image ({ value }) {
+export default function image({ value }) {
   return (
     // <div>
     //     {(value && Array.isArray(value) && value.length > 0) ? value.map((image, index) => (
@@ -16,7 +16,7 @@ export default function image ({ value }) {
             <figure
               key={index}
               // style={{ float: `${image.data.attributes.float ? image.data.attributes.float : null}`, marginRight: '10px' }}
-              className='border-2 inline m-2 float-end'
+              className="border-2 inline-block m-2 float-right"
             >
               <img
                 src={image.url}
@@ -26,8 +26,8 @@ export default function image ({ value }) {
                 alt={`Image ${index + 1}`}
               />
               {image.caption ? (
-                <figcaption className='text-center block m-auto'>
-                <span>  Fig. </span>
+                <figcaption className="text-center block m-auto">
+                  <span> Fig. </span>
                   <span
                     key={index}
                     dangerouslySetInnerHTML={{ __html: image.caption }}
@@ -35,8 +35,8 @@ export default function image ({ value }) {
                 </figcaption>
               ) : null}
               {image.credit ? (
-                <div className='text-center text-sm m-auto italic'>
-                 <span>Credit. </span> 
+                <div className="text-center text-sm m-auto italic">
+                  <span>Credit. </span>
                   <span
                     key={index}
                     dangerouslySetInnerHTML={{ __html: image.credit }}
@@ -47,5 +47,5 @@ export default function image ({ value }) {
           ))
         : null}
     </>
-  )
+  );
 }

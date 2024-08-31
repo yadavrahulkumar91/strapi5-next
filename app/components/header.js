@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <div id="header" className="fullscreen sticky px-2 ">
+      <div id="header" className="fullscreen sticky px-2 shadow-md">
         <div className="flex justify-between items-center">
           <Link className="flex" href="/">
             <div className="relative flex items-center">
@@ -69,7 +69,7 @@ const Header = () => {
           {/* Include your search bar component */}
         </div>
       </div>
-      <NavBar2 />
+      {/* <NavBar2 /> */}
     </>
   );
 }
