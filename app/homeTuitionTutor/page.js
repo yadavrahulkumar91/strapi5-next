@@ -16,10 +16,10 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div className='m-2'>
+    <div className="m-2">
       {axiosData.map(
         (Class) =>
-          Class.attributes.teachers.data.length >1 && (
+          Class.attributes.teachers.data.length > 0 && (
             <div key={Class.id} className="m-xl">
               <h1 className="text-2xl block text-[#a68d65]">
                 {Class.attributes.Class_name}

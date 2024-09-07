@@ -1,16 +1,16 @@
-// 'use client'
-import React from 'react'
+"use client";
+import React from "react";
 // import MathJax from 'react-mathjax'
-import Mermaid from './mermaid'
-import Image from './image'
-import Table from './table'
-import Html from './html'
-import Note from './note'
-import Bullet from './bullet'
-import OrgChart from './OrgChart'
-import MCQ from '../mcq'
-import QA from '../qa'
-import AROC from './aroc'
+import Mermaid from "./mermaid";
+import Image from "./image";
+import Table from "./table";
+import Html from "./html";
+import Note from "./note";
+import Bullet from "./bullet";
+import OrgChart from "./OrgChart";
+import MCQ from "../mcq";
+import QA from "../qa";
+import AROC from "./aroc";
 
 // let qaId = 0
 // let mcqId = 0
@@ -35,30 +35,33 @@ const LessonContent = ({ lessonContent }) => {
   //   document.head.appendChild(script)
   // })()
 
-
   //   }
   // }, [])
 
   return <div className="ml-[-30px] ">{renderAttributes(lessonContent)}</div>;
-}
+};
 
-export default LessonContent
+export default LessonContent;
 
-export const renderAttributes = (attributes, level = 0) => {
+export const renderAttributes = (attributes, level = 0, arrayLevel = 1) => {
   if (!attributes) {
-    return null
+    return null;
   }
 
   if (Array.isArray(attributes)) {
-    return <div>{renderArray(attributes, level)}</div>
-  } else if (typeof attributes === 'object') {
+    return (
+      <div className="ml-[30px]">
+        {renderArray(attributes, level, arrayLevel)}
+      </div>
+    );
+  } else if (typeof attributes === "object") {
     return Object.entries(attributes).map(([key, value]) => {
       return (
-        <div key={key} className='ml-[30px]'>
-          {renderObject(key, value, level)}
+        <div key={key} className="ml-[30px]">
+          {renderObject(key, value, level, arrayLevel)}
         </div>
-      )
-    })
+      );
+    });
   } else {
     return (
       <div
@@ -69,19 +72,53 @@ export const renderAttributes = (attributes, level = 0) => {
       </div>
     );
   }
+};
+
+// function renderArray(attributes, level) {
+//   return (
+//     <ol className=" max-w-[60%]">
+//       {attributes.map((value, i) => {
+//         if (typeof value === "object") {
+//           return renderAttributes(value, level + 1);
+//         } else {
+//           return (
+//             <li className="list-decimal list-outside text-xl ml-[20px]" key={i}>
+//               <span dangerouslySetInnerHTML={{ __html: value }} />
+//             </li>
+//           );
+//         }
+//       })}
+//     </ol>
+//   );
+// }
+
+function getListStyle(arrayLevel) {
+  switch (arrayLevel) {
+    case 1:
+      return { listStyleType: "decimal" }; // 1, 2, 3
+    case 2:
+      return { listStyleType: "upper-roman" }; // I, II, III
+    case 3:
+      return { listStyleType: "lower-alpha" }; // a, b, c
+    case 4:
+      return { listStyleType: "lower-roman" }; // i, ii, iii
+    default:
+      return { listStyleType: "disc" }; // fallback for deeper levels
+  }
 }
 
-function renderArray (attributes, level) {
+function renderArray(attributes, level, arrayLevel) {
   return (
-    <ol className="ml-9 max-w-[60%]">
+    <ol
+      style={{ ...getListStyle(arrayLevel), marginLeft: "20px" }}
+      className="max-w-[60%]"
+    >
       {attributes.map((value, i) => {
-        if (Array.isArray(value)) {
-          return renderArray(value);
-        } else if (typeof value === "object") {
-          return renderAttributes(value, level);
+        if (typeof value === "object") {
+          return renderAttributes(value, level + 1, arrayLevel + 1);
         } else {
           return (
-            <li className="list-decimal list-outside text-xl" key={i}>
+            <li key={i} className="text-xl">
               <span dangerouslySetInnerHTML={{ __html: value }} />
             </li>
           );
@@ -91,52 +128,54 @@ function renderArray (attributes, level) {
   );
 }
 
-function renderObject (key, value, level) {
+function renderObject(key, value, level, arrayLevel) {
   if (/^__image\d*$/.test(key)) {
-    return <Image value={value} />
+    return <Image value={value} />;
   } else if (/^__table\d*$/.test(key)) {
-    return <Table value={value} />
+    return <Table value={value} />;
   } else if (/^__mermaid\d*$/.test(key)) {
-    return <Mermaid value={value} />
-  } else if (key === 'google_chart') {
-    return <></>
-  } else if (/^__html\d*$/.test(key) || key === 'html') {
-    return <Html value={value} />
+    return <Mermaid value={value} />;
+  } else if (key === "google_chart") {
+    return <></>;
+  } else if (/^__html\d*$/.test(key) || key === "html") {
+    return <Html value={value} />;
   } else if (/^__note\d*$/.test(key)) {
-    return <Note value={value} />
+    return <Note value={value} />;
   } else if (/^__levelup\d*$/.test(key)) {
-    return renderAttributes(value, level=level+1);
+    return renderAttributes(value, (level = level + 1));
   } else if (/^__p\d*$/.test(key)) {
-    return <p className='text-xl ml-6'>{value}</p>
+    return <p className="text-xl ml-6">{value}</p>;
   } else if (/^__bullet\d*$/.test(key)) {
-    return <Bullet value={value} />
+    return <Bullet value={value} />;
   } else if (/^__org\d*$/.test(key)) {
-    return <OrgChart value={value} />
-  // } else if (/^__org\d*$/.test(key)) {
-  //   return <AROC value={value} />
+    return <OrgChart value={value} />;
+    // } else if (/^__org\d*$/.test(key)) {
+    //   return <AROC value={value} />
   } else if (/^__mcq\d*$/.test(key)) {
-    return <MCQ MCQ={value} />
+    return <MCQ MCQ={value} />;
   } else if (/^__qa\d*$/.test(key)) {
-    return <QA Question_answer={value} />
+    return <QA Question_answer={value} />;
   } else if (/^__gap\d*$/.test(key)) {
-    return <div style={{ height: value }} />
+    return <div style={{ height: value }} />;
   } else if (/^__right\d*$/.test(key)) {
     return (
       // <div className='h-8'>
-        <div className='relative left-[800px] w-[300px]'>{elseFunction('', value.data, level)}</div>
+      <div className="relative left-[800px] w-[300px]">
+        {elseFunction("", value.data, level)}
+      </div>
       // </div>
-    )
+    );
   } else {
-    return elseFunction(key, value, level)
+    return elseFunction(key, value, level, arrayLevel);
   }
 }
 
-function elseFunction (key, value, level) {
+function elseFunction(key, value, level, arrayLevel) {
   return (
     <div key={key} className="">
       {renderKey(key, level)}
       {typeof value === "object" ? (
-        renderAttributes(value, level + 1)
+        renderAttributes(value, level + 1, arrayLevel)
       ) : (
         <span
           className="max-w-[60%] inline-block"
@@ -149,41 +188,41 @@ function elseFunction (key, value, level) {
   );
 }
 
-function renderKey (key, level) {
+function renderKey(key, level) {
   return (
     <span
       style={{
         color: `hsl(330, 50%, ${level * 10}%)`,
-        backgroundColor: level === 0 ? 'lightgrey' : null,
+        backgroundColor: level === 0 ? "lightgrey" : null,
         fontWeight: `${800 - level * 100}`,
-        display: level === 0 ? 'block' : null
+        display: level === 0 ? "block" : null,
       }}
       className={`font-medium text-xl align-top`}
     >
       {formatBulletin(level)} {formatKey(key, level)}
     </span>
-  )
+  );
 }
 
-function formatBulletin (level) {
+function formatBulletin(level) {
   if (level === 0) {
-    return <span>▢ </span>
+    return <span>▢ </span>;
   } else if (level === 1) {
-    return <span>❖ </span>
+    return <span>❖ </span>;
   } else if (level === 2) {
-    return <span>⟣ </span>
+    return <span>⟣ </span>;
   } else {
-    return <span>⬦</span>
+    return <span>⬦</span>;
   }
 }
 
-function formatKey (key, level) {
-  let formattedKey = key
+function formatKey(key, level) {
+  let formattedKey = key;
   if (level === 0) {
-    formattedKey = formattedKey.toUpperCase()
+    formattedKey = formattedKey.toUpperCase();
   }
-  if (key === '') {
-    return null
+  if (key === "") {
+    return null;
   }
-  return <span dangerouslySetInnerHTML={{ __html: formattedKey + ': ' }} />
+  return <span dangerouslySetInnerHTML={{ __html: formattedKey + ": " }} />;
 }

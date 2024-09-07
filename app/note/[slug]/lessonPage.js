@@ -29,22 +29,22 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
     }
   }, []);
 
-  const [toggled, setToggled] = useState(true);
+  const [toggled, setToggled] = useState(false);
 
   useEffect(() => {
     const elements = document.querySelectorAll(".fullscreen");
 
     elements.forEach((element) => {
       if (toggled) {
-        element.style.display = "block";
-      } else {
         element.style.display = "none";
+      } else {
+        element.style.display = "block";
       }
     });
 
     return () => {
       elements.forEach((element) => {
-        element.style.display = "none"; // Cleanup or reset if needed
+        element.style.display = "block"; // Cleanup or reset if needed
       });
     };
   }, [toggled]);
@@ -89,7 +89,7 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
             }}
             id={`lesson-${lessonCounter + i}`}
           >
-            <div className="top-0 flex justify-between z-50 backdrop-blur-sm sticky bg-[grey]">
+            <div className="top-0 flex justify-between z-50 backdrop-blur-sm sticky bg-orange-300">
               <div>
                 <button
                   className=""

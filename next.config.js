@@ -1,17 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
-    images: { unoptimized: true },
-    trailingSlash: true,
+  output: "export",
+  images: { unoptimized: true },
+  trailingSlash: true,
 };
 
 // const withPWA = require('next-pwa')({
 //     dest: 'out',
-    // scope: '/out',
-    // cacheOnFrontEndNav: true,
-    // register: true,
-    // mode: 'production'
-    // other PWA options...
+// scope: '/out',
+// cacheOnFrontEndNav: true,
+// register: true,
+// mode: 'production'
+// other PWA options...
 // });
 
 // Combine both configurations
@@ -34,6 +34,4 @@ const nextConfig = {
 //     },
 // }
 
-module.exports=nextConfig
-
-
+module.exports = nextConfig;

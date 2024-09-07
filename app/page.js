@@ -1,33 +1,32 @@
+import React from "react";
 
-import React from 'react'
+import Link from "next/link";
+import Carousel from "./carousel";
 
-import Link from 'next/link'
-import Carousel from './carousel'
-
-export default function Home () {
-
-
+export default function Home() {
   return (
     <>
       <main className="bg-gray-100 h-full overflow-scroll">
         {/* Hero Section */}
-
 
         <section className="py-20">
           <div className="container mx-auto text-center">
             <h1 className="text-xl font-bold">
               Get ready crack MBBS Entrance Exam (MEC-CEE)
             </h1>
-            <p className="mt-4 text-lg">
-              Free, effective learning resources, top tutors, video lectures, enough past questions
-              tailored to crack the exam.
+            <p className="my-4 text-lg">
+              Free, effective learning resources, top tutors, video lectures,
+              enough past questions tailored to crack the exam.
             </p>
-            <Link href={'/class/19'} className="mt-8 font-semibold py-2 px-6 rounded-full border-2 border-solid border-black hover:grey">
+            <Link
+              href={"/class/19"}
+              className="font-semibold py-2 px-6 rounded-full border-2 border-solid border-black hover:grey"
+            >
               Start Learning Now
             </Link>
           </div>
-          <Carousel/>
         </section>
+        <Carousel />
 
         {/* About Us Section */}
         <section className="py-16">
@@ -86,7 +85,7 @@ export default function Home () {
         </section>
 
         {/* Call to Action Section */}
-   
+
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-6">
           <div className="container mx-auto text-center">

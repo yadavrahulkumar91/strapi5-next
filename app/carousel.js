@@ -16,27 +16,25 @@ const photos = [
   // },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/gamechanger-drive-91.appspot.com/o/mbbs_carousel%2FIMG_1598.JPG?alt=media&token=38e20710-cc31-4f7e-b7f6-aa0ac045c496",
-    legent: "",
+    legend: "Welcome program at Institute of Medicine (Dr. Milan Gaire)",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/gamechanger-drive-91.appspot.com/o/mbbs_carousel%2F_MG_9353.JPG?alt=media&token=f5579a09-c2ec-4248-968e-af9921188328",
-    legent: "",
+    legend: "Welcome program at Institute of Medicine (Dr. Aanand Singh)",
   },
 ];
 
 export default function Carousel1() {
   return (
-    <div className='w-1/2 m-auto'>
-    <Carousel
-    showThumbs={false}
-    >
-      {photos.map((photo, i) => (
-        <div key={i}>
-          <img src={photo.url} alt={photo.legend} />
-          <p className="legend">{photo.legend}</p>
-        </div>
-      ))}
-    </Carousel>
+    <div className="w-1/2 m-auto">
+      <Carousel showThumbs={false}>
+        {photos.map((photo, i) => (
+          <div key={i}>
+            <img src={photo.url} alt={photo.legend} />
+            <p className="legend">{photo.legend}</p>
+          </div>
+        ))}
+      </Carousel>
     </div>
   );
 }

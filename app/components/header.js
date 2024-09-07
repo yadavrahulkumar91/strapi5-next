@@ -1,30 +1,30 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import NavBar from './navbar'
-import NavBar2 from './navbar2'
-import Link from 'next/link'
-import { GoSidebarCollapse, GoSidebarExpand } from 'react-icons/go'
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import NavBar from "./navbar";
+import NavBar2 from "./navbar2";
+import Link from "next/link";
+import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 
 const Header = () => {
-  const [toggled, setToggled] = useState(false)
+  const [toggled, setToggled] = useState(false);
 
   useEffect(() => {
-    const element = document.getElementById('section')
+    const element = document.getElementById("section");
     if (element) {
       if (toggled) {
-        element.style.display = 'block'
+        element.style.display = "block";
       } else {
-        element.style.display = 'none'
+        element.style.display = "none";
       }
     }
 
     return () => {
       if (element) {
-      element.style.display = 'none' // Cleanup or reset if needed
+        element.style.display = "none"; // Cleanup or reset if needed
       }
-    }
-  }, [toggled])
+    };
+  }, [toggled]);
 
   // useEffect(() => {
   //   const element = document.getElementById('section')
@@ -36,7 +36,10 @@ const Header = () => {
 
   return (
     <>
-      <div id="header" className="fullscreen sticky px-2 shadow-md">
+      <div
+        id="header"
+        className="fullscreen sticky px-2 shadow-md w-full h-[40px]"
+      >
         <div className="flex justify-between items-center">
           <Link className="flex" href="/">
             <div className="relative flex items-center">
@@ -72,6 +75,6 @@ const Header = () => {
       {/* <NavBar2 /> */}
     </>
   );
-}
+};
 
-export default Header
+export default Header;
