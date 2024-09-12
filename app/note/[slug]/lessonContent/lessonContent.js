@@ -97,11 +97,11 @@ function getListStyle(arrayLevel) {
     case 1:
       return { listStyleType: "decimal" }; // 1, 2, 3
     case 2:
-      return { listStyleType: "upper-roman" }; // I, II, III
-    case 3:
       return { listStyleType: "lower-alpha" }; // a, b, c
-    case 4:
+    case 3:
       return { listStyleType: "lower-roman" }; // i, ii, iii
+    case 4:
+      return { listStyleType: "upper-roman" }; // I, II, III
     default:
       return { listStyleType: "disc" }; // fallback for deeper levels
   }
@@ -109,16 +109,13 @@ function getListStyle(arrayLevel) {
 
 function renderArray(attributes, level, arrayLevel) {
   return (
-    <ol
-      style={{ ...getListStyle(arrayLevel), marginLeft: "20px" }}
-      className="max-w-[60%]"
-    >
+    <ol style={{ ...getListStyle(arrayLevel) }} className="max-w-[60%]">
       {attributes.map((value, i) => {
         if (typeof value === "object") {
           return renderAttributes(value, level + 1, arrayLevel + 1);
         } else {
           return (
-            <li key={i} className="text-xl">
+            <li key={i} className="text-xl ml-[20px]">
               <span dangerouslySetInnerHTML={{ __html: value }} />
             </li>
           );
