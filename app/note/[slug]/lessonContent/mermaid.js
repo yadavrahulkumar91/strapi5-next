@@ -35,7 +35,12 @@ export default function MermaidCharts({ value }) {
     data,
     parent = null,
     nodeIndexRef = { index: 1 },
-    lastItemRefs = { lastItems: [], inNested: false },
+    lastItemRefs = {
+      lastItems: [],
+      inNested: false,
+      childLevel: 0,
+      parentLevel: 0,
+    },
     level = 0
   ) => {
     let chartLines = [];
@@ -43,6 +48,7 @@ export default function MermaidCharts({ value }) {
 
     data.forEach((item, index) => {
       if (Array.isArray(item)) {
+        lastItemRefs.childLevel++;
         // Recursively process the nested array, passing the current parent
         lastItemRefs.inNested = true;
         currentLevel = level + 1;
@@ -67,6 +73,8 @@ export default function MermaidCharts({ value }) {
         lastItemRefs.inNested = false; // Reset after processing nested array
       } else {
         let currentNode = nodeIndexRef.index++;
+        lastItemRefs.parentLevel++;
+        lastItemRefs.childLevel++;
 
         // If in a nested array, store the last item of the nested level
         if (lastItemRefs.inNested && index === data.length - 1) {

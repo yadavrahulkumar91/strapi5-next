@@ -42,65 +42,249 @@
             }
         ]
     },
-    "New chart": {
-        "__mermaid": [
-            {
-                "type": "graph TD",
-                "data": [
-                    "A",
-                    [
-                        "B"
-                    ],
-                    [
-                        "C"
-                    ],
-                    "D"
-                ]
-            }
+    "Formation and position of the Heart tube": {
+        "": [
+            "Initially, the central portion of the cardiogenic area is anterior to the oropharyngeal membrane and the neural plate.",
+            "Growth of CNS, Cephalic and lateral folding of the embryo.",
+            "Movement of Cardiogenic area first to cervical region and then to thorax.",
+            "Merging of the caudal regions of the paired cardiac tube except at the caudalmost which becomes right and left horn of sinus venosus."
         ]
     },
-    "Hi": {
-        "Thi": {
-            "Creat": "Cap"
-        }
-    },
-    "NewChart2": {
-        "__mermaid1": [
-            {
-                "type": "graph TD",
-                "data": [
-                    "A",
-                    "Nice",
-                    [
-                        "X",
+    "Lengthening of Cardiac tube": {
+        "": [
+            "Lengthening of Cardiac tube occurs by addition of cells from SHF to outflow tract region which forms the parts given above."
+        ],
+        "Clinical anatomy": {
+            "Inhibition of cardiac tube": [
+                "Double Outlet Right Ventricle (DORV) (Both the aorta and pulmonary artery arise from the right ventricle.",
+                "Ventricle Septal Defect (VSD)",
+                "Tetralogy of Fallot",
+                "Pulmonary atresia",
+                "Pulmonary stenosis"
+            ]
+        },
+        "Regulation of SHF": {
+            "__mermaid": [
+                {
+                    "type": "graph TD",
+                    "data": [
+                        "Regulated by <b>Neural crest cells</b>",
                         [
-                            "B",
-                            "I",
-                            "J"
+                            "Control concentration of FGGs in the area."
                         ],
                         [
-                            "Y"
+                            "Pass nearby the SHF in the pharyngeal arches.",
+                            "Septate the outflow tract."
                         ]
-                    ],
-                    [
-                        "C",
-                        "K"
-                    ],
-                    [
-                        "F"
-                    ],
-                    "End",
-                    [
-                        "D",
-                        "Good boy",
-                        "Helow"
-                    ],
-                    [
-                        "Complex"
-                    ],
-                    "Join"
+                    ]
+                }
+            ]
+        }
+    },
+    "Cardiac looping": {
+        "Bending of ventricular part (cephalic part)": [
+            "Ventrally",
+            "Caudally",
+            "Right"
+        ],
+        "Shifting of Atrial (caudal) portion": [
+            "Dorsocranial",
+            "Left"
+        ],
+        "Local expansions of Heart tube": {
+            "Bulbus cordis": {
+                "Truncus arteriosus": "Forms Aorta and Pulmonary trunk",
+                "Conus cordis": "Forms smooth part/ outflow tract of both right and left ventricles",
+                "Proximal 1/3 part": "Forms rough or trabeculated part of right ventricle."
+            },
+            "Primitive ventricle": "Forms rough or trabeculated part of left ventricle.",
+            "Primitive atria": "Forms rough or trabeculated part of right and left atria.",
+            "Sinus venosus": {
+                "Body of sinus venosus": "Forms smooth part of both right and left atria.",
+                "Horn of sinus venosus": {
+                    "Left horn": {
+                        "__p": "All these retrogresses and remnant forms part of coronary sinus.",
+                        "Common cardinal vein": {
+                            "__p": "Forms <b>Coronary sinus</b> and the <b>Oblique vein of left atrium</b>.",
+                            "Anterior Cardinal vein": "",
+                            "Posterior Cardinal vein": ""
+                        },
+                        "Umbilical vein": "Proximal part disappears, while distal part forms <b>Ductus venosus</b>",
+                        "Vitelline vein": "Regresses"
+                    },
+                    "Right horn": {
+                        "Common cardinal vein": {
+                            "__p": "Forms part of Superior venacava.",
+                            "Anterior Cardinal vein": "",
+                            "Posterior Cardinal vein": ""
+                        },
+                        "Umbilical vein": "Forms terminal part of Inferior venacava.",
+                        "Vitelline vein": "Regresses"
+                    }
+                }
+            }
+        },
+        "Shifting of Conotruncal portion of the heart tube": "Right side of pericardial cavity to left side.",
+        "Clinical anatomy": {
+            "Dextrocardia": [
+                "Dextrocardia is a condition where the heart lies on the right side of the thorax instead of the left.",
+                "It occurs when the heart loops to the left instead of the right.",
+                "The defect is induced during gastrulation, when laterality is established.",
+                {
+                    "Associated with": {
+                        "Situs inversus": "Complete reversal of asymmetry in all organs.",
+                        "Laterality sequences": "Only some organ positions are reversed."
+                    }
+                }
+            ]
+        }
+    },
+    "Development of the Sinus Venosus": [
+        "Left to Right shunting of blood",
+        [
+            "Development of azygous system",
+            "Obliteration of left cardinal veins and becoming the tributaries of right cardinal veins"
+        ],
+        "Shifting of sino-atrial orifice to the right",
+        [
+            "Rapid development of right sided septum of sinuatrial orifice"
+        ],
+        "Vertical placement of sino-atrial orifice",
+        "Development of valvular folds, the right and left venous valves",
+        "Dorsocranial fusion of valves to form Septum spurium.",
+        "Right sinus horn incorporated into the wall of the atrium",
+        "Fusion of left venous valve and the septum spurium with the developing atrial septum",
+        "Complete disappearance of superior portion of the right venous valves",
+        "Fate of inferior portion of right venous valves",
+        [
+            "Valves of coronary sinus",
+            "Valves of the inferior venacava"
+        ],
+        "<b>Crista terminalis</b> forms the dividing line between the original trabeculated part and smooth part of right atrium."
+    ],
+    "Fate of Endocardial cushion": {
+        "Atrioventricular endocardial cushion": [
+            "Atrio-ventricular parts",
+            [
+                "Atrio-ventricular septa",
+                "Atrioventricular canals",
+                "Atrioventricular valves"
+            ],
+            {
+                "Formation of septum intermedium": [
+                    "Developed by fusion of ventral and dorsal endocardial cushions.",
+                    "Divides the canal into righ and left A-V orifices"
+                ]
+            },
+            "Atrial septa",
+            "Membranous part of Ventricular septa",
+            {
+                "Abnormalities": "Atrial and Ventricular septal defect"
+            }
+        ],
+        "Conotruncal endocardial cushion": [
+            "Aortic channel",
+            "Pulmonary channel",
+            {
+                "Abnormalities": [
+                    "Transposition of the great vessels",
+                    "Common truncus arteriosus",
+                    "Tetralogy of Fallot"
                 ]
             }
         ]
+    },
+    "Atrial Chamber": {
+        "Inter-atrial septum development": {
+            "Septum primum": [
+                "The first portion of the septum primum is a sickle-shaped crest growing from the roof of the common atrium into the lumen.",
+                "The two limbs of this septum extend forward the endocardial cushions in the atrioventricular canal.",
+                {
+                    "Ostium primum": [
+                        "The opening between the lower rim of the septum primum and the endocardial cushions is the ostium primum.",
+                        "With further development, extensions of the superior and inferior endocardial cushions grow along the edge of the septum primum, closing the ostium primum."
+                    ],
+                    "Ostium secundum": [
+                        "Before closure of ostium primum, however, cell death produces perforations in the upper portion of the septum primum.",
+                        "Coalescence of these perforations forms the ostium secundum, ensurign free blood flow from the right to the left primitive atrium."
+                    ]
+                }
+            ],
+            "Septum secundum": [
+                "Later, a new crescent-shaped fold appears from the roof known as Septum secundum.",
+                "Its anterior limb extends downward to the septum in the atrioventricular canal.",
+                "The free concave edge of the septum secundum begins to overlap the ostium secundum.",
+                {
+                    "Foramen ovale": [
+                        "The opening left by the septum secundum is called the Foramen ovale.",
+                        "When the upper part of the septum primum gradually disappears, the remaining part becomes the valve of the foramen ovale."
+                    ]
+                }
+            ],
+            "Changes after birth": [
+                {
+                    "Closing of the foramen ovale": "After birth, when lung circulation begins and pressure in the left atrium increases, the valve of the foramen ovale is pressed against the septum secundum, obliterating the foramen ovale and separating the right and left atria.",
+                    "Probe patency": "In about 20% of cases, fusion of the septum primum and septum secundum is incomplete, and a narrow oblique cleft remains between the two atria known as <b>Probe patency</b>."
+                }
+            ]
+        },
+        "Right atrium development": {
+            "Smooth part": "Develops from sinus venosus",
+            "Rough part": "Develops from primitive atrium"
+        },
+        "Left atirum development": {
+            "Smooth part": "Develops from sinus venosus",
+            "Rough part": "Develops from primitive atrium"
+        }
+    },
+    "Ventricular Chamber": {
+        "Inter-ventricular septum development": {
+            "Muscular part": {},
+            "Bulbar part": {},
+            "Membranous part": {
+                "": "Fills the gap of interventricular foramen",
+                "Derived from": {
+                    "AV cardiac cushion": {
+                        "Anterior portion": "Separates right and left ventricles",
+                        "Posterior portion": "Separates right atrium and left ventricles"
+                    },
+                    "Right and left bulbar ridge": ""
+                }
+            },
+            "": "Inter-atrial and inter-ventricular septum doesn't lie in same plane.",
+            "Clinical anatomy": {
+                "Ventricular Septal Defects": {
+                    "Muscular VSDs": [
+                        "Less serious form.",
+                        "Resolves as the child grows."
+                    ],
+                    "Membranous VSDs": [
+                        "More serious form.",
+                        "Often associated with abnormalities in partitioning of the conotruncal region.",
+                        "Depending on the size of the opening, blood carried by the pulmonary artery may be 1.2 to 1.7 times as abundant as that carried by the aorta."
+                    ]
+                },
+                "Tetralogy of Fallot": {
+                    "__p": [
+                        "Tetralogy of fallot is the unequal division of the conus resulting from anterior displacement of the conotruncal septum.",
+                        "It is the most common abnormality of the conotruncal region."
+                    ],
+                    "Cardiovascular alterations produced by it": [
+                        "D --> Ventricular Septal Defect",
+                        "R --> Right Ventricular Hypertrophy",
+                        "O --> Overriding Aorta",
+                        "P --> Pulmonary stenosis"
+                    ]
+                }
+            }
+        },
+        "Right ventricular development": {
+            "Smooth part": "Develops from conus cordis",
+            "Rough part": "Develops from proximal 1/3 part of bulbous cordis"
+        },
+        "Left ventricular development": {
+            "Smooth part": "Develops from conus cordis",
+            "Rough part": "Develops from primitive ventricle"
+        }
     }
 }

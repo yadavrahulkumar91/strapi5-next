@@ -141,7 +141,11 @@ function renderObject(key, value, level, arrayLevel) {
   } else if (/^__levelup\d*$/.test(key)) {
     return renderAttributes(value, (level = level + 1));
   } else if (/^__p\d*$/.test(key)) {
-    return <p className="text-xl ml-6">{value}</p>;
+    return renderAttributes(value, level, arrayLevel);
+    // } else if (/^__p\d*$/.test(key)) {
+    //   return (
+    //     <p className="text-[20px]" dangerouslySetInnerHTML={{ __html: value }} />
+    //   );
   } else if (/^__bullet\d*$/.test(key)) {
     return <Bullet value={value} />;
   } else if (/^__org\d*$/.test(key)) {
@@ -191,7 +195,7 @@ function renderKey(key, level) {
       style={{
         color: `hsl(330, 50%, ${level * 10}%)`,
         backgroundColor: level === 0 ? "lightgrey" : null,
-        fontWeight: `${800 - level * 100}`,
+        fontWeight: `${800 - Math.min(level, 4) * 100}`, // Caps the level at 4
         display: level === 0 ? "block" : null,
       }}
       className={`font-medium text-xl align-top`}
@@ -202,15 +206,9 @@ function renderKey(key, level) {
 }
 
 function formatBulletin(level) {
-  if (level === 0) {
-    return <span>▢ </span>;
-  } else if (level === 1) {
-    return <span>❖ </span>;
-  } else if (level === 2) {
-    return <span>⟣ </span>;
-  } else {
-    return <span>⬦</span>;
-  }
+  const bulletChars = ["▢", "❖", "◉", "◈", "■", "●", "⟣", "➢", "⬦", "○"]; // Define bullet characters array
+  const bullet = bulletChars[Math.min(level, bulletChars.length - 1)]; // Pick character or fallback to last one
+  return <span>{bullet} </span>;
 }
 
 function formatKey(key, level) {
