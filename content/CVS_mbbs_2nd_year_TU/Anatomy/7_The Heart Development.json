@@ -42,27 +42,30 @@
             }
         ]
     },
-    "Formation and position of the Heart tube": {
-        "": [
-            "Initially, the central portion of the cardiogenic area is anterior to the oropharyngeal membrane and the neural plate.",
-            "Growth of CNS, Cephalic and lateral folding of the embryo.",
-            "Movement of Cardiogenic area first to cervical region and then to thorax.",
-            "Merging of the caudal regions of the paired cardiac tube except at the caudalmost which becomes right and left horn of sinus venosus."
-        ]
-    },
+    "Formation and position of the Heart tube": [
+        "Initially, the central portion of the cardiogenic area is anterior to the oropharyngeal membrane and the neural plate.",
+        "Growth of CNS, Cephalic and lateral folding of the embryo.",
+        "Movement of Cardiogenic area first to cervical region and then to thorax.",
+        "Merging of the caudal regions of the paired cardiac tube except at the caudalmost which becomes right and left horn of sinus venosus."
+    ],
     "Lengthening of Cardiac tube": {
-        "": [
+        "__p": [
             "Lengthening of Cardiac tube occurs by addition of cells from SHF to outflow tract region which forms the parts given above."
         ],
-        "Clinical anatomy": {
-            "Inhibition of cardiac tube": [
-                "Double Outlet Right Ventricle (DORV) (Both the aorta and pulmonary artery arise from the right ventricle.",
-                "Ventricle Septal Defect (VSD)",
-                "Tetralogy of Fallot",
-                "Pulmonary atresia",
-                "Pulmonary stenosis"
-            ]
-        },
+        "__note": [
+            {
+                "title": "Clinical Correlates",
+                "data": {
+                    "Inhibition of cardiac tube": [
+                        "Double Outlet Right Ventricle (DORV) (Both the aorta and pulmonary artery arise from the right ventricle.",
+                        "Ventricle Septal Defect (VSD)",
+                        "Tetralogy of Fallot",
+                        "Pulmonary atresia",
+                        "Pulmonary stenosis"
+                    ]
+                }
+            }
+        ],
         "Regulation of SHF": {
             "__mermaid": [
                 {
@@ -125,19 +128,24 @@
             }
         },
         "Shifting of Conotruncal portion of the heart tube": "Right side of pericardial cavity to left side.",
-        "Clinical anatomy": {
-            "Dextrocardia": [
-                "Dextrocardia is a condition where the heart lies on the right side of the thorax instead of the left.",
-                "It occurs when the heart loops to the left instead of the right.",
-                "The defect is induced during gastrulation, when laterality is established.",
-                {
-                    "Associated with": {
-                        "Situs inversus": "Complete reversal of asymmetry in all organs.",
-                        "Laterality sequences": "Only some organ positions are reversed."
-                    }
+        "__note": [
+            {
+                "title": "Clinical Correlates",
+                "data": {
+                    "Dextrocardia": [
+                        "Dextrocardia is a condition where the heart lies on the right side of the thorax instead of the left.",
+                        "It occurs when the heart loops to the left instead of the right.",
+                        "The defect is induced during gastrulation, when laterality is established.",
+                        {
+                            "Associated with": {
+                                "Situs inversus": "Complete reversal of asymmetry in all organs.",
+                                "Laterality sequences": "Only some organ positions are reversed."
+                            }
+                        }
+                    ]
                 }
-            ]
-        }
+            }
+        ]
     },
     "Development of the Sinus Venosus": [
         "Left to Right shunting of blood",
@@ -239,8 +247,19 @@
     },
     "Ventricular Chamber": {
         "Inter-ventricular septum development": {
-            "Muscular part": {},
-            "Bulbar part": {},
+            "Muscular part": [
+                "First there is a formation of bulbo-ventricular cavity by fusion of conus and primitive ventricle, so the bulboventricular sulcus disappears.",
+                "This cavity contains lower dilated part and upper conical part.",
+                "A muscular interventricular septum grows from the floor of bulboventricular cavity and divides ventricles into two halves.",
+                "It grows towards septum intermedium (AV cushion).",
+                "When the muscular ventricular septum ceases to grow, a incomplete muscular septum is formed.",
+                "The two ventricles still communicate with each other through the interventricular foramen that lies cranial to the muscular interventricular foramen."
+            ],
+            "Bulbar part": [
+                "The formation of bulbar part of IV septum is associated with the septation of outflow tract of heart tube.",
+                "There are formation of the subendocardial tissue in the conus part of bulbus cordis called the right and left trunco-conal or <b>Bulbar ridges</b>.",
+                "But these ridges are also invaded by neural crest cells. Thus the cushion tissue of the outflow tract consists of both endocardium-derived cushion tissue and neural-crest cell derived cushion tissue."
+            ],
             "Membranous part": {
                 "": "Fills the gap of interventricular foramen",
                 "Derived from": {
@@ -251,32 +270,91 @@
                     "Right and left bulbar ridge": ""
                 }
             },
-            "": "Inter-atrial and inter-ventricular septum doesn't lie in same plane.",
-            "Clinical anatomy": {
-                "Ventricular Septal Defects": {
-                    "Muscular VSDs": [
-                        "Less serious form.",
-                        "Resolves as the child grows."
-                    ],
-                    "Membranous VSDs": [
-                        "More serious form.",
-                        "Often associated with abnormalities in partitioning of the conotruncal region.",
-                        "Depending on the size of the opening, blood carried by the pulmonary artery may be 1.2 to 1.7 times as abundant as that carried by the aorta."
-                    ]
+            "__note": [
+                {
+                    "data": "Inter-atrial and inter-ventricular septum doesn't lie in same plane."
                 },
-                "Tetralogy of Fallot": {
-                    "__p": [
-                        "Tetralogy of fallot is the unequal division of the conus resulting from anterior displacement of the conotruncal septum.",
-                        "It is the most common abnormality of the conotruncal region."
-                    ],
-                    "Cardiovascular alterations produced by it": [
-                        "D --> Ventricular Septal Defect",
-                        "R --> Right Ventricular Hypertrophy",
-                        "O --> Overriding Aorta",
-                        "P --> Pulmonary stenosis"
-                    ]
+                {
+                    "title": "Clinical Correlates",
+                    "data": {
+                        "Ventricular Septal Defects": {
+                            "Muscular VSDs": [
+                                "Less serious form.",
+                                "Resolves as the child grows."
+                            ],
+                            "Membranous VSDs": [
+                                "More serious form.",
+                                "Often associated with abnormalities in partitioning of the conotruncal region.",
+                                "Depending on the size of the opening, blood carried by the pulmonary artery may be 1.2 to 1.7 times as abundant as that carried by the aorta."
+                            ]
+                        },
+                        "Tetralogy of Fallot": {
+                            "__p": [
+                                "Tetralogy of fallot is the unequal division of the conus resulting from anterior displacement of the conotruncal septum.",
+                                "It is the most common abnormality of the conotruncal region.",
+                                "It is not fatal",
+                                "Occurrence rate is 9.6/10,000 births."
+                            ],
+                            "Cardiovascular alterations produced by it": [
+                                "D &#x27F6; Ventricular Septal Defect",
+                                "R &#x27F6; Right Ventricular Hypertrophy",
+                                "O &#x27F6; Overriding Aorta",
+                                "P &#x27F6; Pulmonary stenosis"
+                            ]
+                        },
+                        "Persistent (common) truncus arteriosus": {
+                            "__p": [
+                                "persistent truncus arteriosus is the defect having no division of the outflow tract.",
+                                "It occurs when the conotruncal ridges fail to form such division.",
+                                "Pulmonary artery arises some distance above the origin of the undivided truncus.",
+                                "Since the ridges also participate in formation of the interventricular septu, the persistent truncus is always accompained by a defective interventricular septum.",
+                                "The undivided truncus thus overrides both ventricles and receives blood from both sides.",
+                                "Occurrence rate is 0.8/10,000 births."
+                            ]
+                        },
+                        "Transposition of the great vessels": [
+                            "Transposition of the great vessels is the condition in which the aorta originates from the right ventricle, and the pulmonary artery originates from the left ventricle.",
+                            "Causes: Failure of conotruncal septum to follow its normal spiral course and runs straight down.",
+                            "Occurrence rate: 4.8/10,000 birts"
+                        ],
+                        "DiGeorge sequence": {
+                            "": "DiGeorge sequence is characterized by a pattern of malformations that have their origin in abnormal neural crest development.",
+                            "Defects": [
+                                "Facial defects",
+                                "Thymic hypoplasia",
+                                "Parathyroid dysfunction",
+                                "Cardiac abnormalities involving the outflow tract",
+                                [
+                                    "Persistent truncus arteriosus",
+                                    "Tetralogy of Fallot"
+                                ]
+                            ]
+                        },
+                        "Valvular stenosis": {
+                            "Cause": "Fusion of semilunar valves for variable distance",
+                            "Incidence": "Approx 3 to 4 / 10,000 births",
+                            "Pulmonary arterial valvular stenosis ": [
+                                "The trunk of the pulmonary artery is narrow or even atretic.",
+                                "The patent oval foramen then forms the only outlet for blood from the right side of the heart.",
+                                "The ductus arteriosus, always patent, is the only access route to the pulmonary circulation."
+                            ],
+                            "Aortic valvular stenosis ": [
+                                "Fusion of the thickened valves may be so complete that only a pinhole opening remains.",
+                                "The size of the aorta itself is usually normal."
+                            ],
+                            "Aortic valvular atresia": [
+                                "Complete fusion of the semilunar aortic valves is called Aortic valvular atresia.",
+                                "The aorta, Left ventricle, and Left atrium are markedly underdeveloped.",
+                                "The abnormality is usually accompained by an open ductus arteriosus, which delivers blood into the aorta."
+                            ]
+                        },
+                        "Ectopia cordis": {
+                            "": "Ectopia cordis is the condition of the heart lying on the surface of the chest.",
+                            "Cause": "Failure of the embryo to close the ventral body wall."
+                        }
+                    }
                 }
-            }
+            ]
         },
         "Right ventricular development": {
             "Smooth part": "Develops from conus cordis",
