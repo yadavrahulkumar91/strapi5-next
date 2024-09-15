@@ -1,0 +1,47 @@
+{
+    "Layers of palm from ventral to dorsal": [
+        "Skin",
+        "Deep facia <b>(Palmar Aponeurosis)</b>",
+        "<span style='color:red;'> Superficial palmar arches </span>",
+        "Long flexor tendon and Lumbricales",
+        "<span style='color:red;'> Deep palmar arches </span>",
+        "Metacarpal and interossei muscles"
+    ],
+    "Major distributing artery": {
+        "Superficial palmar arch": "Ulnar artery",
+        "Deep palmar arch": "Radial artery"
+    },
+    "__mermaid": [
+        {
+            "data": [
+                "graph TD",
+                "UlnarArtery[\"Ulnar Artery\"] --> UlnarSuperficial[\"Superficial Branch\"]",
+                "UlnarArtery --> UlnarDeep[\"Deep Branch\"]",
+                "RadialArtery[\"Radial Artery\"] --> RadialSuperficial[\"Superficial Branch\"]",
+                "RadialArtery --> RadialDeep[\"Deep Branch\"]",
+                "UlnarSuperficial --> SuperficialPalmarArch[\"Superficial Palmar Arch\"]",
+                "RadialSuperficial --> SuperficialPalmarArch",
+                "UlnarDeep --> DeepPalmarArch[\"Deep Palmar Arch\"]",
+                "RadialDeep --> DeepPalmarArch"
+            ]
+        }
+    ],
+    "Superficial palmar arch": {
+        "Formation": [
+            "Ulnar artery in medial side enter the palmar outside the carpal tunnel and divides into Superficial and Deep branch at the pisiform bone.",
+            "Superficial branch is superficial to Pamaris brevis while Deep branch is deeper to it.",
+            "Superficial branch makes the incomplete arch laterally.",
+            "Superficial branch of Radial artery comes from lateral and completes the arch."
+        ],
+        "Branches": {
+            "Digital artery of little finger": "",
+            "3 common digital artery": [
+                "All of them give 2 branches each and go in lateral and medial side."
+            ]
+        },
+        "Area of supply": [
+            "3½ fingers from little finger."
+        ]
+    },
+    "Deep palmar arch": {}
+}

@@ -84,7 +84,7 @@ export default function Table({ value }) {
             nextRowIndex++;
           }
 
-          spans[rowIndex][colIndex].rowspan = rowspan + 1; // Apply rowspan to the current cell
+          spans[rowIndex][colIndex].rowspan = rowspan; // Apply rowspan to the current cell
         }
 
         // Apply colspan logic: If a cell is followed by " ", increase the colspan of the current cell.
@@ -104,7 +104,7 @@ export default function Table({ value }) {
             nextColIndex++;
           }
 
-          spans[rowIndex][colIndex].colspan = colspan + 1; // Apply colspan to the current cell
+          spans[rowIndex][colIndex].colspan = colspan; // Apply colspan to the current cell
         }
       }
     }

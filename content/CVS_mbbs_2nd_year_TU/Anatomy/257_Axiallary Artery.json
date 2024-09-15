@@ -1,0 +1,211 @@
+{
+    "Origin": "Outer border of 1<sup>st</sup> rib",
+    "End": "Lower border of the Teres major muscle",
+    "Continuation": "As Brachial artery",
+    "Parts": {
+        "__p": "It is divided into 3 parts by <b>Pectoralis minor</b> muscle.",
+        "__table": [
+            {
+                "data": [
+                    [
+                        "",
+                        " ",
+                        "1<sup>st</sup> part",
+                        "2<sup>nd</sup> part",
+                        "3<sup>rd</sup> part"
+                    ],
+                    [
+                        "Boundary",
+                        " ",
+                        "between outer border of first rib and medial border of Pectoralis minor muscle.",
+                        "behind the Pectoralis minor muscle",
+                        "between medial border of Pectoralis minor muscle and lower border of Teres major muscle"
+                    ],
+                    [
+                        "Relations",
+                        "Anterior",
+                        [
+                            "Skin",
+                            "Superficial fascia, platysma and supraclavicular nerves",
+                            "Deep fascia",
+                            "Clavicular part of the Pectoralis major",
+                            "Clavipectoral fascia with cephalic vein, lateral pectoral nerve, and thoracoacromial artery.",
+                            "Loop of communication between the lateral and medial pectoral nerves."
+                        ],
+                        [
+                            "Skin",
+                            "Superficial fascia",
+                            "Deep fascia",
+                            "Pectoralis major",
+                            "Pectoralis minor"
+                        ],
+                        [
+                            "Skin",
+                            "Superficial fascia",
+                            "Deep fascia",
+                            "In the upper part, there are the pectoralis major and the medial root of the median nerve."
+                        ]
+                    ],
+                    [
+                        "  ",
+                        "Posterior",
+                        [
+                            "First intercostal space with the external intercostal muscle.",
+                            "First and second digitations of the serratus anterior with the nerve to serratus anterior.",
+                            "Medial cord of brachial plexus with its medial pectoral branch."
+                        ],
+                        [
+                            "Posterior cord of brachial plexus",
+                            "Subscapularis"
+                        ],
+                        [
+                            "Radial nerve",
+                            "Axillary nerve in the upper part",
+                            "Subscapularis in the upper part",
+                            "Tendons of the latissimus dorsi and the teres major in the lower part"
+                        ]
+                    ],
+                    [
+                        "  ",
+                        "Lateral",
+                        [
+                            "Lateral and Posterior cords of the brachial plexus."
+                        ],
+                        [
+                            "Lateral cord of brachial plexus.",
+                            "Coracobrachialis"
+                        ],
+                        [
+                            "Coracobrachialis",
+                            "Musculocutaneous nerve in the upper part",
+                            "Lateral root of median nerve in the upper part",
+                            "Trunk of median nerve in the lower part."
+                        ]
+                    ],
+                    [
+                        "  ",
+                        "Medial",
+                        [
+                            "Axillary vein"
+                        ],
+                        [
+                            "Medial cord of brachial plexus",
+                            "Medial pectoral nerve",
+                            "Axillary vein"
+                        ],
+                        [
+                            "Axillary vein",
+                            "Medial cutaneous nerve of the forearm and ulnar nerve, between the axillary artery and the axiallary vein.",
+                            "Medial cutaneous nerve of arm, medial to the axillary vein."
+                        ]
+                    ],
+                    [
+                        "Branches",
+                        "",
+                        [
+                            "Superior thoracic artery"
+                        ],
+                        [
+                            "Thoracoacromial trunk",
+                            "Lateral thoracic artery"
+                        ],
+                        [
+                            "Anterior circumflex humeral artery",
+                            "Posterior circumflex humeral artery",
+                            "Subscapular artery"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "1<sup>st</sup> part": {
+            "__p": "It lies between outer border of first rib and medial border of Pectoralis minor muscle.",
+            "Branches": [
+                "Superior thoracic artery"
+            ],
+            "Relations": {
+                "Anterior": [
+                    "Skin",
+                    "Superficial fascia, platysma and supraclavicular nerves",
+                    "Deep fascia",
+                    "Clavicular part of the Pectoralis major",
+                    "Clavipectoral fascia with cephalic vein, lateral pectoral nerve, and thoracoacromial artery.",
+                    "Loop of communication between the lateral and medial pectoral nerves."
+                ],
+                "Posterior": [
+                    "First intercostal space with the external intercostal muscle.",
+                    "First and second digitations of the serratus anterior with the nerve to serratus anterior.",
+                    "Medial cord of brachial plexus with its medial pectoral branch."
+                ],
+                "Lateral": [
+                    "Lateral and Posterior cords of the brachial plexus."
+                ],
+                "Medial": [
+                    "Axillary vein"
+                ]
+            }
+        },
+        "2<sup>nd</sup> part": {
+            "__p": "It lies behind the Pectoralis minor muscle.",
+            "Branches": [
+                "Thoracoacromial trunk",
+                "Lateral thoracic artery"
+            ],
+            "Relations": {
+                "Anterior": [
+                    "Skin",
+                    "Superficial fascia",
+                    "Deep fascia",
+                    "Pectoralis major",
+                    "Pectoralis minor"
+                ],
+                "Posterior": [
+                    "Posterior cord of brachial plexus",
+                    "Subscapularis"
+                ],
+                "Lateral": [
+                    "Lateral cord of brachial plexus.",
+                    "Coracobrachialis"
+                ],
+                "Medial": [
+                    "Medial cord of brachial plexus",
+                    "Medial pectoral nerve",
+                    "Axillary vein"
+                ]
+            }
+        },
+        "3<sup>rd</sup> part": {
+            "__p": "It lies between medial border of Pectoralis minor muscle and lower border of Teres major muscle.",
+            "Branches": [
+                "Anterior circumflex humeral artery",
+                "Posterior circumflex humeral artery",
+                "Subscapular artery"
+            ],
+            "Relations": {
+                "Anterior": [
+                    "Skin",
+                    "Superficial fascia",
+                    "Deep fascia",
+                    "In the upper part, there are the pectoralis major and the medial root of the median nerve."
+                ],
+                "Posterior": [
+                    "Radial nerve",
+                    "Axillary nerve in the upper part",
+                    "Subscapularis in the upper part",
+                    "Tendons of the latissimus dorsi and the teres major in the lower part"
+                ],
+                "Lateral": [
+                    "Coracobrachialis",
+                    "Musculocutaneous nerve in the upper part",
+                    "Lateral root of median nerve in the upper part",
+                    "Trunk of median nerve in the lower part."
+                ],
+                "Medial": [
+                    "Axillary vein",
+                    "Medial cutaneous nerve of the forearm and ulnar nerve, between the axillary artery and the axiallary vein.",
+                    "Medial cutaneous nerve of arm, medial to the axillary vein."
+                ]
+            }
+        }
+    }
+}

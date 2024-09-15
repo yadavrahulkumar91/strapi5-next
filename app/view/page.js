@@ -1,13 +1,13 @@
 import Image from "next/image";
 import LessonContent from "../note/[slug]/lessonContent/lessonContent";
 
-import data from "../../content/CVS_mbbs_2nd_year_TU/Anatomy/8_Pericardium.json";
+import data from "../../content/CVS_mbbs_2nd_year_TU/Anatomy/257_Axiallary Artery.json";
 
 export default function Home() {
   return (
     <div>
       <div className="bg-orange-300 font-bold text-center align-middle py-2 text-3xl font-serif uppercase">
-        Arterial Supply of Heart
+        Palmar arches
       </div>
 
       <LessonContent lessonContent={data} />
