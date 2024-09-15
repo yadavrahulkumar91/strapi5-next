@@ -1,0 +1,76 @@
+{
+    "Right Coronary Artery": {
+        "Origin": "Right anterior aortic sinus",
+        "Course": [
+            "It first runs forward and right and emerges out on the surface of heart between the right auricle and root of pulmonary trunk.",
+            "It then runs downward in the right atrioventricular sulcus upto the inferior border of heart where it gives the right marginal artery of heart.",
+            "It then winds round the inferior border to reach diaphragmatic surface of the heart.",
+            "Here it runs backward and to the left in the right posterior coronary sulcus to reach the posterior interventricular groove.",
+            "It terminates by anastomosing with the circumflex branch of left coronary artery at the crux."
+        ],
+        "Branches": {
+            "Atrial branches": {
+                "Anterior groups": {
+                    "SA nodal artery": "One of the anterior atrial branch"
+                },
+                "Posterior groups": "",
+                "Lateral groups": ""
+            },
+            "Ventricular branches": {
+                "Anterior groups": "",
+                "Posterior groups": ""
+            },
+            "Right Marginal artery": "",
+            "Posterior Interventricular artery": {
+                "__p": "Also called as <b>Posterior Descending Artery (PDA)</b>",
+                "AV nodal artery": "",
+                "Septal artery": ""
+            },
+            "Right Conus artery": {}
+        },
+        "Area of Distribution": [
+            "Whole Right atrium",
+            "Greater part of Right ventricle",
+            "Small part of Left ventricle",
+            "Posterior 1/3 part of Interventricular septum",
+            "Whole of the conducting system of heart except a part of the left branch of the AV bundle."
+        ]
+    },
+    "Left Coronary Artery": {
+        "Origin": "Left posterior aortic sinus",
+        "Course": [
+            "It first runs forward and left and emerges out on the surface of the heart beween the left auricle and root of pulmonary trunk.",
+            "Here it gives two branches namely Circumflex artery and Anterior interventricular artery.",
+            "Anterior interventricular artery runs downward and left in the anterior interventricular sulcus which ends by anastomosing with the posterior interventricular artery.",
+            "Circumflex artery runs towards right in the right anterior atrioventricular groove which ends by anastomosing with the right coronary artery."
+        ],
+        "Branches": {
+            "Circumflex artery": {
+                "Atrial branches": {
+                    "Anterior atrial branches": "",
+                    "Posterior atrial branches": ""
+                },
+                "Ventricular branches": {
+                    "Anterior groups": "",
+                    "Posterior groups": "",
+                    "Lateral groups": ""
+                },
+                "Left Marginal artery": ""
+            },
+            "Anterior Interventricular artery": {
+                "Left conus artery": "",
+                "Septal branch": "",
+                "Anterior Ventricular branches": {
+                    "Left Diagonal artery": "Largest of anterior ventricular branches"
+                }
+            }
+        },
+        "Area of Distribution": [
+            "Whole left atrium",
+            "Greater part of Left ventricle",
+            "Small part of Right ventricle",
+            "Anterior 2/3 part of interventricular septum",
+            "A part of the left branch of the AV bundle."
+        ]
+    }
+}

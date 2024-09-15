@@ -107,10 +107,136 @@ function getListStyle(arrayLevel) {
   }
 }
 
-function renderArray(attributes, level, arrayLevel) {
+// function renderArray(attributes, level, arrayLevel) {
+//   return (
+//     <ol style={{ ...getListStyle(arrayLevel) }} className="max-w-[60%]">
+//       {attributes.map((value, i) => {
+// if (typeof value === "object") {
+//   return renderAttributes(value, level + 1, arrayLevel + 1);
+// } else {
+//   return (
+//     <li key={i} className="text-xl ml-[20px]">
+//       <span dangerouslySetInnerHTML={{ __html: value }} />
+//     </li>
+//   );
+// }
+//       })}
+//     </ol>
+//   );
+// }
+
+// function getCustomListStyle(arrayLevel, listTypeData, type) {
+//   // listTypeData contains custom styles like ["A", "I", "1", "a", "i"] or ["•", "◦", "➢", "a", "i"]
+//   // type is either "number" or "bullet"
+//   if (type === "number") {
+//     switch (arrayLevel) {
+//       case 1:
+//         return { listStyleType: listTypeData[2] || "decimal" }; // Default to "1"
+//       case 2:
+//         return { listStyleType: listTypeData[3] || "lower-alpha" }; // Default to "a"
+//       case 3:
+//         return { listStyleType: listTypeData[4] || "lower-roman" }; // Default to "i"
+//       case 4:
+//         return { listStyleType: listTypeData[1] || "upper-roman" }; // Default to "I"
+//       default:
+//         return { listStyleType: "decimal" }; // Fallback
+//     }
+//   } else if (type === "bullet") {
+//     return { listStyleType: listTypeData[arrayLevel - 1] || "disc" }; // Custom bullet styles
+//   } else {
+//     return getListStyle(arrayLevel); // Fallback to default if type is not valid
+//   }
+// }
+
+// function renderArray(attributes, level, arrayLevel) {
+//   // Check if the first item is an object containing __type and data
+//   let listType = null;
+//   let customListData = [];
+
+//   if (
+//     typeof attributes[0] === "object" &&
+//     attributes[0].__type &&
+//     Array.isArray(attributes[0].data)
+//   ) {
+//     listType = attributes[0].__type; // "number" or "bullet"
+//     customListData = attributes[0].data; // Custom numbering or bulleting styles
+//     attributes = attributes.slice(1); // Remove the first item from the array for rendering
+//   }
+
+//   return (
+//     <ol
+//       style={{
+//         ...getCustomListStyle(arrayLevel, customListData, listType),
+//       }}
+//       className="max-w-[60%]"
+//     >
+//       {attributes.map((value, i) => {
+//         if (typeof value === "object") {
+//           return renderAttributes(value, level + 1, arrayLevel + 1);
+//         } else {
+//           return (
+//             <li key={i} className="text-xl ml-[20px]">
+//               <span dangerouslySetInnerHTML={{ __html: value }} />
+//             </li>
+//           );
+//         }
+//       })}
+//     </ol>
+//   );
+// }
+function renderBulletList(attributes, level, arrayLevel) {
+  const bulletType =
+    attributes[0]?.__type === "bullet" ? attributes[0]?.data : null;
+  // const listItems = Array.isArray(attributes[0]?.data)
+  //   ? attributes.slice(1)
+  //   : attributes;
+  const listItems = attributes.slice(1);
+
   return (
-    <ol style={{ ...getListStyle(arrayLevel) }} className="max-w-[60%]">
-      {attributes.map((value, i) => {
+    <ul className="max-w-[60%]">
+      {listItems.map((value, i) => {
+        if (typeof value === "object") {
+          return renderAttributes(value, level + 1, arrayLevel + 1);
+        } else {
+          return (
+            <li key={i} className="flex text-xl ml-[20px]">
+              <span className="mr-2">
+                {bulletType && bulletType[arrayLevel - 1] ? (
+                  <div>{bulletType[arrayLevel - 1]}</div>
+                ) : (
+                  <div>•</div> // Default bullet type
+                )}
+              </span>
+              <span dangerouslySetInnerHTML={{ __html: value }} />
+            </li>
+          );
+        }
+      })}
+    </ul>
+  );
+}
+
+function renderNumberList(attributes, level, arrayLevel) {
+  const numberType =
+    attributes[0]?.__type === "number" ? attributes[0]?.data : null;
+  const listItems = Array.isArray(attributes[0]?.data)
+    ? attributes.slice(1)
+    : attributes;
+
+  return (
+    <ol
+      className="max-w-[60%]"
+      style={{ listStyleType: getListStyleType(arrayLevel, numberType) }}
+    >
+      {listItems.map((value, i) => {
+        // <li key={i} className="text-xl ml-[20px]">
+        //   <span>
+        //     {typeof value === "object"
+        //       ? renderAttributes(value, level + 1, level + 1)
+        //       : value}
+        //   </span>
+        // </li>
+
         if (typeof value === "object") {
           return renderAttributes(value, level + 1, arrayLevel + 1);
         } else {
@@ -123,6 +249,43 @@ function renderArray(attributes, level, arrayLevel) {
       })}
     </ol>
   );
+}
+
+function getListStyleType(arrayLevel, numberType) {
+  if (!numberType) {
+    // Default numbering system if no custom `data` provided
+    return getListStyle(arrayLevel).listStyleType;
+  }
+
+  // Custom number formatting if `data` is provided
+  switch (arrayLevel) {
+    case 1:
+      return numberType[0] || "decimal"; // Default to "1"
+    case 2:
+      return numberType[1] || "lower-alpha"; // Default to "a"
+    case 3:
+      return numberType[2] || "lower-roman"; // Default to "i"
+    case 4:
+      return numberType[3] || "upper-roman"; // Default to "I"
+    default:
+      return "decimal"; // Fallback
+  }
+}
+
+function renderArray(attributes, level, arrayLevel) {
+  // Check if the first item is an object containing __type
+  if (typeof attributes[0] === "object" && attributes[0].__type) {
+    const listType = attributes[0].__type;
+
+    if (listType === "bullet") {
+      return renderBulletList(attributes, level, arrayLevel);
+    } else if (listType === "number") {
+      return renderNumberList(attributes, level, arrayLevel);
+    }
+  }
+
+  // If the first item is not an object with __type, fall back to default numbered list
+  return renderNumberList(attributes, level, arrayLevel);
 }
 
 function renderObject(key, value, level, arrayLevel) {
