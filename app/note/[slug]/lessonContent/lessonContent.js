@@ -16,28 +16,6 @@ import AROC from "./aroc";
 // let mcqId = 0
 
 const LessonContent = ({ lessonContent }) => {
-  // const jsonLessonContent = JSON.parse(lessonContent)
-  // window.MathJax = {
-  //   tex: {
-  //     inlineMath: [
-  //       ['$', '$'],
-  //       ['\\(', '\\)']
-  //     ]
-  //   },
-  //   svg: {
-  //     fontCache: 'global'
-  //   }
-  // }
-  // ;(function () {
-  //   var script = document.createElement('script')
-  //   script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'
-  //   script.async = true
-  //   document.head.appendChild(script)
-  // })()
-
-  //   }
-  // }, [])
-
   return <div className="ml-[-30px] ">{renderAttributes(lessonContent)}</div>;
 };
 
