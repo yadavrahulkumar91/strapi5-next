@@ -11,15 +11,51 @@ import OrgChart from "./OrgChart";
 import MCQ from "../mcq";
 import QA from "../qa";
 import AROC from "./aroc";
+import { MathJaxContext, MathJax } from "better-react-mathjax";
 
-// let qaId = 0
-// let mcqId = 0
+const replaceMathExpressions = (obj) => {
+  if (typeof obj === "string") {
+    // Replace \( ... \) with inline MathJax component
+    obj = obj.replace(/\\\\((.*?)\\\\)/g, (match, p1) => {
+      return `<MathJax>{"\\\\(${p1}\\\\)"}</MathJax>`;
+    });
+
+    // Replace \[ ... \] with display MathJax component
+    obj = obj.replace(/\\\\[(.*?)\\\\]/g, (match, p1) => {
+      return `<MathJax>{"\\\\[${p1}\\\\]"}</MathJax>`;
+    });
+  } else if (typeof obj === "object" && obj !== null) {
+    // If it's an object or array, recursively process its properties
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        obj[key] = replaceMathExpressions(obj[key]);
+      }
+    }
+  }
+  return obj;
+};
 
 const LessonContent = ({ lessonContent }) => {
-  return <div className="ml-[-30px] ">{renderAttributes(lessonContent)}</div>;
+  // Step 1: Process lessonContent to replace math expressions
+  const processedLessonContent = replaceMathExpressions(lessonContent);
+
+  // Step 2: Wrap the processed content inside MathJaxContext and pass to renderAttributes
+  return (
+    <MathJaxContext>
+      <div className="ml-[-30px] ">
+        {renderAttributes(processedLessonContent)}
+      </div>
+    </MathJaxContext>
+  );
 };
 
 export default LessonContent;
+
+// const LessonContent = ({ lessonContent }) => {
+//   return <div className="ml-[-30px] ">{renderAttributes(lessonContent)}</div>;
+// };
+
+// export default LessonContent;
 
 export const renderAttributes = (attributes, level = 0, arrayLevel = 1) => {
   if (!attributes) {

@@ -14,6 +14,7 @@
     "@lani.ground/react-outside-click-handler": "^1.1.2",
     "awesome-react-org-chart": "^1.4.11",
     "axios": "^1.6.2",
+    "better-react-mathjax": "^2.0.3",
     "mdx-mermaid": "^2.0.0",
     "mermaid": "^10.6.1",
     "next": "14.0.2",
