@@ -39,13 +39,13 @@ export default function Aroc({ data, layout_type }) {
         dangerouslySetInnerHTML={{ __html: node.name }}
       />
       <div>
-        {/* {node.about ? renderAttributes(node.about, node.level ?? 2) : null} */}
-        {node.about ? (
+        {node.about ? renderAttributes(node.about, node.level ?? 2) : null}
+        {/* {node.about ? (
           <span
             className="px-[2px]"
             dangerouslySetInnerHTML={{ __html: node.about }}
           />
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );

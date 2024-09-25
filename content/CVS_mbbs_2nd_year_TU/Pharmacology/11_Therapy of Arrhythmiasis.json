@@ -1,1 +1,161 @@
-{"introduction": {"name": "Anti-arrhythmic Drugs"}, "classification": [{"part": [{"name": "Moderately decrease dv/dt of 0 phase", "part": [{"name": "Quinidine"}, {"name": "Procainamide"}, {"name": "Disopyramide"}]}, {"name": "Little decrease dv/dt of 0 phase", "part": [{"name": "Lidocaine"}, {"name": "Mexiletine"}, {"name": "Tocainide"}]}, {"name": "Marked decrease dv/dt of 0 phase", "part": [{"name": "Propafenone"}, {"name": "Encainide"}, {"name": "Flecainide"}]}], "class": "Class-I", "other_name": "Membrane stabilizing agents", "other_name_1": "Na+ channel blocker"}, {"part": [{"name": "Propranolol"}, {"name": "Esmolol"}, {"name": "Sotalol"}], "class": "Class-II", "other_name": "β-blocker"}, {"part": [{"name": "Amiodarone"}, {"name": "Bretylium"}, {"name": "Dofetilide"}, {"name": "Ibutilide"}], "class": "Class-III", "other_name": "Agent widening AP (prolong repolarization and ERP)"}, {"part": [{"name": "Verapamil"}, {"name": "Diltiazem"}], "class": "Class-IV", "other_name": "Calcium channel blockers"}]}
+{
+    "introduction": {
+        "name": "Anti-arrhythmic Drugs"
+    },
+    "classification": [
+        {
+            "__org": [
+                {
+                    "type": "",
+                    "data": {
+                        "name": "Anti-arrhythmic Drugs",
+                        "children": [
+                            {
+                                "name": "Class I (Na<sup>+</sup> <br>Channel blocker)",
+                                "children": [
+                                    {
+                                        "name": "Moderately decrease <br>dv/dt of 0 phase",
+                                        "about": [
+                                            "Disopyramide",
+                                            "Procainamide",
+                                            "Quinidine"
+                                        ]
+                                    },
+                                    {
+                                        "name": "Little decrease <br>dv/dt of 0 phase",
+                                        "about": [
+                                            "Lidocaine",
+                                            "Mexiletine",
+                                            "Tocainide"
+                                        ]
+                                    },
+                                    {
+                                        "name": "Marked decrease <br>dv/dt of 0 phase",
+                                        "about": [
+                                            "Encainide",
+                                            "Flecainide",
+                                            "Propafenone"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Class II (β-blocker)",
+                                "about": [
+                                    "Esmolol",
+                                    "Propranolol",
+                                    "Sotalol"
+                                ]
+                            },
+                            {
+                                "name": "Class III (K<sup>+</sup> <br>Channel blocker)",
+                                "about": [
+                                    "Amiodarone",
+                                    "Dronedarone",
+                                    "Bretylium",
+                                    "Dofetilide",
+                                    "Ibutilide"
+                                ],
+                                "class": "Class-III",
+                                "other_name": "Agent widening AP (prolong repolarization and ERP)"
+                            },
+                            {
+                                "name": "Class IV (Ca<sup>++</sup> <br>Channel blocker)",
+                                "about": [
+                                    "Verapamil",
+                                    "Diltiazem",
+                                    "Amlodipine",
+                                    "Nifedipine"
+                                ]
+                            },
+                            {
+                                "name": "Class V <br>(Miscellaneous Drugs)",
+                                "children": [
+                                    {
+                                        "name": "Drugs for PSVT <br>(Paroxysmal Supraventricular <br>Tachycardia)",
+                                        "about": [
+                                            "Adenosine",
+                                            "Digoxin"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "CLASS I": {
+                "__levelup": {
+                    "Mechanism of action": [
+                        "They primarily limit the conductance of Na<sup>+</sup> (and K<sup>+</sup>) across cell membrane i.e, exerts local anaesthetic action.",
+                        "They also reduce rate of phase 0 - depolarization in automatic cells.",
+                        "They exert <b>'Use dependent' blockade</b> action.",
+                        [
+                            {
+                                "__type": "bullet"
+                            },
+                            "They bind easily to the activated and/or inactivated state of the Na<sup>+</sup> channel, but poorly to the resting state. As such they block more when activation and inactivation is fast, i.e., in rapidly firing fibres. This is called 'use dependent' blockade. Further, the partially"
+                        ]
+                    ]
+                },
+                "SUBCLASS IA": {
+                    "__levelup": {
+                        "Mechanism of action": ""
+                    },
+                    "DISOPYRAMIDE": {
+                        "Mechanism of action": ""
+                    },
+                    "PROCAINAMIDE": {
+                        "Mechanism of action": ""
+                    },
+                    "QUINIDINE": {
+                        "Mechanism of action": ""
+                    }
+                },
+                "SUBCLASS IB": {
+                    "__levelup": {
+                        "Mechanism of action": ""
+                    },
+                    "LIDOCAINE": {
+                        "Mechanism of action": ""
+                    },
+                    "MEXILITINE": {
+                        "Mechanism of action": ""
+                    }
+                },
+                "SUBCLASS IC": {
+                    "__levelup": {
+                        "Mechanism of action": ""
+                    },
+                    "PROPAFENONE": {
+                        "Mechanism of action": ""
+                    }
+                }
+            },
+            "CLASS II": {
+                "__levelup": {
+                    "Mechanism of action": ""
+                },
+                "ESMOLOL": {
+                    "Mechanism of action": ""
+                }
+            },
+            "CLASS III": {
+                "__levelup": {
+                    "Mechanism of action": ""
+                },
+                "AMIODARONE": {
+                    "Mechanism of action": ""
+                }
+            },
+            "CLASS IV": {
+                "__levelup": {
+                    "Mechanism of action": ""
+                },
+                "VERAPAMIL": {
+                    "Mechanism of action": ""
+                }
+            }
+        }
+    ]
+}
