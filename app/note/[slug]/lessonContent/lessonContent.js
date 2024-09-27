@@ -90,7 +90,7 @@ export const renderAttributes = (attributes, level = 0, arrayLevel = 1) => {
 
 // function renderArray(attributes, level) {
 //   return (
-//     <ol className=" max-w-[60%]">
+//     <ol className=" ">
 //       {attributes.map((value, i) => {
 //         if (typeof value === "object") {
 //           return renderAttributes(value, level + 1);
@@ -123,7 +123,7 @@ function getListStyle(arrayLevel) {
 
 // function renderArray(attributes, level, arrayLevel) {
 //   return (
-//     <ol style={{ ...getListStyle(arrayLevel) }} className="max-w-[60%]">
+//     <ol style={{ ...getListStyle(arrayLevel) }} className="">
 //       {attributes.map((value, i) => {
 // if (typeof value === "object") {
 //   return renderAttributes(value, level + 1, arrayLevel + 1);
@@ -182,7 +182,7 @@ function getListStyle(arrayLevel) {
 //       style={{
 //         ...getCustomListStyle(arrayLevel, customListData, listType),
 //       }}
-//       className="max-w-[60%]"
+//       className=""
 //     >
 //       {attributes.map((value, i) => {
 //         if (typeof value === "object") {
@@ -207,7 +207,7 @@ function renderBulletList(attributes, level, arrayLevel) {
   const listItems = attributes.slice(1);
 
   return (
-    <ul className="max-w-[60%]">
+    <ul className="">
       {listItems.map((value, i) => {
         if (typeof value === "object") {
           return renderAttributes(value, level + 1, arrayLevel + 1);
@@ -239,7 +239,7 @@ function renderNumberList(attributes, level, arrayLevel) {
 
   return (
     <ol
-      className="max-w-[60%]"
+      className=""
       style={{ listStyleType: getListStyleType(arrayLevel, numberType) }}
     >
       {listItems.map((value, i) => {
@@ -356,7 +356,7 @@ function elseFunction(key, value, level, arrayLevel) {
         renderAttributes(value, level + 1, arrayLevel)
       ) : (
         <span
-          className="max-w-[60%] inline-block"
+          className=" inline-block"
           key={key}
           style={{ fontSize: "20px" }}
           dangerouslySetInnerHTML={{ __html: value }}

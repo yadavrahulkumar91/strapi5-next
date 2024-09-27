@@ -1,0 +1,49 @@
+{
+    "__org": [
+        {
+            "data": {
+                "name": "Hypolipidaemic Drugs",
+                "children": [
+                    {
+                        "name": "HMG-CoA reductase <br>inhibitors (Statins)",
+                        "about": [
+                            "Atorvastatin",
+                            "Lovastatin",
+                            "Pitavastatin",
+                            "Pravastatin",
+                            "Rosuvastatin",
+                            "Simvastatin"
+                        ]
+                    },
+                    {
+                        "name": "Bile acid <br>sequestrants",
+                        "about": [
+                            "Cholestipol",
+                            "Cholestyramine"
+                        ]
+                    },
+                    {
+                        "name": "Lipoprotein lipase <br>activators (Fibrate)",
+                        "about": [
+                            "Bezafibrates",
+                            "Fenofibrates",
+                            "Gemfibrates"
+                        ]
+                    },
+                    {
+                        "name": "Lipolysis and triglyceride <br>synthesis inhibitor",
+                        "about": [
+                            "Nicotinic acid"
+                        ]
+                    },
+                    {
+                        "name": "Sterol absorption <br>inhibitor",
+                        "about": [
+                            "Ezetimibe"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

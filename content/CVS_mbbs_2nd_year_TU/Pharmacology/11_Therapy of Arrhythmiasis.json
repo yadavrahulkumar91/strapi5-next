@@ -89,18 +89,69 @@
                     "Mechanism of action": [
                         "They primarily limit the conductance of Na<sup>+</sup> (and K<sup>+</sup>) across cell membrane i.e, exerts local anaesthetic action.",
                         "They also reduce rate of phase 0 - depolarization in automatic cells.",
-                        "They exert <b>'Use dependent' blockade</b> action.",
+                        "They exert <b>'Use dependent' blockade</b> action i.e., acts more on rapidly firing fibres.",
                         [
                             {
                                 "__type": "bullet"
                             },
-                            "They bind easily to the activated and/or inactivated state of the Na<sup>+</sup> channel, but poorly to the resting state. As such they block more when activation and inactivation is fast, i.e., in rapidly firing fibres. This is called 'use dependent' blockade. Further, the partially"
+                            "Thus, they block more on partially depolarized fibres."
                         ]
                     ]
                 },
+                "__table": [
+                    {
+                        "data": [
+                            [
+                                "",
+                                "CLASS IA",
+                                "CLASS IB",
+                                "CLASS IC"
+                            ],
+                            [
+                                "<b>MOA:</b>",
+                                "All of them block Na<sup>+</sup> channel and thus decrease the slope of 0 phase depolarization.",
+                                " ",
+                                " "
+                            ],
+                            [
+                                "  ",
+                                [
+                                    "Blocks  Na<sup>+</sup> channel at <b>open state</b> more than closed ones.",
+                                    "Blocks  K<sup>+</sup> channel."
+                                ],
+                                [
+                                    "Blocks  Na<sup>+</sup> channel at <b>inactivated state</b> more than open state.",
+                                    "Opens  K<sup>+</sup> channel."
+                                ],
+                                [
+                                    "Blocks  Na<sup>+</sup> channel at <b>open state</b> more than closed ones.",
+                                    "Negligible effect on  K<sup>+</sup> channel."
+                                ]
+                            ]
+                        ]
+                    }
+                ],
                 "SUBCLASS IA": {
                     "__levelup": {
-                        "Mechanism of action": ""
+                        "Mechanism of action": [
+                            "They are open state Na<sup>+</sup> channel blockers with little effect on resting channels.",
+                            "They moderately",
+                            [
+                                "delay channel recovery",
+                                "suppress AV conduction and",
+                                "prolong refractoriness."
+                            ],
+                            "They serve to <b>extinguish ectopic pacemakers</b> that are often responsible for triggered arrhythmias.",
+                            "They also abolish reentry by converting unidirectional block into bidirectional block."
+                        ],
+                        "Uses": [
+                            "Used to prevent acute, chronic ventricular and supraventricular arrhythmias expecially",
+                            [
+                                "Paroxysmal Supraventricular Tachycardia (PSVT)",
+                                "Symptomatic ventricular premature beats",
+                                "Ventricular fibrillation"
+                            ]
+                        ]
                     },
                     "DISOPYRAMIDE": {
                         "Mechanism of action": ""
@@ -109,7 +160,77 @@
                         "Mechanism of action": ""
                     },
                     "QUINIDINE": {
-                        "Mechanism of action": ""
+                        "Source": "Cinchona plant",
+                        "__image": [
+                            {
+                                "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Cinchona.pubescens01.jpg",
+                                "width": "200",
+                                "caption": "Cinchona plant"
+                            }
+                        ],
+                        "Mechanism of action": [
+                            "As above",
+                            "<b>Blood vessels</b>: Increases Blood pressure at high dose due to α<sub>1</sub> blocking effect.",
+                            "Relaxes skeletal muscles.",
+                            "Has anti-malarial effect.",
+                            "Utrine contraction."
+                        ],
+                        "Uses": [
+                            "Wide use in many arrhythmias",
+                            [
+                                "Atrial flutter",
+                                "Atrial fibrillation"
+                            ],
+                            "Anti-malarial action",
+                            [
+                                {
+                                    "__type": "bullet"
+                                },
+                                "It has weaker anti-malarial action than <b>Quinine</b>.",
+                                "It is used as a parenteral alternative to quinine for falciparum malaria."
+                            ]
+                        ],
+                        "Adverse effects": [
+                            "Hypotension and Hypoglycemia",
+                            "GIT",
+                            [
+                                "Nausea",
+                                "Vomiting",
+                                "Diarrhoea"
+                            ],
+                            "Hypersensitivity",
+                            [
+                                "Fever",
+                                "Angioedema",
+                                "Shock",
+                                "Thrombocytopenia"
+                            ],
+                            "<b>Cinchonism</b> in overdose",
+                            [
+                                "Ear",
+                                [
+                                    "Ringing in ear",
+                                    "Vertigo",
+                                    "<b>Tinnitus</b> (the perception of sound that does not have an external source)",
+                                    "Deafness"
+                                ],
+                                "CNS",
+                                [
+                                    "Headache",
+                                    "Visual disturbances and",
+                                    "Delirium",
+                                    "Mental changes"
+                                ],
+                                "Hypotension"
+                            ]
+                        ],
+                        "Drug interaction": [
+                            "Increase in blood levels and <b>toxicity of Digoxin and Digitoxin</b>",
+                            [
+                                "Inhibition of Renal clearance of Digoxin",
+                                "Inhibition of Biliary clearance of Digitoxin"
+                            ]
+                        ]
                     }
                 },
                 "SUBCLASS IB": {
