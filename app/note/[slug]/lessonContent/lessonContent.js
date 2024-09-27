@@ -11,6 +11,7 @@ import OrgChart from "./OrgChart";
 import MCQ from "../mcq";
 import QA from "../qa";
 import AROC from "./aroc";
+import VSDX from "./vsdx";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
 
 const replaceMathExpressions = (obj) => {
@@ -335,6 +336,8 @@ function renderObject(key, value, level, arrayLevel) {
     return <QA Question_answer={value} />;
   } else if (/^__gap\d*$/.test(key)) {
     return <div style={{ height: value }} />;
+  } else if (/^__vsdx\d*$/.test(key)) {
+    return <VSDX url={value} />;
   } else if (/^__right\d*$/.test(key)) {
     return (
       // <div className='h-8'>

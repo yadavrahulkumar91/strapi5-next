@@ -165,7 +165,16 @@
                             {
                                 "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Cinchona.pubescens01.jpg",
                                 "width": "200",
-                                "caption": "Cinchona plant"
+                                "caption": "Cinchona plant",
+                                "label": [
+                                    [
+                                        288,
+                                        302,
+                                        "",
+                                        "",
+                                        "Gut"
+                                    ]
+                                ]
                             }
                         ],
                         "Mechanism of action": [

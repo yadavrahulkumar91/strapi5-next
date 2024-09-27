@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gamechanger-drive-91",
+  "private_key_id": "d27c1e195052232227b2c6f981d89e264dde249e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCqdcWDAeuOUZCa\n6Rfzfnsbuv/XoBVrfEoG+23zCb1Q3qdeRNvbphUR/Ax+C3SfinEDKm1hMeiE7Wxz\nZ6sTo+D/+aN7LANBklG6VCrGkECNfGbg7EpemeLzIj3PEwwXsCLGSbWw4Xjhb2yh\naozJ/liGytCOdUqqBcg+n8o7tiqu9o6fAcIde47VoGmQdCrbOuZYk2Ybtod80VmR\nSMwBWyaqDZ0xAexV22imXdzOHuaTavV4ol4itsfWDM+DsKqi2ekhkXGEbjQicC+x\nBDUI+v+xmwzGoNtbemt/pSc9jXn3zEP8e40vOnZ+/cXJKs3hegYYvStl2grfl00p\nnWSULsCTAgMBAAECggEABX/wQ/ZTZc+e5UihA7OwgCgL6iaZmlKzxr7lAMLvL0VH\nzCRXnaIhqudhdc2j0SPz2oDLb6ffEy7f4WdWXzdZ4pho3GgCoOJ6LZNan/Z2hrod\nTaOCEMRRTLvtl5lLOhZuQMyPBqp3rnpcXGbmLPw+WfcAPKBvLMYr/E1Ghp+th+CS\nIPdx9U7itTI/5Wcc+lj0KJTZEzfjlgTaqOCuM49YdbZyzwO3OkYozQCGoA7itqif\nokkGBgeiFs02cMZDK50ARAUM2/Fxa1ocjVeuBj5fWV+iMVcwJJIZZx2chGjR1nQO\nQQRZaCpAKWDl5/mk5JHog3BG82hVP6XfeQ4sz6lL+QKBgQDb+PjoByrwP9qRDmEM\n/EjIocr2CPbHexbxuGb43mLyua40V19CIddHK4qzFZ9nihtpR3UpIToLtvTqji8/\n9iQPyZX1T1yyT88j5MbfB1g4wA+H8UsH9eufUmM+Iyscb2nvJVWgp7JbCF+f1caz\nHRZMlk/br91ex5y2DjN+16HcKwKBgQDGYNW1nWLWoUePTbYW+YdVKMS56sz4YBvI\nrJcdoBamOIpya0c6hLjgoL2JaljIKBT5tbpV/ZgU/m3DbKxXnxHBP5v5/6P03OqL\n5OjYlp+ePBCgQjDH3ST8lAsM4Fn7UBmav7V10dlODfJRMApZF3eCYZUJC3zdffbx\njd3Gw0GxOQKBgQCHtxpKfXGefKbq7AYwrs5xCnFgTrOC64yCYhUV4o8F1k2GeYmK\nEbrybAjM6MBKb0juMWo1kAxyAdUlicfZHJGvM95TVT2Jvfe8239fRvbFPKnYY6S5\nKp7O01PrmGMWzh57r3se/Zfq1kW5JXnMNFv3sJ1gmyZnPZyQLj7TOVLhtQKBgDr3\nHY7WMULKvZKC7tT1ZpyReagperN5HckQQ/qyUwklVUGdUZa7TJi4Lp5h1fHouBNh\nSPm2XzYeSlIEQ1XoGkbuuVYd/oYSBEWAzRVT8C4AfJCmHAnMWeoZtw8kwJpKvNGa\nmj1jGsxwqM4pEWpZ51QB3WLK31qWzogOOxWRhD1BAoGAOPSmw/U6kx8NVdniMUyR\nSphNm7Zi5HG3Ave2xcDlhyRFkb1URqeYgKE1vBjZPWMXxMtRapJNOVcj3hZvNW4C\n9gITtH80e2MSxICcLCgRmBH1uR8fwG8RF9E12SgB0Ictwj6xvyuzJKkyU0+urrM+\nSVsFjDMQXeGPpR2faWHIPlg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-y4ega@gamechanger-drive-91.iam.gserviceaccount.com",
+  "client_id": "112221887212496964795",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-y4ega%40gamechanger-drive-91.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

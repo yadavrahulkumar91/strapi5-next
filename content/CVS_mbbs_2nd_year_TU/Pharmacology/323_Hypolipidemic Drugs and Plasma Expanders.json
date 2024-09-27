@@ -45,5 +45,22 @@
                 ]
             }
         }
+    ],
+    "__image": [
+        {
+            "url": "https://storage.googleapis.com/gamechanger-drive-91.appspot.com/coelom.png",
+            "width": "610",
+            "height": "779",
+            "caption": "Cinchona plant",
+            "label": [
+                [
+                    288,
+                    302,
+                    "",
+                    "",
+                    "Gut"
+                ]
+            ]
+        }
     ]
 }
