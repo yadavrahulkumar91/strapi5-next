@@ -1,0 +1,241 @@
+{
+    "__image": [
+        {
+            "url": "https://storage.googleapis.com/gamechanger-drive-91.appspot.com/Manual%20uploaded/nephron.png",
+            "width": "700",
+            "svg": {
+                "text": [
+                    [
+                        "28%",
+                        "37%",
+                        "1️⃣PCT"
+                    ],
+                    [
+                        "41%",
+                        "61%",
+                        "2️⃣Loop of Henle"
+                    ],
+                    [
+                        "53%",
+                        "41%",
+                        "3️⃣Thick Asceding Limb"
+                    ],
+                    [
+                        "65%",
+                        "32%",
+                        "4️⃣DCT"
+                    ],
+                    [
+                        "76%",
+                        "25.5%",
+                        "5️⃣Late DCT & Collecting tubule"
+                    ]
+                ]
+            },
+            "style": {
+                "float": "none"
+            }
+        }
+    ],
+    "__org": [
+        {
+            "data": {
+                "name": "DIURETICS",
+                "children": [
+                    {
+                        "name": "High Ceiling <br>Diuretics",
+                        "children": [
+                            {
+                                "name": "Na<sup>+</sup>-K<sup>+</sup>-2Cl<sup>-</sup> <br>cotransport <br>inhibitor 3️⃣",
+                                "about": [
+                                    "Furosemide",
+                                    "Torasemide",
+                                    "Azosemide"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Medium Ceiling Diuretics",
+                        "children": [
+                            {
+                                "name": "Na<sup>+</sup>-Cl<sup>-</sup> cotransport inhibitor 4️⃣",
+                                "children": [
+                                    {
+                                        "name": "Thiazides",
+                                        "about": [
+                                            "Hydrochlorothiazides",
+                                            "Hydroflumethiazides",
+                                            "Chlorthiazide",
+                                            "Benzthiazide"
+                                        ]
+                                    },
+                                    {
+                                        "name": "Thiazide-like",
+                                        "about": [
+                                            "Indapamide",
+                                            "Xipamide",
+                                            "Clopamide"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Low Ceiling Diuretics",
+                        "children": [
+                            {
+                                "name": "K<sup>+</sup> sparing diuretics 5️⃣",
+                                "children": [
+                                    {
+                                        "name": "Na<sup>+</sup> channel <br>inhibitors",
+                                        "about": [
+                                            "Amiloride",
+                                            "Triamterene"
+                                        ]
+                                    },
+                                    {
+                                        "name": "Aldosterone <br>antagonists",
+                                        "about": [
+                                            "Spironolactone",
+                                            "Eplerenone"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Carbonic anhydrase <br>inhibitor 1️⃣",
+                                "about": [
+                                    "Acetazolamide",
+                                    "Methazolamide",
+                                    "Dichlorphenamide"
+                                ]
+                            },
+                            {
+                                "name": "Osmotic <br>diuretic 2️⃣",
+                                "about": [
+                                    "Glycerol",
+                                    "Isosorbide",
+                                    "Mannitol"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "__org1": [
+        {
+            "data": {
+                "name": "RAS drugs",
+                "children": [
+                    {
+                        "name": "Direct renin inhibitor",
+                        "about": "Aliskiren"
+                    },
+                    {
+                        "name": "ACE inhibitor",
+                        "about": [
+                            "Captopril",
+                            "Enalapril",
+                            "Fosinopril",
+                            "Lisinopril",
+                            "Perindopril",
+                            "Ramipril"
+                        ]
+                    },
+                    {
+                        "name": "AT1 receptor blocker",
+                        "about": [
+                            "Candesartan",
+                            "Losartan",
+                            "Irbesartan",
+                            "Olmesartan",
+                            "Telmisartan",
+                            "Valsartan"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "RAS drugs": {
+        "__mermaid": [
+            {
+                "data": [
+                    "graph TD",
+                    "A(Angiotensinogen - Liver) -->|Renin - Kidney| B(Angiotensin I)",
+                    "B -->|ACE - Lung| C(Angiotensin II)",
+                    "C --> D(Heart)",
+                    "C --> E(Blood vessels)",
+                    "C --> F(Kidney)",
+                    "C --> G(Adrenal gland)",
+                    "C --> H(Brain)",
+                    "C --> I(Sympathetic **nervous** system)",
+                    "subgraph Effect of Angiotensin II",
+                    "D --> D1(Increases force,<br> velocity, and <br>rate of heart)",
+                    "E --> E1(Causes vasoconstriction, <br>increases venous return, <br>and cardiac output)",
+                    "F --> F1(Increases absorption of Na<sup>+</sup>)",
+                    "G --> G1(Increases aldosterone <br>synthesis, increases Na<sup>+</sup><br> absorption)",
+                    "H --> H1(Activates thirst center)",
+                    "I --> I1(Activates sympathetic<br> activity)",
+                    "end",
+                    "D1 & E1 & F1 & G1 & H1 & I1 --> J(Increases Blood pressure)"
+                ]
+            }
+        ],
+        "Angiotensin - 2": {
+            "Uses": {
+                "Heart": "Increases force, velocity and rate of heart.",
+                "Blood vessels": "Causes vasoconstriction and thus increases both Venous return and Cardiac output.",
+                "Kidney": "Increases absorption of Na<sup>+</sup>.",
+                "Adrenal gland": "Increases aldosterone synthesis and thus increases the absorption of Na<sup>+</sup>.",
+                "Brain": "Activates thirst center",
+                "Sympathetic nervous system": "Activates the sympathetic activity."
+            }
+        },
+        "Direct renin inhibitor": {
+            "Drugs": "Aliskiren",
+            "Mechanism of action": {},
+            "Pharmacokinetics": {},
+            "Pharmacodynamics": {},
+            "Uses": {},
+            "Adverse effect": {},
+            "Contraindication": {}
+        },
+        "ACE inhibitor": {
+            "Drugs": [
+                "Captopril",
+                "Enalapril",
+                "Fosinopril",
+                "Lisinopril",
+                "Perindopril",
+                "Ramipril"
+            ],
+            "Mechanism of action": {},
+            "Pharmacokinetics": {},
+            "Pharmacodynamics": {},
+            "Uses": {},
+            "Adverse effect": {},
+            "Contraindication": {}
+        },
+        "AT1 receptor blocker": {
+            "Drugs": [
+                "Candesartan",
+                "Losartan",
+                "Irbesartan",
+                "Olmesartan",
+                "Telmisartan",
+                "Valsartan"
+            ],
+            "Mechanism of action": {},
+            "Pharmacokinetics": {},
+            "Pharmacodynamics": {},
+            "Uses": {},
+            "Adverse effect": {},
+            "Contraindication": {}
+        }
+    }
+}
