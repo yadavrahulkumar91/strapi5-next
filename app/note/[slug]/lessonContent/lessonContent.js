@@ -37,28 +37,24 @@ const replaceMathExpressions = (obj) => {
 };
 
 const LessonContent = ({ lessonContent }) => {
-  // Step 1: Process lessonContent to replace math expressions
   const processedLessonContent = replaceMathExpressions(lessonContent);
 
-  // Step 2: Wrap the processed content inside MathJaxContext and pass to renderAttributes
   return (
-    <MathJaxContext>
-      <div className="ml-[-30px] ">
-        {renderAttributes(processedLessonContent)}
-      </div>
-    </MathJaxContext>
+    <MathJaxContext>{renderAttributes(processedLessonContent)}</MathJaxContext>
   );
 };
 
 export default LessonContent;
 
-// const LessonContent = ({ lessonContent }) => {
-//   return <div className="ml-[-30px] ">{renderAttributes(lessonContent)}</div>;
-// };
-
-// export default LessonContent;
-
 export const renderAttributes = (attributes, level = 0, arrayLevel = 1) => {
+  return (
+    <div className="ml-[-30px]">
+      {renderAttributes1(attributes, level, arrayLevel)}
+    </div>
+  );
+};
+
+const renderAttributes1 = (attributes, level, arrayLevel) => {
   if (!attributes) {
     return null;
   }
@@ -80,7 +76,7 @@ export const renderAttributes = (attributes, level = 0, arrayLevel = 1) => {
   } else {
     return (
       <div
-        className="text-[20px] mx-2"
+        className="text-[20px] mx-2 ml-[30px]"
         dangerouslySetInnerHTML={{ __html: attributes }}
       >
         {/* {attributes} */}
@@ -88,24 +84,6 @@ export const renderAttributes = (attributes, level = 0, arrayLevel = 1) => {
     );
   }
 };
-
-// function renderArray(attributes, level) {
-//   return (
-//     <ol className=" ">
-//       {attributes.map((value, i) => {
-//         if (typeof value === "object") {
-//           return renderAttributes(value, level + 1);
-//         } else {
-//           return (
-//             <li className="list-decimal list-outside text-xl ml-[20px]" key={i}>
-//               <span dangerouslySetInnerHTML={{ __html: value }} />
-//             </li>
-//           );
-//         }
-//       })}
-//     </ol>
-//   );
-// }
 
 function getListStyle(arrayLevel) {
   switch (arrayLevel) {
@@ -122,83 +100,6 @@ function getListStyle(arrayLevel) {
   }
 }
 
-// function renderArray(attributes, level, arrayLevel) {
-//   return (
-//     <ol style={{ ...getListStyle(arrayLevel) }} className="">
-//       {attributes.map((value, i) => {
-// if (typeof value === "object") {
-//   return renderAttributes(value, level + 1, arrayLevel + 1);
-// } else {
-//   return (
-//     <li key={i} className="text-xl ml-[20px]">
-//       <span dangerouslySetInnerHTML={{ __html: value }} />
-//     </li>
-//   );
-// }
-//       })}
-//     </ol>
-//   );
-// }
-
-// function getCustomListStyle(arrayLevel, listTypeData, type) {
-//   // listTypeData contains custom styles like ["A", "I", "1", "a", "i"] or ["•", "◦", "➢", "a", "i"]
-//   // type is either "number" or "bullet"
-//   if (type === "number") {
-//     switch (arrayLevel) {
-//       case 1:
-//         return { listStyleType: listTypeData[2] || "decimal" }; // Default to "1"
-//       case 2:
-//         return { listStyleType: listTypeData[3] || "lower-alpha" }; // Default to "a"
-//       case 3:
-//         return { listStyleType: listTypeData[4] || "lower-roman" }; // Default to "i"
-//       case 4:
-//         return { listStyleType: listTypeData[1] || "upper-roman" }; // Default to "I"
-//       default:
-//         return { listStyleType: "decimal" }; // Fallback
-//     }
-//   } else if (type === "bullet") {
-//     return { listStyleType: listTypeData[arrayLevel - 1] || "disc" }; // Custom bullet styles
-//   } else {
-//     return getListStyle(arrayLevel); // Fallback to default if type is not valid
-//   }
-// }
-
-// function renderArray(attributes, level, arrayLevel) {
-//   // Check if the first item is an object containing __type and data
-//   let listType = null;
-//   let customListData = [];
-
-//   if (
-//     typeof attributes[0] === "object" &&
-//     attributes[0].__type &&
-//     Array.isArray(attributes[0].data)
-//   ) {
-//     listType = attributes[0].__type; // "number" or "bullet"
-//     customListData = attributes[0].data; // Custom numbering or bulleting styles
-//     attributes = attributes.slice(1); // Remove the first item from the array for rendering
-//   }
-
-//   return (
-//     <ol
-//       style={{
-//         ...getCustomListStyle(arrayLevel, customListData, listType),
-//       }}
-//       className=""
-//     >
-//       {attributes.map((value, i) => {
-//         if (typeof value === "object") {
-//           return renderAttributes(value, level + 1, arrayLevel + 1);
-//         } else {
-//           return (
-//             <li key={i} className="text-xl ml-[20px]">
-//               <span dangerouslySetInnerHTML={{ __html: value }} />
-//             </li>
-//           );
-//         }
-//       })}
-//     </ol>
-//   );
-// }
 function renderBulletList(attributes, level, arrayLevel) {
   const bulletType =
     attributes[0]?.__type === "bullet" ? attributes[0]?.data : null;
@@ -211,7 +112,7 @@ function renderBulletList(attributes, level, arrayLevel) {
     <ul className="">
       {listItems.map((value, i) => {
         if (typeof value === "object") {
-          return renderAttributes(value, level + 1, arrayLevel + 1);
+          return renderAttributes1(value, level + 1, arrayLevel + 1);
         } else {
           return (
             <li key={i} className="flex text-xl ml-[20px]">
@@ -244,16 +145,8 @@ function renderNumberList(attributes, level, arrayLevel) {
       style={{ listStyleType: getListStyleType(arrayLevel, numberType) }}
     >
       {listItems.map((value, i) => {
-        // <li key={i} className="text-xl ml-[20px]">
-        //   <span>
-        //     {typeof value === "object"
-        //       ? renderAttributes(value, level + 1, level + 1)
-        //       : value}
-        //   </span>
-        // </li>
-
         if (typeof value === "object") {
-          return renderAttributes(value, level + 1, arrayLevel + 1);
+          return renderAttributes1(value, level + 1, arrayLevel + 1);
         } else {
           return (
             <li key={i} className="text-xl ml-[20px]">
@@ -317,7 +210,7 @@ function renderObject(key, value, level, arrayLevel) {
   } else if (/^__note\d*$/.test(key)) {
     return <Note value={value} />;
   } else if (/^__levelup\d*$/.test(key)) {
-    return renderAttributes(value, (level = level + 1));
+    return renderAttributes1(value, (level = level + 1));
   } else if (/^__p\d*$/.test(key)) {
     return renderAttributes(value, level, arrayLevel);
     // } else if (/^__p\d*$/.test(key)) {
@@ -356,7 +249,7 @@ function elseFunction(key, value, level, arrayLevel) {
     <div key={key} className="">
       {renderKey(key, level)}
       {typeof value === "object" ? (
-        renderAttributes(value, level + 1, arrayLevel)
+        renderAttributes1(value, level + 1, arrayLevel)
       ) : (
         <span
           className=" inline-block"
