@@ -158,6 +158,35 @@ function renderNumberList(attributes, level, arrayLevel) {
     </ol>
   );
 }
+function renderParagraph(attributes, level, arrayLevel) {
+  const indentValue = attributes[0]?.indent || 0; // Get the indent value from attributes[0], default to 0 if not available
+  const listItems = attributes.slice(1);
+
+  return (
+    <>
+      {listItems.map((value, i) => {
+        if (typeof value === "object") {
+          return renderAttributes1(value, level + 1, arrayLevel + 1);
+        } else {
+          return (
+            <p
+              className="my-2"
+              key={i}
+              style={{
+                textIndent: `${indentValue}px`,
+                textAlign: "justify",
+                textJustify: "interWord",
+              }}
+            >
+              {renderAttributes1(value, level + 1, arrayLevel + 1)}
+              {/* <span dangerouslySetInnerHTML={{ __html: value }} /> */}
+            </p>
+          );
+        }
+      })}
+    </>
+  );
+}
 
 function getListStyleType(arrayLevel, numberType) {
   if (!numberType) {
@@ -189,6 +218,8 @@ function renderArray(attributes, level, arrayLevel) {
       return renderBulletList(attributes, level, arrayLevel);
     } else if (listType === "number") {
       return renderNumberList(attributes, level, arrayLevel);
+    } else if (listType === "p") {
+      return renderParagraph(attributes, level, arrayLevel);
     }
   }
 
@@ -211,18 +242,12 @@ function renderObject(key, value, level, arrayLevel) {
     return <Note value={value} />;
   } else if (/^__levelup\d*$/.test(key)) {
     return renderAttributes1(value, (level = level + 1));
-  } else if (/^__p\d*$/.test(key)) {
+  } else if (/^__null\d*$/.test(key)) {
     return renderAttributes(value, level, arrayLevel);
-    // } else if (/^__p\d*$/.test(key)) {
-    //   return (
-    //     <p className="text-[20px]" dangerouslySetInnerHTML={{ __html: value }} />
-    //   );
   } else if (/^__bullet\d*$/.test(key)) {
     return <Bullet value={value} />;
   } else if (/^__org\d*$/.test(key)) {
     return <OrgChart value={value} />;
-    // } else if (/^__org\d*$/.test(key)) {
-    //   return <AROC value={value} />
   } else if (/^__mcq\d*$/.test(key)) {
     return <MCQ MCQ={value} />;
   } else if (/^__qa\d*$/.test(key)) {
@@ -233,11 +258,9 @@ function renderObject(key, value, level, arrayLevel) {
     return <VSDX url={value} />;
   } else if (/^__right\d*$/.test(key)) {
     return (
-      // <div className='h-8'>
       <div className="relative left-[800px] w-[300px]">
         {elseFunction("", value.data, level)}
       </div>
-      // </div>
     );
   } else {
     return elseFunction(key, value, level, arrayLevel);
