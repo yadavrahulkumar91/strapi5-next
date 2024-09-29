@@ -7,7 +7,7 @@
     "Germ layers": "Diploblastic",
     "Body plan": "Blind sac body plan",
     "Body wall": {
-      "__p": "Consists of 2 cellular layers surrounding the Mesogloea",
+      "__null": "Consists of 2 cellular layers surrounding the Mesogloea",
       "Epidermis (Outer epithelium)": "",
       "Gastrodermis (Inner epithelium)": [
         "Lines the gastrovascular cavity"
@@ -25,7 +25,7 @@
     ]
   },
   "Polymorphism": {
-    "__p": "The occurrence of structurally and functionally different types of individuals, called <b>zooids</b>, within the same organism during its life history is called Polymorphism.",
+    "__null": "The occurrence of structurally and functionally different types of individuals, called <b>zooids</b>, within the same organism during its life history is called Polymorphism.",
     "9 types": {
       "Trophozooid/ Gastrozooid": "Feeding ",
       "Gonophore": "Sessile medusae",
@@ -69,7 +69,7 @@
     ]
   },
   "Metagenesis/ Alternation of generation": {
-    "__p": "Alternation of polypoid and medusoid generation occurs.",
+    "__null": "Alternation of polypoid and medusoid generation occurs.",
     "__table": [
       {
         "data": [

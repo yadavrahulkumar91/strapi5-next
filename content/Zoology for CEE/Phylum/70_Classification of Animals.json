@@ -51,7 +51,7 @@
         "credit": ""
       }
     ],
-    "__p": "Grade of organisation refers to the levels in which the cells are arranged",
+    "__null": "Grade of organisation refers to the levels in which the cells are arranged",
     "Protoplasmic grade/ Molecular grade / Acellular grade": {
       "Characteristics": "All life activities within a single cell",
       "Organisms": [
@@ -480,7 +480,7 @@
     ]
   },
   "Metamerism/ Segmentation": {
-    "__p": "Segmentation is the serial repetition of similar organs, tissues, cell types or body cavities along the anterior posterior (A-P) axis of bilaterally symmetric animals",
+    "__null": "Segmentation is the serial repetition of similar organs, tissues, cell types or body cavities along the anterior posterior (A-P) axis of bilaterally symmetric animals",
     "Unsegmented": {
       "Characteristics": "Body without a linear series of segments.",
       "Examples": [
@@ -623,7 +623,7 @@
   },
   "Animal habitats": {
     "Aquatic animals": {
-      "__p": "Lives in water.",
+      "__null": "Lives in water.",
       "Marine": {
         "": "Lives in sea."
       },
@@ -733,7 +733,7 @@
     }
   },
   "Nutrition": {
-    "__p": "The means by which living organisms obtain the substances required for growth and the maintenance of life is called nutrition.",
+    "__null": "The means by which living organisms obtain the substances required for growth and the maintenance of life is called nutrition.",
     "Holozoic or Zootrophic nutrition (Animal-like)": {
       "": "Utilize ready made solid food in the from of other organisms such as microorganisms, bacteria, yeast, algae, protozoans and small metazoans.",
       "Examples": [

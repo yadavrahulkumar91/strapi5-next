@@ -109,7 +109,7 @@
           "width": "300"
         }
       ],
-      "__p": "Thin, firm, and flexible membrane covering the body.",
+      "__null": "Thin, firm, and flexible membrane covering the body.",
       "Structure": [
         "Uniform appearance.",
         "Composed of a lattice of hexagonally shaped pits, each centrally perforated by a single cilium.",
@@ -136,14 +136,14 @@
           "credit": ""
         }
       ],
-      "__p": "Numerous cilia covering the entire body surface, acting as locomotory organelles.",
+      "__null": "Numerous cilia covering the entire body surface, acting as locomotory organelles.",
       "Arrangement": [
         "Longitudinal rows",
         "Almost parallel on the dorsal surface and slightly oblique on the ventral surface.",
         "Uniform length throught the body except few longer at the posterior end of body called Caudal tuft."
       ],
       "Ultrastructure": {
-        "__p": "3 major parts",
+        "__null": "3 major parts",
         "Outer Plasma membrane": "",
         "Interposed cytoplasmic matrix": "",
         "A central axoneme": [

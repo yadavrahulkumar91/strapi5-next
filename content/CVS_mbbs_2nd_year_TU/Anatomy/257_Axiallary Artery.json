@@ -18,7 +18,7 @@
     "End \\[a_b\\]": "Lower border of the Teres major muscle \\[a_b\\]",
     "Continuation": "As Brachial artery",
     "Parts": {
-        "__p": "It is divided into 3 parts by <b>Pectoralis minor</b> muscle.",
+        "__null": "It is divided into 3 parts by <b>Pectoralis minor</b> muscle.",
         "__table": [
             {
                 "data": [
@@ -134,7 +134,7 @@
             }
         ],
         "1<sup>st</sup> part": {
-            "__p": "It lies between outer border of first rib and medial border of Pectoralis minor muscle.",
+            "__null": "It lies between outer border of first rib and medial border of Pectoralis minor muscle.",
             "Branches": [
                 "Superior thoracic artery"
             ],
@@ -161,7 +161,7 @@
             }
         },
         "2<sup>nd</sup> part": {
-            "__p": "It lies behind the Pectoralis minor muscle.",
+            "__null": "It lies behind the Pectoralis minor muscle.",
             "Branches": [
                 "Thoracoacromial trunk",
                 "Lateral thoracic artery"
@@ -190,7 +190,7 @@
             }
         },
         "3<sup>rd</sup> part": {
-            "__p": "It lies between medial border of Pectoralis minor muscle and lower border of Teres major muscle.",
+            "__null": "It lies between medial border of Pectoralis minor muscle and lower border of Teres major muscle.",
             "Branches": [
                 "Anterior circumflex humeral artery",
                 "Posterior circumflex humeral artery",

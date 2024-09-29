@@ -8,7 +8,7 @@
     "On each side": "Mediastinal pleura of each lungs"
   },
   "Divisions": {
-    "__p": "",
+    "__null": "",
     "__org": [
       {
         "data": {
@@ -36,7 +36,7 @@
       }
     ],
     "Superior Mediastinum": {
-      "__p": "",
+      "__null": "",
       "Boundaries": {
         "Anteriorly": "Manubrium sterni",
         "Posteriorly": "Upper four thoracic vertebrae (T<sub>1</sub>-T<sub>4</sub>)",
@@ -100,7 +100,7 @@
     },
     "Inferior Mediastinum": {
       "Anterior Mediastinum": {
-        "__p": "",
+        "__null": "",
         "Boundaries": {
           "Anteriorly": "Sternum",
           "Posteriorly": "Pericardium",
@@ -117,7 +117,7 @@
         ]
       },
       "Middle Mediastinum": {
-        "__p": "",
+        "__null": "",
         "Boundaries": {
           "Anteriorly": "Anterior mediastinum",
           "Posteriorly": "Posterior mediastinum",
@@ -138,7 +138,7 @@
         ]
       },
       "Posterior Mediastinum": {
-        "__p": "",
+        "__null": "",
         "Boundaries": {
           "Anteriorly": "Pericardium",
           "Posteriorly": "Vertebral column (T<sub>5</sub>-T<sub>12</sub>)",

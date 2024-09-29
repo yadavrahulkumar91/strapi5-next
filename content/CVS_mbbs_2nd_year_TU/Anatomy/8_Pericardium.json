@@ -66,7 +66,7 @@
             ]
         ],
         "Serous pericardium": {
-            "__p": [
+            "__null": [
                 "It is thin inner layer.",
                 "The parietal and visceral layers of serous pericardium are continuous at the roots of the great vessels.",
                 "The reflections of serous pericardium occurs in two locations.",
@@ -84,7 +84,7 @@
                 "It contains 150ml of Pericardial fluid."
             ],
             "Visceral pericardium/ Epicardium": {
-                "__p": [
+                "__null": [
                     "It adheres to the heart and forms its outer covering."
                 ],
                 "Contents": [
@@ -161,7 +161,7 @@
     },
     "Sinuses of pericardium": {
         "Transverse sinus of pericardium": {
-            "__p": [
+            "__null": [
                 "The transverse sinus is a horizontal gap betweent the arterial and venous ends of the heart tube.",
                 [
                     "Arterial end encloses the aorta and pulmonary trunk.",
@@ -187,7 +187,7 @@
             "Development": "Developed from Central part of dorsal mesocardium"
         },
         "Oblique sinus": {
-            "__p": [
+            "__null": [
                 "The oblique sinus is a narrow gap behind the left atrium of heart.",
                 "The oblique sinus is also called as <b>'Cul-de-sac'</b>.",
                 "It is developed due to rearrangement of veins at the venous end."

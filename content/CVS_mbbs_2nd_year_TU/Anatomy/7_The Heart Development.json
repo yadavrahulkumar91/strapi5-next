@@ -65,7 +65,7 @@
         "Merging of the caudal regions of the paired cardiac tube except at the caudalmost which becomes right and left horn of sinus venosus."
     ],
     "Lengthening of Cardiac tube": {
-        "__p": [
+        "__null": [
             "Lengthening of Cardiac tube occurs by addition of cells from SHF to outflow tract region which forms the parts given above."
         ],
         "__note": [
@@ -128,9 +128,9 @@
                 "Body of sinus venosus": "Forms smooth part of both right and left atria.",
                 "Horn of sinus venosus": {
                     "Left horn": {
-                        "__p": "All these retrogresses and remnant forms part of coronary sinus.",
+                        "__null": "All these retrogresses and remnant forms part of coronary sinus.",
                         "Common cardinal vein": {
-                            "__p": "Forms <b>Coronary sinus</b> and the <b>Oblique vein of left atrium</b>.",
+                            "__null": "Forms <b>Coronary sinus</b> and the <b>Oblique vein of left atrium</b>.",
                             "Anterior Cardinal vein": "",
                             "Posterior Cardinal vein": ""
                         },
@@ -139,7 +139,7 @@
                     },
                     "Right horn": {
                         "Common cardinal vein": {
-                            "__p": "Forms part of Superior venacava.",
+                            "__null": "Forms part of Superior venacava.",
                             "Anterior Cardinal vein": "",
                             "Posterior Cardinal vein": ""
                         },
@@ -311,7 +311,7 @@
                             ]
                         },
                         "Tetralogy of Fallot": {
-                            "__p": [
+                            "__null": [
                                 "Tetralogy of fallot is the unequal division of the conus resulting from anterior displacement of the conotruncal septum.",
                                 "It is the most common abnormality of the conotruncal region.",
                                 "It is not fatal",
@@ -325,7 +325,7 @@
                             ]
                         },
                         "Persistent (common) truncus arteriosus": {
-                            "__p": [
+                            "__null": [
                                 "Persistent truncus arteriosus is the defect having no division of the outflow tract.",
                                 "It occurs when the conotruncal ridges fail to form such division.",
                                 "Pulmonary artery arises some distance above the origin of the undivided truncus.",
@@ -449,7 +449,7 @@
                     [
                         "IV",
                         {
-                            "__p": "Right subclavian artery (Proximal portion)",
+                            "__null": "Right subclavian artery (Proximal portion)",
                             "__note": [
                                 {
                                     "data": "The distal portion of the right subclavian artery, as well as the left subclavian artery, form from the seventh intersegmental arteries on their respective sides."
@@ -457,7 +457,7 @@
                             ]
                         },
                         {
-                            "__p": "Arch of the aorta from the left common carotid to the left subclavian arteries",
+                            "__null": "Arch of the aorta from the left common carotid to the left subclavian arteries",
                             "__note": [
                                 {
                                     "data": "The proximal portion of the aortic arch is derived from the left horn of the aortic sac; the right horn of this sac forms the brachiocephalic artery."

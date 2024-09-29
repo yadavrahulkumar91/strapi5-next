@@ -234,7 +234,7 @@
     "They are ammonotelic. (NH<sub>3</sub>)"
   ],
   "Reproduction": {
-    "__p": "Reproduction in protozoa may be asexual or sexual.",
+    "__null": "Reproduction in protozoa may be asexual or sexual.",
     "Asexual reproduction": {
       "Binary fission": {
         "__table": [
@@ -271,7 +271,7 @@
         ]
       },
       "Budding": {
-        "__p": "Budding is a modified binary fission resulting in a single or many daughter individuals in addition to the parent.",
+        "__null": "Budding is a modified binary fission resulting in a single or many daughter individuals in addition to the parent.",
         "Examples": [
           "<i>Vorticella</i>",
           "<i>Ephelota</i>"

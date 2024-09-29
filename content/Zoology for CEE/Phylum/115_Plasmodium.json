@@ -175,7 +175,7 @@
           "Ruptured RBCs and schizonts are called Ghost cells, which are destroyed by the spleen."
         ],
         "Gametocyte(n)": {
-          "__p": "After repeated schizogony, numerous RBC merozoites are formed, losing their power of asexual multiplication, so they undergo a sexual cycle. RBC merozoites become rounded and are known as Gametocytes.",
+          "__null": "After repeated schizogony, numerous RBC merozoites are formed, losing their power of asexual multiplication, so they undergo a sexual cycle. RBC merozoites become rounded and are known as Gametocytes.",
           "Types": [
             "Microgamonts (Micro-gametocytes, male)",
             "Macrogamonts (Macro-gametocytes, female)"
@@ -187,7 +187,7 @@
     "Sexual Cycle/ Gamogony and Sporogony - Mosquito (Primary host)": {
       "Gametocytes(n)": "When an Anopheles mosquito bites an infected person, along with all stages, gametocytes are ingested into the mosquito's gut. All stages except Gametocytes are digested in the mosquito's gut.",
       "Gametes(n)": {
-        "__p": "Gametocytes develop into Gametes. There are two types of gametes:",
+        "__null": "Gametocytes develop into Gametes. There are two types of gametes:",
         "Types": [
           "Microgametes (Male 👨 gametes): Micro-gametocyte gives rise to 6-8 haploid microgametes after meiotic division. The formation of whip-like micro-gametes or sperms is known as Ex-flagellation.",
           "Macrogametes (Female 🚺 gametes): Macro-gametocytes give rise to one haploid macrogamete after meiotic division. It has a cone receptor."
@@ -200,7 +200,7 @@
         "Ookinete penetrates the Peritrophic membrane of the gut wall and forms an encysted zygote called Oocyst."
       ],
       "Oocyst(2n)": {
-        "__p": "Oocyst undergoes Sporogony, which is meiosis followed by mitosis. Sporogony occurs in the Stomach wall of the mosquito, producing about 10,000 sporozoites from each oocyst."
+        "__null": "Oocyst undergoes Sporogony, which is meiosis followed by mitosis. Sporogony occurs in the Stomach wall of the mosquito, producing about 10,000 sporozoites from each oocyst."
       },
       "Sporoblast (n)": "",
       "Sporozoite(n)": "Sporozoites migrate to the salivary gland."
@@ -209,7 +209,7 @@
   "Treatment of Malaria": {
     "Drugs": {
       "Quinine": {
-        "__p": "Quinine is an important alkaloid in the treatment of malaria.",
+        "__null": "Quinine is an important alkaloid in the treatment of malaria.",
         "Source": "Quinine is extracted from the bark of the Cinchona tree."
       },
       "brin": [

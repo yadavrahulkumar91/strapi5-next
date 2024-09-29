@@ -206,7 +206,7 @@
         },
         "ACE inhibitor": {
             "Drugs": {
-                "__p": [
+                "__null": [
                     "Captopril",
                     "Enalapril",
                     "Fosinopril",

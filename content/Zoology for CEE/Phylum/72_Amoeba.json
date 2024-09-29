@@ -44,7 +44,7 @@
       },
       "Uroid": "Posterior end of Amoeba is marked by wrinkled plasma membrane - the Uroid.",
       "Cytoplasm": {
-        "__p": "Cytoplasm of Amoeba is differentiated into Outer ectoplasm and inner endoplasm.",
+        "__null": "Cytoplasm of Amoeba is differentiated into Outer ectoplasm and inner endoplasm.",
         "Ectoplasm": "Ectoplasm is the outer tough plasmagel.",
         "Endoplasm": [
           "Endoplasm is central more fluid like plasmasol state of colloid cytoplasm.",
