@@ -1,1 +1,187 @@
-{"introduction": {"name": "Anti hypertensive drugs"}, "classification": {"Diuretics": {"Thiazides": ["Hydrochlorothiazide", "Chlorthalidone", "Indapamide"], "High ceiling": ["Furosemide"], "Aldosterone antagonist": ["Spironolactone", "Eplerenone"]}, "Vasodilators": {"Arteriolar dilator": ["Hydralazine"], "Arteriolar + Venodilator": ["Sodium nitroprusside"]}, "Sympathetic inhibitors": {"Central sympatholytics": ["Clonidine", "Methyldopa"], "α-adrenergic blockers": ["Prazosin", "Terazosin", "Doxazosin", "Phentolamine"], "β-adrenergic blockers": ["Propranolol", "Metoprolol", "Atenolol"], "α+β adrenergic blockers": ["Labetalol", "Carvedilol"]}, "Calcium channel blockers": {"Benzothiazepine": ["Diltiazem"], "Dihydropyridines": [{"Nifedipine": {"adverse_effects": ["Flushing", "Ankle edema", {"cariac": ["Hypotension", "Palpitation", "Reflex tachycardia"]}, {"CNS": ["Headache", "Drowsiness", "Nausea"]}, "Urine voiding difficult in male", "Hamper diabetic control by decreasing insulin release"]}}, "Amlodipine", "Cilnidipine", "Felodipine", "Lacidipine", "Lercanidipine", "Benidipine", "Nicardipine"], "Phenylalkylamine": ["Verapamil"]}, "Renin-angiotensin system inhibitors": {"ACE inhibitors": ["Captopril", "Enalapril", "Fosinopril", "Lisinopril", "Perindopril", "Quinapril", "Ramipril", "Trandolapril"], "Direct renin inhibitor": ["Aliskiren"], "Angiotensin receptor blockers (ARBs)": ["Losartan", "Candesartan", "Valsartan", "Telmisartan", "Irbesartan", "Olmesartan"]}}}
+{
+    "introduction": {
+        "name": "Anti hypertensive drugs"
+    },
+    "classification": {
+        "__org": [
+            {
+                "data": {
+                    "name": "Anti hypertensive drugs",
+                    "children": [
+                        {
+                            "name": "Diuretics"
+                        },
+                        {
+                            "name": "RAS inhibitors"
+                        },
+                        {
+                            "name": "Vasodilators"
+                        },
+                        {
+                            "name": "Calclium channel <br>blockers",
+                            "children": [
+                                {
+                                    "name": "Phenylalkylamine",
+                                    "about": "Verapamil"
+                                },
+                                {
+                                    "name": "Benzothiazepine",
+                                    "about": "Diltiazem"
+                                },
+                                {
+                                    "name": "Dihydropyridines",
+                                    "about": [
+                                        "Amlodipine",
+                                        "Nifedipine"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sympathetic inhibitors",
+                            "children": [
+                                {
+                                    "name": "α-adrenergic <br>blockers",
+                                    "about": [
+                                        "Prazosin",
+                                        "Terazosin",
+                                        "Doxazosin"
+                                    ]
+                                },
+                                {
+                                    "name": "β-adrenergic <br>blockers",
+                                    "about": [
+                                        "Atenolol",
+                                        "Metoprolol",
+                                        "Propranolol"
+                                    ]
+                                },
+                                {
+                                    "name": "α+β-adrenergic <br>blockers",
+                                    "about": [
+                                        "Carvedilol",
+                                        "Labetalol"
+                                    ]
+                                },
+                                {
+                                    "name": "Central <br>sympatholytics",
+                                    "about": [
+                                        "Clonidine",
+                                        "Methyldopa"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "Diuretics": {
+            "Thiazides": [
+                "Hydrochlorothiazide",
+                "Chlorthalidone",
+                "Indapamide"
+            ],
+            "High ceiling": [
+                "Furosemide"
+            ],
+            "Aldosterone antagonist": [
+                "Spironolactone",
+                "Eplerenone"
+            ]
+        },
+        "Vasodilators": {
+            "Arteriolar dilator": [
+                "Hydralazine"
+            ],
+            "Arteriolar + Venodilator": [
+                "Sodium nitroprusside"
+            ]
+        },
+        "Sympathetic inhibitors": {
+            "Central sympatholytics": [
+                "Clonidine",
+                "Methyldopa"
+            ],
+            "α-adrenergic blockers": [
+                "Prazosin",
+                "Terazosin",
+                "Doxazosin",
+                "Phentolamine"
+            ],
+            "β-adrenergic blockers": [
+                "Propranolol",
+                "Metoprolol",
+                "Atenolol"
+            ],
+            "α+β adrenergic blockers": [
+                "Labetalol",
+                "Carvedilol"
+            ]
+        },
+        "Calcium channel blockers": {
+            "Benzothiazepine": [
+                "Diltiazem"
+            ],
+            "Dihydropyridines": [
+                {
+                    "Nifedipine": {
+                        "adverse_effects": [
+                            "Flushing",
+                            "Ankle edema",
+                            {
+                                "cariac": [
+                                    "Hypotension",
+                                    "Palpitation",
+                                    "Reflex tachycardia"
+                                ]
+                            },
+                            {
+                                "CNS": [
+                                    "Headache",
+                                    "Drowsiness",
+                                    "Nausea"
+                                ]
+                            },
+                            "Urine voiding difficult in male",
+                            "Hamper diabetic control by decreasing insulin release"
+                        ]
+                    }
+                },
+                "Amlodipine",
+                "Cilnidipine",
+                "Felodipine",
+                "Lacidipine",
+                "Lercanidipine",
+                "Benidipine",
+                "Nicardipine"
+            ],
+            "Phenylalkylamine": [
+                "Verapamil"
+            ]
+        },
+        "Renin-angiotensin system inhibitors": {
+            "ACE inhibitors": [
+                "Captopril",
+                "Enalapril",
+                "Fosinopril",
+                "Lisinopril",
+                "Perindopril",
+                "Quinapril",
+                "Ramipril",
+                "Trandolapril"
+            ],
+            "Direct renin inhibitor": [
+                "Aliskiren"
+            ],
+            "Angiotensin receptor blockers (ARBs)": [
+                "Losartan",
+                "Candesartan",
+                "Valsartan",
+                "Telmisartan",
+                "Irbesartan",
+                "Olmesartan"
+            ]
+        }
+    }
+}

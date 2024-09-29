@@ -3,7 +3,7 @@
     "classification": {
         "__org": [
             {
-                "type": "FISHBONE_1",
+                "type": "",
                 "data": {
                     "name": "Drugs for Congestive Heart Failure",
                     "children": [
@@ -40,67 +40,40 @@
                             "name": "Drugs without +ve ionotropic effect",
                             "children": [
                                 {
-                                    "name": "Diuretics",
-                                    "children": [
-                                        {
-                                            "name": "Bumetanide"
-                                        },
-                                        {
-                                            "name": "Furosemide"
-                                        },
-                                        {
-                                            "name": "Hydrochlorothiazide"
-                                        },
-                                        {
-                                            "name": "Metolazone"
-                                        },
-                                        {
-                                            "name": "Spironolactone"
-                                        }
-                                    ]
+                                    "name": "Diuretics"
                                 },
                                 {
-                                    "name": "ACE inhibitors",
-                                    "children": [
-                                        {
-                                            "name": "Enalapril"
-                                        },
-                                        {
-                                            "name": "Lisinopril"
-                                        },
-                                        {
-                                            "name": "Ramipril"
-                                        }
-                                    ]
+                                    "name": "ACE inhibitors"
                                 },
                                 {
                                     "name": "β-blockers",
-                                    "children": [
-                                        {
-                                            "name": "Carvedilol"
-                                        },
-                                        {
-                                            "name": "Metoprolol"
-                                        },
-                                        {
-                                            "name": "Bisoprolol"
-                                        }
+                                    "about": [
+                                        "Carvedilol",
+                                        "Metoprolol",
+                                        "Bisoprolol"
                                     ]
                                 },
                                 {
                                     "name": "Vasodilator",
                                     "children": [
                                         {
-                                            "name": "Hydralazine"
+                                            "name": "Arteriolar dilator",
+                                            "about": [
+                                                "Hydralazine"
+                                            ]
                                         },
                                         {
-                                            "name": "Sodium nitroprusside"
+                                            "name": "Venodilators",
+                                            "about": [
+                                                "Glyceryl trinitrate",
+                                                "Isosorbide dinitrate"
+                                            ]
                                         },
                                         {
-                                            "name": "Isosorbidedi nitrate"
-                                        },
-                                        {
-                                            "name": "Nesiritide"
+                                            "name": "Arteriolar + <br>Venodilator",
+                                            "about": [
+                                                "Sodium nitroprusside"
+                                            ]
                                         }
                                     ]
                                 }

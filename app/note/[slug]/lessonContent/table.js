@@ -119,51 +119,56 @@ export default function Table({ value }) {
             const spans = computeSpan(table.data); // Compute the spans for this table
 
             return (
-              <table className="m-2" key={tableIndex} border="1">
-                {table.caption ? (
-                  <caption className="text-base">
-                    <span>Table: </span>
-                    <span dangerouslySetInnerHTML={{ __html: table.caption }} />
-                  </caption>
-                ) : null}
+              <>
+                <table className="m-2" key={tableIndex} border="1">
+                  {table.caption ? (
+                    <caption className="text-base">
+                      <span>Table: </span>
+                      <span
+                        dangerouslySetInnerHTML={{ __html: table.caption }}
+                      />
+                    </caption>
+                  ) : null}
 
-                <tbody>
-                  {table.data.map((row, rowIndex) => (
-                    <tr key={rowIndex}>
-                      {row.map((cell, cellIndex) => {
-                        const { colspan, rowspan, skip } =
-                          spans[rowIndex][cellIndex];
+                  <tbody>
+                    {table.data.map((row, rowIndex) => (
+                      <tr key={rowIndex}>
+                        {row.map((cell, cellIndex) => {
+                          const { colspan, rowspan, skip } =
+                            spans[rowIndex][cellIndex];
 
-                        if (skip) return null; // Skip cell if it's part of a colspan or rowspan
+                          if (skip) return null; // Skip cell if it's part of a colspan or rowspan
 
-                        if (rowIndex === 0) {
-                          return (
-                            <th
-                              className="border border-blue-600 bg-blue-300"
-                              key={cellIndex}
-                              colSpan={colspan}
-                              rowSpan={rowspan}
-                            >
-                              {renderAttributes(cell, table.level ?? 2)}
-                            </th>
-                          );
-                        } else {
-                          return (
-                            <td
-                              className="border border-blue-400 bg-blue-50"
-                              key={cellIndex}
-                              colSpan={colspan}
-                              rowSpan={rowspan}
-                            >
-                              {renderAttributes(cell, table.level ?? 2)}
-                            </td>
-                          );
-                        }
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                          if (rowIndex === 0) {
+                            return (
+                              <th
+                                className="border border-blue-600 bg-blue-300"
+                                key={cellIndex}
+                                colSpan={colspan}
+                                rowSpan={rowspan}
+                              >
+                                {renderAttributes(cell, table.level ?? 2)}
+                              </th>
+                            );
+                          } else {
+                            return (
+                              <td
+                                className="border border-blue-400 bg-blue-50"
+                                key={cellIndex}
+                                colSpan={colspan}
+                                rowSpan={rowspan}
+                              >
+                                {renderAttributes(cell, table.level ?? 2)}
+                              </td>
+                            );
+                          }
+                        })}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                {table.about ?? renderAttributes(table.about, table.level ?? 2)}
+              </>
             );
           })
         : null}
