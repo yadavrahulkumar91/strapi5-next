@@ -73,13 +73,21 @@ const LessonPage = ({ lessons, lessonCounter, unitName }) => {
       {lessons.map((lesson, i) => {
         let lessonContent = {};
 
-        try {
-          lessonContent = JSON.parse(lesson.lesson_content);
-        } catch (error) {
-          console.error("Failed to parse lesson content:", error);
-          // Optionally, you can set lessonContent to some default value or show an error message
-          lessonContent = {}; // Default empty object or handle accordingly
+        if (lesson.lesson_content === "") {
+          lessonContent = {}; // Handle empty lesson_content case
+        } else {
+          try {
+            lessonContent = JSON.parse(lesson.lesson_content);
+          } catch (error) {
+            lessonContent = {}; // Default empty object or handle accordingly
+            console.error(
+              "Failed to parse lesson content:",
+              error,
+              lessonContent
+            );
+          }
         }
+
         return (
           <div
             key={lesson.id}
