@@ -1,0 +1,131 @@
+{
+    "__org": [
+        {
+            "data": {
+                "name": "Anticoagulants",
+                "children": [
+                    {
+                        "name": "Parenteral anticoagulants",
+                        "children": [
+                            {
+                                "name": "Indirect thrombin <br>inhibitors",
+                                "about": [
+                                    "Danaparoid",
+                                    "Fondaparinux",
+                                    "Heparin",
+                                    "Low molecular <br>weight heparin"
+                                ]
+                            },
+                            {
+                                "name": "Direct thrombin <br>inhibitors",
+                                "about": [
+                                    "Argatroban",
+                                    "Bivalirudin"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Oral anticoagulants",
+                        "children": [
+                            {
+                                "name": "Vitamin K <br>antagonists",
+                                "about": [
+                                    "Acenocoumarol",
+                                    "Bishydroxycoumarin",
+                                    "Ethyl-biscoum-acetate",
+                                    "Warfarin sodium"
+                                ]
+                            },
+                            {
+                                "name": "Direct factor <br>Xa inhibitor",
+                                "about": [
+                                    "Apixaban",
+                                    "Rivaroxaban"
+                                ]
+                            },
+                            {
+                                "name": "Oral direct <br>thrombin inhibitors",
+                                "about": [
+                                    "Dabigatranetexilate"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "__table": [
+        {
+            "caption": "Differences between <b>Heparin</b> and <b>Warfarin</b>",
+            "data": [
+                [
+                    "",
+                    "Heparin",
+                    "Warfarin"
+                ],
+                [
+                    "Chemistry",
+                    "Mucopolysaccharide",
+                    "Coumarin derivative"
+                ],
+                [
+                    "Source",
+                    "Hog lung, pig intestine",
+                    "Synthetic"
+                ],
+                [
+                    "Route of administration",
+                    "Parenteral (i.v., s.c.)",
+                    "Oral"
+                ],
+                [
+                    "Onset of action",
+                    "Immediate",
+                    "Delayed (1–3 days)"
+                ],
+                [
+                    "Duration of action",
+                    "4–6 hrs",
+                    "3–6 days"
+                ],
+                [
+                    "Activity",
+                    "In vitro and in vivo",
+                    "In vivo only"
+                ],
+                [
+                    "Mechanism",
+                    "Blocks action of factor X and thrombin",
+                    "Inhibits synthesis of clotting factors"
+                ],
+                [
+                    "Antagonist",
+                    "Protamine sulphate",
+                    "Vit K"
+                ],
+                [
+                    "Variability in response",
+                    "Limited",
+                    "Marked"
+                ],
+                [
+                    "Lab control",
+                    "aPTT/clotting time (desirable)",
+                    "Prothrombin time/INR (essential)"
+                ],
+                [
+                    "Drug interactions",
+                    "Few and not significant",
+                    "Many and significant"
+                ],
+                [
+                    "Use",
+                    "To initiate therapy",
+                    "For maintenance"
+                ]
+            ]
+        }
+    ]
+}

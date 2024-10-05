@@ -1,0 +1,120 @@
+{
+    "Some terms": {
+        "Primary platelet plug/ Hemostatic plug": "",
+        "Coagulation": [
+            "Coagulation is the property of plasma.",
+            "Coagulation is the cascade of enzymatic reaction at the end of which soluble fibrinogen is converted into insoluble fibrin.",
+            "Normally fibrinogen is soluble in blood, but at end it converts into fibrin strand.",
+            {
+                "__mermaid": [
+                    {
+                        "data": [
+                            "graph LR",
+                            "A(Soluble fibrinogen)-->|Coagulation| B(Inoluble fibrin/ <br>Fibrin plug)"
+                        ],
+                        "caption": "Coagulation"
+                    }
+                ]
+            }
+        ],
+        "Platelet adherence": "",
+        "Platelet activation": "",
+        "Platelet aggregation": "",
+        "Secondary hemostatic plug": "",
+        "Clot": "",
+        "Thrombus": "",
+        "Embolus": ""
+    },
+    "Platelet": {
+        "Substances produced by Endothelin": [
+            "NO",
+            "PGI<sub>2</sub> (Prostacylins)",
+            "Adenosine dephosphatase"
+        ],
+        "": [
+            "These keep the platelets inactive.",
+            "Healthy endothelial cells don't allow activated coagulation ",
+            "Heparin sulphate",
+            [
+                "Heparan sulphate is present on every endothelial cell.",
+                "Anti-thrombin - III can stick on the surface of heparan sulface and activates it."
+            ],
+            "Thrombomodulin",
+            [
+                "Thrombomodulin binds with thrombin and modulates the function of thrombin.",
+                "Thrombin will active Protein C.",
+                "Protein C will destroy ",
+                "Thrombin becomes anticoagulants."
+            ],
+            "t-PA (Tissue plasminogen activator)",
+            [
+                "It can convert protein Plasminogen coming from liver into plasmin.",
+                "Plasmin breaks fibrin."
+            ],
+            "Hence healthy endothlial lining is tissue which is anti-coagulant and anti-platelet."
+        ]
+    },
+    "3 steps to stop bleeding": {
+        "Vascular constriction": [
+            "Very early but for short time.",
+            "Neurogenic reflex vasoconstriction: Vasoconstrictions are released from nerves called Neurogenic reflex.",
+            "Myogenic constriction:",
+            [
+                ""
+            ],
+            "Endothelial cells",
+            [
+                "Produces vasoconstriction when injured.",
+                "Loss of Vasodilator",
+                [
+                    "NO",
+                    "Prostacylins"
+                ],
+                "Produce endothelial cell",
+                "Acts on smooth muscle to contract them."
+            ]
+        ],
+        "Production of chemical substances by Injured endothelial": [
+            "Chemicals",
+            [
+                "vWF (Von Willebrand Factor)"
+            ],
+            "Hook with injured collagens and platelets.",
+            "Make the exposed surface very sticky.",
+            "Receptor present in vWF is glycoprotein receptor (GPIb).",
+            "Platelet adhesion is the process in which platelet is adhered to non-platelet surface."
+        ],
+        "Platetlet": [
+            "Release reaction: Granules are released from adhered platelets.",
+            "Granules present in platelet",
+            [
+                "α granules",
+                [
+                    "α factors",
+                    "Platelet Derived Growth Factor (PDGF)"
+                ],
+                "δ granules",
+                [
+                    "Serotonin",
+                    [
+                        "Produces vasoconstriction"
+                    ],
+                    "ADP",
+                    [
+                        "Any substances touches it, it activates them"
+                    ],
+                    "Ca<sup>++</sup>",
+                    [
+                        "To hold the coagulation factor tighty, fix on the platelet",
+                        ""
+                    ]
+                ]
+            ],
+            "Thromboxane A2 (TXA2)",
+            [
+                "Vasoconstrictior",
+                "Platelet agggregator"
+            ]
+        ]
+    }
+}

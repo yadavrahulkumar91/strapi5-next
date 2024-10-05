@@ -1,0 +1,82 @@
+{
+    "__org": [
+        {
+            "name": "Drugs for Cough",
+            "children": [
+                {
+                    "name": "Pharyngeal <br>demulcents",
+                    "about": [
+                        "Glycerine",
+                        "Liquorice",
+                        "Lozenges",
+                        "Syrups"
+                    ]
+                },
+                {
+                    "name": "Expectorants <br> (Mucokinetics)",
+                    "children": [
+                        {
+                            "name": "Secretion <br>enhancers",
+                            "about": [
+                                "Ammon. chloride",
+                                "Pot. citrate",
+                                "Pot. iodide",
+                                "Guaiphenesin",
+                                "Tolu balsam",
+                                "Vasaka"
+                            ]
+                        },
+                        {
+                            "name": "Mucolytics",
+                            "about": [
+                                "Ambroxol",
+                                "Bromhexine",
+                                "Acetylcysteine",
+                                "Carbocysteins"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Adjucant antitussives/ <br>Bronchodilators",
+                    "about": [
+                        "Salbutamol",
+                        "Terbutaline",
+                        "Bambuterol",
+                        "Formoterol",
+                        "Salmeterol"
+                    ]
+                },
+                {
+                    "name": "Antitussives <br>(Cough center <br>suppressants)",
+                    "children": [
+                        {
+                            "name": "Opioids",
+                            "about": [
+                                "Codeine",
+                                "Pholcodine",
+                                "Ethylmorphine"
+                            ]
+                        },
+                        {
+                            "name": "Non-opioids",
+                            "about": [
+                                "Chlophedianol",
+                                "Dextromethorphan",
+                                "Noscapine"
+                            ]
+                        },
+                        {
+                            "name": "Antihistaminics",
+                            "about": [
+                                "Diphenhydramine",
+                                "Promethazine",
+                                "Chlorpheniramine"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

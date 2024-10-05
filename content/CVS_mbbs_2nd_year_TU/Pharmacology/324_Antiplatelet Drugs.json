@@ -1,0 +1,34 @@
+{
+    "__org": [
+        {
+            "name": "Antiplatelet drugs <br> (Antithrombotic drugs)",
+            "children": [
+                {
+                    "name": "Thromboxane synthesis <br> inhibitor",
+                    "about": "Aspirin"
+                },
+                {
+                    "name": "Platelet cAMP <br>enhancer",
+                    "about": "Dipyridamole"
+                },
+                {
+                    "name": "P2Y<sub>12</sub> receptor <br>blockers",
+                    "about": [
+                        "Clopidogrel",
+                        "Prasugrel",
+                        "Ticagrelor",
+                        "Ticlopidine"
+                    ]
+                },
+                {
+                    "name": "GP II<sub>b</sub>/III<sub>a</sub> <br>antogonists",
+                    "about": [
+                        "Abciximab",
+                        "Eptifibatide",
+                        "Tirofiban"
+                    ]
+                }
+            ]
+        }
+    ]
+}
