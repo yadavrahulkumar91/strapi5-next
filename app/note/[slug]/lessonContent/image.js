@@ -76,7 +76,8 @@ export default function Image({ value }) {
             >
               <div height="auto" width="auto" className="relative">
                 <img
-                  src={image.url}
+                  src={image.url + "?" + "t=" + Date.now()}
+                  // src={image.url}
                   width={image.width ? image.width : 500}
                   // height={image.height ? image.height : 600}
                   // width={400}

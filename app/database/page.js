@@ -158,6 +158,19 @@ export default function ManageFiles() {
     setMessage(data.message);
   };
 
+  const updateContent = async () => {
+    setLoading(true);
+    setMessage("");
+
+    const response = await fetch("/api/uploadContent", {
+      method: "POST",
+    });
+
+    const data = await response.json();
+    setLoading(false);
+    setMessage(data.message);
+  };
+
   const handleDownloadFiles = async () => {
     setLoading(true);
     setMessage("");
@@ -185,6 +198,9 @@ export default function ManageFiles() {
       </button>
       <button onClick={handleDownloadFiles} disabled={loading}>
         {loading ? "Downloading..." : "Download Files"}
+      </button>
+      <button onClick={updateContent} disabled={loading}>
+        {loading ? "Downloading..." : "Update content to firebase storage"}
       </button>
       {message && <p>{message}</p>}
     </div>

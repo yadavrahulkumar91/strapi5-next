@@ -18,6 +18,7 @@
 
 /downloads
 /lib
+/content
 # misc
 .DS_Store
 *.pem
