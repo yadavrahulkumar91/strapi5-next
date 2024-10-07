@@ -3,82 +3,69 @@ import React from "react";
 import { Mermaid } from "mdx-mermaid/Mermaid";
 
 export default function MermaidCharts({ value }) {
-  const generateChartData = (
-    data,
-    parent = null,
-    nodeIndexRef = { index: 1 },
-    lastItemRefs = {
-      lastItems: [],
-      inNested: false,
-      childLevel: 0,
-      parentLevel: 0,
-    },
-    level = 0
-  ) => {
-    let chartLines = [];
-    let currentLevel = level;
-
-    data.forEach((item, index) => {
+  function assignUniqueIds(data, startId = 1) {
+    let currentId = startId;
+    const idData = data.map((item) => {
       if (Array.isArray(item)) {
-        lastItemRefs.childLevel++;
-        // Recursively process the nested array, passing the current parent
-        lastItemRefs.inNested = true;
-        currentLevel = level + 1;
-        let childChartLines = generateChartData(
-          item,
-          parent,
-          nodeIndexRef,
-          lastItemRefs,
-          currentLevel
-        );
-
-        chartLines.push(...childChartLines);
-
-        lastItemRefs.inNested = false; // Reset after processing nested array
-      } else {
-        let currentNode = nodeIndexRef.index++;
-        lastItemRefs.parentLevel++;
-        lastItemRefs.childLevel++;
-
-        // If in a nested array, store the last item of the nested level
-        if (lastItemRefs.inNested && index === data.length - 1) {
-          lastItemRefs.lastItems.push(currentNode);
-        }
-
-        // If not the last item, link all stored last items to the current node
-        if (level == currentLevel - 1 && lastItemRefs.lastItems.length > 0) {
-          lastItemRefs.lastItems.forEach((lastItem) => {
-            chartLines.push(`${lastItem} --> ${currentNode}`);
-          });
-          lastItemRefs.lastItems.length = 0; // Clear after linking
-        } else {
-          if (parent) {
-            chartLines.push(`${parent} --> ${currentNode}`);
-          }
-        }
-
-        chartLines.push(`${currentNode}[${item}]`);
-        parent = currentNode; // Update parent to the current node
+        const [newIdData, newStartId] = assignUniqueIds(item, currentId);
+        currentId = newStartId;
+        return newIdData;
       }
+      return { id: currentId++, label: item };
     });
+    return [idData, currentId];
+  }
+
+  function generateChartWithLastItemLinking(data) {
+    let chartLines = [];
+
+    function processArrayWithIds(idData, parent = null) {
+      for (let i = 0; i < idData.length; i++) {
+        const item = idData[i];
+
+        // If it's an array, recursively process its contents
+        if (Array.isArray(item)) {
+          // processArrayWithIds(item, idData[i - 1].id);
+          processArrayWithIds(item, parent); // Link to the last processed element
+
+          function processLastItem(idData, item) {
+            const lastItem = item[item.length - 1];
+            if (Array.isArray(lastItem)) {
+              for (let k = item.length - 1; Array.isArray(item[k]); k--) {
+                processLastItem(idData, item[k]);
+              }
+            } else {
+              for (let j = i; j < idData.length; j++) {
+                if (!Array.isArray(idData[j])) {
+                  chartLines.push(
+                    `${lastItem.id} --> ${idData[j].id}[${idData[j].label}]`
+                  );
+                  break;
+                }
+              }
+            }
+          }
+
+          processLastItem(idData, item);
+        } else {
+          if (Array.isArray(idData[i - 1])) {
+            parent = null;
+          }
+          if (parent !== null) {
+            chartLines.push(
+              `${parent.id}[${parent.label}] --> ${item.id}[${item.label}]`
+            );
+          }
+          parent = item;
+        }
+      }
+    }
+
+    const [idData] = assignUniqueIds(data); // Get the ID-mapped data
+    processArrayWithIds(idData); // Generate links based on IDs
 
     return chartLines;
-  };
-
-  const generateChartWithLastItemLinking = (data) => {
-    let nodeIndexRef = { index: 1 };
-    let lastItemRefs = { lastItems: [] };
-    let level = 0;
-    let chartLines = generateChartData(
-      data,
-      null,
-      nodeIndexRef,
-      lastItemRefs,
-      level
-    );
-
-    return chartLines;
-  };
+  }
 
   if (!value || !Array.isArray(value) || value.length === 0) {
     return null;

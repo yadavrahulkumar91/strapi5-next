@@ -96,9 +96,7 @@ export default function MermaidCharts({ value }) {
           return (
             <div key={index}>
               <Mermaid chart={mermaidChart} />
-              {caption && (
-                <p style={{ textAlign: "center", marginTop: "" }}>{caption}</p>
-              )}
+              {caption && <p style={{ textAlign: "center" }}>{caption}</p>}
             </div>
           );
         } else if (Array.isArray(data) && data.length > 0) {
