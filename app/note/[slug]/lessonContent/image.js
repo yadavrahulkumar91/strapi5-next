@@ -91,6 +91,7 @@ export default function Image({ value }) {
                   <span>Fig. </span>
                   <span
                     key={index}
+                    className="break-words h-auto w-auto"
                     dangerouslySetInnerHTML={{ __html: image.caption }}
                   />
                 </figcaption>

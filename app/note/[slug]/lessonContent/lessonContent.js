@@ -115,7 +115,7 @@ function renderBulletList(attributes, level, arrayLevel) {
           return renderAttributes1(value, level + 1, arrayLevel + 1);
         } else {
           return (
-            <li key={i} className="flex text-xl ml-[20px]">
+            <li key={i} className="flex text-xl">
               <span className="mr-2">
                 {bulletType && bulletType[arrayLevel - 1] ? (
                   <div>{bulletType[arrayLevel - 1]}</div>

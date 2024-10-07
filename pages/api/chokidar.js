@@ -201,7 +201,7 @@ async function convertVsdxToPng(filePath) {
 async function onFileChange(filePath) {
   const ext = path.extname(filePath);
 
-  if (ext === ".vsdx") {
+  if (ext === ".vsdx" || ext === ".pub") {
     await convertVsdxToPng(filePath);
   }
   // If the file is a JSON file, update the lesson content in the database
