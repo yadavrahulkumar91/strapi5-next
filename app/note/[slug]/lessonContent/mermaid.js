@@ -19,14 +19,25 @@ export default function MermaidCharts({ value }) {
   function generateChartWithLastItemLinking(data) {
     let chartLines = [];
 
+    // Function to store id-label pairs
+    function storeIdLabelPairs(idData) {
+      for (const item of idData) {
+        if (Array.isArray(item)) {
+          storeIdLabelPairs(item); // Recursively handle nested arrays
+        } else {
+          chartLines.push(`${item.id}["${item.label}"]`); // Store id with label
+        }
+      }
+    }
+
+    // Function to store only id mappings (without labels)
     function processArrayWithIds(idData, parent = null) {
       for (let i = 0; i < idData.length; i++) {
         const item = idData[i];
 
         // If it's an array, recursively process its contents
         if (Array.isArray(item)) {
-          // processArrayWithIds(item, idData[i - 1].id);
-          processArrayWithIds(item, parent); // Link to the last processed element
+          processArrayWithIds(item, parent); // Process recursively
 
           function processLastItem(idData, item) {
             const lastItem = item[item.length - 1];
@@ -37,9 +48,7 @@ export default function MermaidCharts({ value }) {
             } else {
               for (let j = i; j < idData.length; j++) {
                 if (!Array.isArray(idData[j])) {
-                  chartLines.push(
-                    `${lastItem.id} --> ${idData[j].id}[${idData[j].label}]`
-                  );
+                  chartLines.push(`${lastItem.id} --> ${idData[j].id}`); // Store only id mappings
                   break;
                 }
               }
@@ -52,9 +61,7 @@ export default function MermaidCharts({ value }) {
             parent = null;
           }
           if (parent !== null) {
-            chartLines.push(
-              `${parent.id}[${parent.label}] --> ${item.id}[${item.label}]`
-            );
+            chartLines.push(`${parent.id} --> ${item.id}`); // Store id mappings without label
           }
           parent = item;
         }
@@ -62,7 +69,9 @@ export default function MermaidCharts({ value }) {
     }
 
     const [idData] = assignUniqueIds(data); // Get the ID-mapped data
-    processArrayWithIds(idData); // Generate links based on IDs
+
+    storeIdLabelPairs(idData); // First, store id-label pairs
+    processArrayWithIds(idData); // Then, store id mappings
 
     return chartLines;
   }

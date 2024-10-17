@@ -5,6 +5,7 @@ import LessonContent from "../lessonContent/lessonContent";
 import QA from "../qa";
 import { MdOutlineFullscreen, MdFullscreenExit } from "react-icons/md";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
+import Video from "./video";
 
 const LessonPage = ({ lesson, lessonCounter, unitName }) => {
   const [toggled, setToggled] = useState(false);
@@ -92,15 +93,34 @@ const LessonPage = ({ lesson, lessonCounter, unitName }) => {
           {toggled ? <MdOutlineFullscreen /> : <MdFullscreenExit />}
         </button>
       </div>
-      {lesson.video_url && (
-        <iframe
-          // width='100%'
-          // height='100vh'
-          src={lesson.video_url}
-          frameBorder="0"
-          allowFullScreen
-          // style={{ width: '100%', height: '60vh' }}
-        ></iframe>
+      {lesson.video_url.length > 0 && (
+        // <div
+        //   style={{
+        //     position: "relative",
+        //     paddingBottom: "56.25%",
+        //     height: 0,
+        //     overflow: "hidden",
+        //     maxWidth: "100%",
+        //     backgroundColor: "#000",
+        //   }}
+        // >
+        //   <iframe
+        //     src={lesson.video_url}
+        //     title="YouTube video player"
+        //     style={{
+        //       position: "absolute",
+        //       top: 0,
+        //       left: 0,
+        //       width: "100%",
+        //       height: "100%",
+        //     }}
+        //     frameBorder="0"
+        //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        //     referrerPolicy="strict-origin-when-cross-origin"
+        //     allowFullScreen
+        //   ></iframe>
+        // </div>
+        <Video video_url={lesson.video_url} />
       )}
 
       {/* <div className='h-full' style={{ width: '100%', overflow: 'scroll' }}> */}
