@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LessonContent from "../note/[slug]/lessonContent/lessonContent";
+import LessonContent from "../note/[slug]/[slug1]/lessonContent/lessonContent";
 
 // import data from "../../content/CVS_mbbs_2nd_year_TU/Anatomy/257_Axiallary Artery.json";
 // import data from "../../content/CVS_mbbs_2nd_year_TU/Pharmacology/12_Congestive Heart Failure.json";

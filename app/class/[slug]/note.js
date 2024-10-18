@@ -8,7 +8,7 @@ export default function page({ books }) {
           <Link
             className="block hover:-translate-y-2"
             key={book.id}
-            href={`/note/${book.id}`}
+            href={`/note/${book.id}/1`}
           >
             <div
               key={book.id}

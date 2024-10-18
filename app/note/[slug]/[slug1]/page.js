@@ -1,91 +1,74 @@
-import React from "react";
-import Unit from "./unit";
-// import CoverPage from "./CoverPage";
-// import ContentPage from "./ContentPage";
+"use client";
+import React, { useEffect } from "react";
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
 
-import axios from "axios";
+// import Sidebar from "../sidebar";
+import LessonPage from "./lesson";
+import { useRouter } from "next/navigation";
 
-export async function generateStaticParams() {
-  const {
-    data: { data: axiosData },
-  } = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks?populate=unit.Lesson`
-  );
+// Inside your component
 
-  const params = [];
-
-  // Iterate through the fetched data to get all slugs and lessons
-  axiosData.forEach((book) => {
-    const bookSlug = book.id.toString();
-    var lessonCounter1 = 1;
-    // Iterate through units and lessons for each book
-    book.attributes.unit.forEach((unit, u) => {
-      unit.Lesson.forEach((lesson, i) => {
-        const lessonSlug = (lessonCounter1++).toString(); // Create slug1 based on the lesson's index
-        params.push({
-          slug: bookSlug, // book id
-          slug1: lessonSlug, // lesson number
-        });
-      });
-    });
-  });
-
-  return params;
-}
-
-export default async function Page({ params }) {
-  const { slug, slug1 } = params;
-
-  const {
-    data: { data: axiosData },
-  } = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks/${slug}?populate=unit.Lesson.MCQ.Asked_year,unit.Lesson.Question_answer.Asked_year,unit.Lesson.Question_answer.Marks,unit.Lesson.video_url`
-  );
-
-  if (!axiosData) {
-    return <div>Loading...</div>;
-  }
-
-  const { attributes } = axiosData;
-  const { unit } = attributes;
-
-  // Find the correct lesson based on the slug1 number
-  let lessonCounter = 1;
-  let selectedLesson = null;
-  let unitName = ""; // Store the unit name
-
-  for (let i = 0; i < unit.length; i++) {
-    const { Lesson, Unit_name } = unit[i];
-    for (let j = 0; j < Lesson.length; j++) {
-      if (lessonCounter === parseInt(slug1)) {
-        selectedLesson = Lesson[j];
-        unitName = Unit_name; // Assign the unit name when the lesson is found
-        break;
-      }
-      lessonCounter++;
+export default function Unit({
+  lesson,
+  unit,
+  unitName,
+  activeLesson,
+  totalLessons,
+  slug,
+  slug1,
+}) {
+  const router = useRouter();
+  const handlePrevLesson = () => {
+    if (activeLesson > 1) {
+      router.push(`/note/${slug}/${activeLesson - 1}`, { scroll: false }); // Adjust the path as needed
     }
-    if (selectedLesson) break;
-  }
+  };
 
-  if (!selectedLesson) {
-    return <div>Lesson not found</div>;
-  }
+  const handleNextLesson = () => {
+    if (activeLesson < totalLessons) {
+      router.push(`/note/${slug}/${activeLesson + 1}`, { scroll: false }); // Adjust the path as needed
+    }
+  };
 
-  const totalLessons = unit.reduce(
-    (sum, unit1) => sum + unit1.Lesson.length,
-    0
-  );
-  const activeLesson = parseInt(slug1);
+  useEffect(() => {
+    const element = document.getElementById(activeLesson);
+
+    if (element) {
+      element.style.color = "red"; // Set the color of the active lesson
+    }
+
+    return () => {
+      const cleanupElement = document.getElementById(activeLesson); // Re-fetch element during cleanup
+      if (cleanupElement) {
+        cleanupElement.style.color = "black"; // Reset the color when the component unmounts or updates
+      }
+    };
+  }, [activeLesson]);
+
   return (
-    <Unit
-      key={selectedLesson.id}
-      unit={unit}
-      lesson={selectedLesson}
-      unitName={unitName} // Use the unit name here
-      activeLesson={activeLesson}
-      totalLessons={totalLessons}
-      slug={slug}
-      slug1={slug1}
-    />
+    <div className="box-border relative w-full h-full">
+      <button
+        className="text-lg p-0 top-1/2 left-[-4px] fullscreen absolute z-50"
+        onClick={handlePrevLesson}
+        disabled={activeLesson <= 1}
+      >
+        <GrPrevious />
+      </button>
+
+      <LessonPage
+        lesson={lesson}
+        unitName={unitName} // Use the unit name here
+        lessonCounter={activeLesson} // Use slug1 as the lesson number
+      />
+
+      <button
+        className="text-lg p-0 right-1 top-1/2 fullscreen absolute"
+        onClick={handleNextLesson}
+        disabled={activeLesson >= totalLessons}
+      >
+        <GrNext />
+      </button>
+    </div>
   );
 }

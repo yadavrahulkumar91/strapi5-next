@@ -100,6 +100,17 @@
   display: none;
 }
 
+.hiddenScrollbar>*::-webkit-scrollbar {
+  display: none;
+  /* Hide the scrollbar for children */
+}
+
+.hiddenScrollbar>* {
+  -ms-overflow-style: none;
+
+  scrollbar-width: none;
+
+}
 .hiddenScrollbar {
   -ms-overflow-style: none;
 
@@ -113,4 +124,41 @@
   /* Underline the text */
   /* cursor: pointer; */
   /* Change cursor to pointer */
+}
+
+
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 2px;
+  /* Width of the vertical scrollbar */
+  height: 2px;
+  /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Scrollbar color */
+  border-radius: 10px;
+  /* Roundness of the scrollbar handle */
+  border: 2px solid transparent;
+  /* Optional: adds space around the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Handle color on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  /* scrollbar-width: 2px; */
+  /* Makes the scrollbar thinner */
+  scrollbar-color: #888 #f1f1f1;
+  /* Scrollbar color */
 }

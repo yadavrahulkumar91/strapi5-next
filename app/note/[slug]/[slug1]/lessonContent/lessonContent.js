@@ -140,13 +140,34 @@ function renderNumberList(attributes, level, arrayLevel) {
     : attributes;
 
   return (
+    // <ol
+    //   className=""
+    //   style={{ listStyleType: getListStyleType(arrayLevel, numberType) }}
+    // >
+    //   {listItems.map((value, i) => {
+    //     if (typeof value === "object") {
+    //       return renderAttributes1(value, level + 1, arrayLevel + 1);
+    //     } else {
+    //       return (
+    //         <li key={i} className="text-xl ml-[20px]">
+    //           <span dangerouslySetInnerHTML={{ __html: value }} />
+    //         </li>
+    //       );
+    //     }
+    //   })}
+    // </ol>
     <ol
       className=""
       style={{ listStyleType: getListStyleType(arrayLevel, numberType) }}
     >
       {listItems.map((value, i) => {
         if (typeof value === "object") {
-          return renderAttributes1(value, level + 1, arrayLevel + 1);
+          // Ensure that each object also has a unique key
+          return (
+            <span key={i}>
+              {renderAttributes1(value, level + 1, arrayLevel + 1)}
+            </span>
+          );
         } else {
           return (
             <li key={i} className="text-xl ml-[20px]">

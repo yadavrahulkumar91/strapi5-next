@@ -6,12 +6,9 @@ function Note({ value }) {
     <div>
       {value && Array.isArray(value) && value.length > 0
         ? value.map((note, index) => (
-            <>
+            <span key={index}>
               {note.title ? (
-                <div
-                  className="rounded-md border-red-600 border m-2 overflow-hidden"
-                  key={index}
-                >
+                <div className="rounded-md border-red-600 border m-2 overflow-hidden">
                   <div className="bg-red-200 text-xl font-bold pl-1">
                     {note.title}
                   </div>
@@ -32,7 +29,7 @@ function Note({ value }) {
                   </div>
                 </div>
               )}
-            </>
+            </span>
           ))
         : null}
     </div>

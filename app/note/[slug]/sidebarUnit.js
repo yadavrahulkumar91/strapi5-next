@@ -2,12 +2,13 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
-function SidebarUnit({ unit, activeLesson, lessonCounter, slug }) {
+function SidebarUnit({ unit, lessonCounter, slug }) {
   const [open, setOpen] = useState(true);
   const router = useRouter();
 
   const handleLessonClick = (lessonId) => {
-    router.push(`/note/${slug}/${lessonId}`); // Update this path accordingly
+    // router.push(`/note/${slug}/${lessonId}`);
+    router.push(`/note/${slug}/${lessonId}`);
   };
 
   return (
@@ -21,14 +22,14 @@ function SidebarUnit({ unit, activeLesson, lessonCounter, slug }) {
       </li>
       {unit.Lesson.map((lesson, i) => {
         const lessonId = lessonCounter + i; // Compute the lesson ID
+        // router.prefetch(`/note/${slug}/${lessonId}`);
 
         return open ? (
           <div
             key={lesson.id} // Use lesson.id for the key instead of index
-            className={`cursor-pointer whitespace-nowrap hover:underline mx-4 ${
-              activeLesson === lessonId ? "text-red-500" : ""
-            }`}
+            className="cursor-pointer whitespace-nowrap hover:underline mx-4"
             onClick={() => handleLessonClick(lessonId)} // Call the click handler
+            id={lessonId.toString()}
           >
             {lessonId}. {lesson.Lesson_name}
           </div>

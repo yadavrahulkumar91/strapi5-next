@@ -119,8 +119,8 @@ export default function Table({ value }) {
             const spans = computeSpan(table.data); // Compute the spans for this table
 
             return (
-              <>
-                <table className="m-2" key={tableIndex} border="1">
+              <span key={tableIndex}>
+                <table className="m-2" border="1">
                   {table.caption ? (
                     <caption className="text-base">
                       <span>Table: </span>
@@ -168,7 +168,7 @@ export default function Table({ value }) {
                   </tbody>
                 </table>
                 {table.about ?? renderAttributes(table.about, table.level ?? 2)}
-              </>
+              </span>
             );
           })
         : null}
