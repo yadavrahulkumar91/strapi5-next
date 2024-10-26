@@ -8,7 +8,7 @@ function SidebarUnit({ unit, lessonCounter, slug }) {
 
   const handleLessonClick = (lessonId) => {
     // router.push(`/note/${slug}/${lessonId}`);
-    router.push(`/note/${slug}/${lessonId}`);
+    router.push(`/note/${slug}/${lessonId}`, { scroll: false });
   };
 
   return (

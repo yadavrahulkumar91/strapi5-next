@@ -265,6 +265,12 @@ function renderObject(key, value, level, arrayLevel) {
     return renderAttributes1(value, (level = level + 1));
   } else if (/^__null\d*$/.test(key)) {
     return renderAttributes(value, level, arrayLevel);
+  } else if (/^__nulll\d*$/.test(key)) {
+    return (
+      <div className="ml-[-30px]">
+        {renderAttributes(value, level - 1, arrayLevel)}
+      </div>
+    );
   } else if (/^__bullet\d*$/.test(key)) {
     return <Bullet value={value} />;
   } else if (/^__org\d*$/.test(key)) {
