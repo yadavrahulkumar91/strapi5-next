@@ -113,7 +113,7 @@ export default function Table({ value }) {
   };
 
   return (
-    <div>
+    <div className="overflow-x-scroll">
       {value && Array.isArray(value) && value.length > 0
         ? value.map((table, tableIndex) => {
             const spans = computeSpan(table.data); // Compute the spans for this table
@@ -130,7 +130,7 @@ export default function Table({ value }) {
                     </caption>
                   ) : null}
 
-                  <tbody>
+                  <tbody className="">
                     {table.data.map((row, rowIndex) => (
                       <tr key={rowIndex}>
                         {row.map((cell, cellIndex) => {
