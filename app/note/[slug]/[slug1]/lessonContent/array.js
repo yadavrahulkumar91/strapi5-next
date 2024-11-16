@@ -1,6 +1,6 @@
 import React from "react";
 
-import { renderAttributes1 } from "./lessonContent";
+import { renderAttributes1 } from "./content";
 function getListStyle(arrayLevel) {
   switch (arrayLevel) {
     case 1:

@@ -14,7 +14,6 @@ import AROC from "./aroc";
 import Visio from "./visio";
 import Arrays from "./array";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
-import Content from "./content";
 
 const replaceMathExpressions = (obj) => {
   if (typeof obj === "string") {
@@ -92,8 +91,6 @@ function renderObject(key, value, level, arrayLevel) {
     return <Image value={value} />;
   } else if (/^__table\d*$/.test(key)) {
     return <Table value={value} />;
-  } else if (/^__content\d*$/.test(key)) {
-    return <Content lessonContent={value} />;
   } else if (/^__mermaid\d*$/.test(key)) {
     return <Mermaid value={value} />;
   } else if (key === "google_chart") {
@@ -154,53 +151,34 @@ function elseFunction(key, value, level, arrayLevel) {
 }
 
 function renderKey(key, level) {
-  //   return (
-  //     <span
-  //       style={{
-  //         // color: `hsl(330, 50%, ${level * 10}%)`,
-  //         // backgroundColor: `hsl(0, 5%, ${level * 10}%)`,
-  //         // backgroundColor: level === 0 ? "lightgrey" : null,
-  //         backgroundColor: "lightgrey",
-  //         // fontWeight: `${800 - Math.min(level, 4) * 100}`,
-  //         fontWeight: "600",
-  //         // display: level === 0 ? "block" : null,
-  //         display: "block",
-  //       }}
-  //       className={`font-medium text-xl align-top my-[2px] sticky top-0`}
-  //     >
-  //       {formatKey(key, level)}
-  //     </span>
-  //   );
-  // }
-
   return (
     <span
       style={{
-        backgroundColor: "lightgrey",
-        fontWeight: "600",
-        display: "block",
-        top: `${level * 30}px`, // Adjust top offset based on hierarchy
-        zIndex: `${100 - level}`, // Higher levels have higher z-index
+        color: `hsl(330, 50%, ${level * 10}%)`,
+        backgroundColor: level === 0 ? "lightgrey" : null,
+        fontWeight: `${800 - Math.min(level, 4) * 100}`, // Caps the level at 4
+        display: level === 0 ? "block" : null,
       }}
-      className={`font-medium text-xl align-top my-[2px] sticky py-0`}
+      className={`font-medium text-xl align-top`}
     >
-      {formatKey(key, level)}
+      {formatBulletin(level)} {formatKey(key, level)}
     </span>
   );
 }
+
+function formatBulletin(level) {
+  const bulletChars = ["▢", "❖", "◉", "◈", "■", "●", "⟣", "➢", "⬦", "○"]; // Define bullet characters array
+  const bullet = bulletChars[Math.min(level, bulletChars.length - 1)]; // Pick character or fallback to last one
+  return <span>{bullet} </span>;
+}
+
 function formatKey(key, level) {
   let formattedKey = key;
-  formattedKey = formattedKey.toUpperCase();
+  if (level === 0) {
+    formattedKey = formattedKey.toUpperCase();
+  }
   if (key === "") {
     return null;
   }
-  return (
-    <div className="" dangerouslySetInnerHTML={{ __html: formattedKey }} />
-  );
+  return <span dangerouslySetInnerHTML={{ __html: formattedKey + ": " }} />;
 }
-
-// function formatBulletin(level) {
-//   const bulletChars = ["▢", "❖", "◉", "◈", "■", "●", "⟣", "➢", "⬦", "○"];
-//   const bullet = bulletChars[Math.min(level, bulletChars.length - 1)];
-//   return <span>{bullet} </span>;
-// }

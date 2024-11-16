@@ -96,6 +96,15 @@ export default function Image({ value }) {
                   />
                 </figcaption>
               )}
+              {image.about && (
+                <div className="text-center block m-auto">
+                  <span
+                    key={index}
+                    className="break-words h-auto w-auto"
+                    dangerouslySetInnerHTML={{ __html: image.about }}
+                  />
+                </div>
+              )}
 
               {image.credit && (
                 <div className="text-center text-sm m-auto italic">
