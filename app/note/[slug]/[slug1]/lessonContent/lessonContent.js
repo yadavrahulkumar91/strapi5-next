@@ -92,7 +92,7 @@ function renderObject(key, value, level, arrayLevel) {
     return <Image value={value} />;
   } else if (/^__table\d*$/.test(key)) {
     return <Table value={value} />;
-  } else if (/^__content\d*$/.test(key)) {
+  } else if (/^__c\d*$/.test(key)) {
     return <Content lessonContent={value} />;
   } else if (/^__mermaid\d*$/.test(key)) {
     return <Mermaid value={value} />;
@@ -154,43 +154,48 @@ function elseFunction(key, value, level, arrayLevel) {
 }
 
 function renderKey(key, level) {
-  //   return (
-  //     <span
-  //       style={{
-  //         // color: `hsl(330, 50%, ${level * 10}%)`,
-  //         // backgroundColor: `hsl(0, 5%, ${level * 10}%)`,
-  //         // backgroundColor: level === 0 ? "lightgrey" : null,
-  //         backgroundColor: "lightgrey",
-  //         // fontWeight: `${800 - Math.min(level, 4) * 100}`,
-  //         fontWeight: "600",
-  //         // display: level === 0 ? "block" : null,
-  //         display: "block",
-  //       }}
-  //       className={`font-medium text-xl align-top my-[2px] sticky top-0`}
-  //     >
-  //       {formatKey(key, level)}
-  //     </span>
-  //   );
-  // }
-
   return (
     <span
       style={{
-        backgroundColor: "lightgrey",
-        fontWeight: "600",
+        // color: `hsl(330, 50%, ${level * 10}%)`,
+        color: "white",
+        backgroundColor: `hsl(208, 100%, ${(level + 1) * 10}%)`,
+        // backgroundColor: `hsl(356, 100%, ${(level + 1) * 10}%)`,
+        // backgroundColor: level === 0 ? "lightgrey" : null,
+        // backgroundColor: "lightgrey",
+        fontWeight: `${800 - Math.min(level, 4) * 100}`,
+        // fontWeight: "600",
+        // display: level === 0 ? "block" : null,
         display: "block",
         top: `${level * 30}px`, // Adjust top offset based on hierarchy
         zIndex: `${100 - level}`, // Higher levels have higher z-index
       }}
-      className={`font-medium text-xl align-top my-[2px] sticky py-0`}
+      className={`font-medium text-xl align-top my-[2px] sticky top-0 pl-2`}
     >
       {formatKey(key, level)}
     </span>
   );
+
+  // return (
+  //   <span
+  //     style={{
+  //       backgroundColor: "lightgrey",
+  //       fontWeight: "600",
+  //       display: "block",
+  //       top: `${level * 30}px`, // Adjust top offset based on hierarchy
+  //       zIndex: `${100 - level}`, // Higher levels have higher z-index
+  //     }}
+  //     className={`font-medium text-xl align-top my-[2px] sticky py-0`}
+  //   >
+  //     {formatKey(key, level)}
+  //   </span>
+  // );
 }
 function formatKey(key, level) {
   let formattedKey = key;
-  formattedKey = formattedKey.toUpperCase();
+  if (level === 0) {
+    formattedKey = formattedKey.toUpperCase();
+  }
   if (key === "") {
     return null;
   }

@@ -23,7 +23,7 @@ export default function page({ books }) {
                 />
               )}
             </div>
-            <h2 className="font-bold text-center text-[#587c1f]">
+            <h2 className="font-bold text-center text-[#587c1f] w-[125px]">
               {book.attributes.book_name}
             </h2>
           </Link>

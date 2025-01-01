@@ -116,6 +116,9 @@ export default function Table({ value }) {
     <div className="overflow-x-scroll">
       {value && Array.isArray(value) && value.length > 0
         ? value.map((table, tableIndex) => {
+            if (table.data == undefined) {
+              return;
+            }
             const spans = computeSpan(table.data); // Compute the spans for this table
 
             return (

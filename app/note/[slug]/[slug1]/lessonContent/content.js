@@ -15,6 +15,7 @@ import Visio from "./visio";
 import Arrays from "./array";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
 import LessonContent1 from "./lessonContent";
+
 // const replaceMathExpressions = (obj) => {
 //   if (typeof obj === "string") {
 //     // Replace \( ... \) with inline MathJax component
@@ -87,7 +88,7 @@ function renderObject(key, value, level, arrayLevel) {
     return <Image value={value} />;
   } else if (/^__table\d*$/.test(key)) {
     return <Table value={value} />;
-  } else if (/^__heading\d*$/.test(key)) {
+  } else if (/^__h\d*$/.test(key)) {
     return <LessonContent1 lessonContent={value} />;
   } else if (/^__mermaid\d*$/.test(key)) {
     return <Mermaid value={value} />;

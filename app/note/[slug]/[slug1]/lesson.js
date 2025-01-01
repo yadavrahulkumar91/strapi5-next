@@ -6,9 +6,10 @@ import QA from "./qa";
 import { MdOutlineFullscreen, MdFullscreenExit } from "react-icons/md";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import Video from "./video";
-
+import Editor from "./editor";
 const LessonPage = ({ lesson, lessonCounter, unitName }) => {
   const [toggled, setToggled] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   useEffect(() => {
     const elements = document.querySelectorAll(".fullscreen");
@@ -60,13 +61,14 @@ const LessonPage = ({ lesson, lessonCounter, unitName }) => {
     }
   }
 
+  console.log("lessonID is", lesson.id);
   return (
     <div
       key={lesson.id}
-      className=" p-0 m-0 overflow-y-scroll w-full h-full"
-      id={`lesson-${lessonCounter}`}
+      className=" p-0 m-0 h-full w-full"
+      style={{ display: "grid", gridTemplateRows: "30px auto" }}
     >
-      <div className="top-0 flex justify-between z-50 sticky bg-orange-300">
+      <div className="top-0 flex justify-between z-50 bg-orange-300">
         <div>
           <button
             className=""
@@ -89,35 +91,41 @@ const LessonPage = ({ lesson, lessonCounter, unitName }) => {
         >
           {toggled ? <MdOutlineFullscreen /> : <MdFullscreenExit />}
         </button>
+        <button
+          className="mr-2 text-2xl"
+          onClick={() => {
+            setEdit(!edit);
+          }}
+        >
+          {edit ? <div>Preview</div> : <div>Edit</div>}
+        </button>
       </div>
-      {lesson.video_url.length > 0 && <Video video_url={lesson.video_url} />}
+      <div className="overflow-y-scroll">
+        {lesson.video_url.length > 0 && <Video video_url={lesson.video_url} />}
 
-      {/* <div className='h-full' style={{ width: '100%', overflow: 'scroll' }}> */}
-      {/* <LessonContent lessonContent={JSON.parse(lesson.lesson_content)} /> */}
-      <LessonContent lessonContent={lessonContent} />
-      {lesson.MCQ.length > 0 && (
-        <>
-          <h2 className="text-center text-3xl"> Multiple Choice Questions</h2>
-          <MCQ MCQ={lesson.MCQ} />
-        </>
-      )}
-      {lesson.Question_answer.length > 0 && (
-        <>
-          <h2 className="text-center font-semibold m-2 text-3xl">
-            Question Answers
-          </h2>
-          <QA Question_answer={lesson.Question_answer} />
-        </>
-      )}
+        {edit ? (
+          <Editor id={lesson.id} />
+        ) : (
+          <LessonContent lessonContent={lessonContent} />
+        )}
 
-      {/* </div> */}
+        {lesson.MCQ.length > 0 && (
+          <>
+            <h2 className="text-center text-3xl"> Multiple Choice Questions</h2>
+            <MCQ MCQ={lesson.MCQ} />
+          </>
+        )}
+        {lesson.Question_answer.length > 0 && (
+          <>
+            <h2 className="text-center font-semibold m-2 text-3xl">
+              Question Answers
+            </h2>
+            <QA Question_answer={lesson.Question_answer} />
+          </>
+        )}
+      </div>
     </div>
   );
-
-  //   })
-  //       }
-  //     </>
-  //   );
 };
 
 export default LessonPage;

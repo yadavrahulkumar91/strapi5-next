@@ -19,7 +19,7 @@ export default async function Page({ params }) {
     <div className="m-2 h-screen">
       {axiosData.map((Class) => (
         <div key={Class.id} className="m-xl">
-          {Class.attributes.jsonbooks?.data.length > 1 && (
+          {Class.attributes.jsonbooks?.data.length > 0 && (
             <>
               <h1 className="text-lg font-bold text-[#6c6a06]">
                 {Class.attributes.Class_name}

@@ -16,6 +16,9 @@ const DynamicOrgChart = dynamic(() => import("awesome-react-org-chart"), {
 export default function Aroc({ data, layout_type }) {
   const isValidNode = (node) => node !== undefined && node !== null;
 
+  if (data == undefined) {
+    return;
+  }
   const generateUniqueKey = (node, parentKey = "0") => {
     const children = node.children || [];
     return {
