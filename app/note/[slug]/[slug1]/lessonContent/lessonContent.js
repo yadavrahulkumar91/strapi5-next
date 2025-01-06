@@ -16,29 +16,67 @@ import Arrays from "./array";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
 import Content from "./content";
 
+// const replaceMathExpressions = (obj) => {
+//   if (typeof obj === "string") {
+//     // Replace \( ... \) with inline MathJax component
+//     obj = obj.replace(/\\\\((.*?)\\\\)/g, (match, p1) => {
+//       return `<MathJax>{"\\\\(${p1}\\\\)"}</MathJax>`;
+//     });
+
+//     // Replace \[ ... \] with display MathJax component
+//     obj = obj.replace(/\\\\[(.*?)\\\\]/g, (match, p1) => {
+//       return `<MathJax>{"\\\\[${p1}\\\\]"}</MathJax>`;
+//     });
+//   } else if (typeof obj === "object" && obj !== null) {
+//     // If it's an object or array, recursively process its properties
+//     for (let key in obj) {
+//       if (obj.hasOwnProperty(key)) {
+//         obj[key] = replaceMathExpressions(obj[key]);
+//       }
+//     }
+//   }
+//   return obj;
+// };
+
+// const LessonContent = ({ lessonContent }) => {
+//   const processedLessonContent = replaceMathExpressions(lessonContent);
+
+//   return (
+//     <MathJaxContext>{renderAttributes(processedLessonContent)}</MathJaxContext>
+//   );
+// };
+
+// export default LessonContent;
+
 const replaceMathExpressions = (obj) => {
   if (typeof obj === "string") {
     // Replace \( ... \) with inline MathJax component
-    obj = obj.replace(/\\\\((.*?)\\\\)/g, (match, p1) => {
+    obj = obj.replace(/\\\\\((.*?)\\\\\)/g, (match, p1) => {
       return `<MathJax>{"\\\\(${p1}\\\\)"}</MathJax>`;
     });
 
     // Replace \[ ... \] with display MathJax component
-    obj = obj.replace(/\\\\[(.*?)\\\\]/g, (match, p1) => {
+    obj = obj.replace(/\\\\\[(.*?)\\\\\]/g, (match, p1) => {
       return `<MathJax>{"\\\\[${p1}\\\\]"}</MathJax>`;
     });
+
+    return obj; // Return processed string
+  } else if (Array.isArray(obj)) {
+    // If it's an array, map through and process its elements immutably
+    return obj.map((item) => replaceMathExpressions(item));
   } else if (typeof obj === "object" && obj !== null) {
-    // If it's an object or array, recursively process its properties
-    for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        obj[key] = replaceMathExpressions(obj[key]);
-      }
-    }
+    // If it's an object, process each property immutably
+    return Object.keys(obj).reduce((newObj, key) => {
+      newObj[key] = replaceMathExpressions(obj[key]);
+      return newObj;
+    }, {});
   }
-  return obj;
+
+  return obj; // Return other types (e.g., numbers) as is
 };
 
 const LessonContent = ({ lessonContent }) => {
+  // Process lesson content without modifying the original object
   const processedLessonContent = replaceMathExpressions(lessonContent);
 
   return (

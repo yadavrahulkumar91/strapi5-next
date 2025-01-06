@@ -7,6 +7,7 @@ import { MdOutlineFullscreen, MdFullscreenExit } from "react-icons/md";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import Video from "./video";
 import Editor from "./editor";
+import MCQEditor from "./MCQeditor";
 const LessonPage = ({ lesson, lessonCounter, unitName }) => {
   const [toggled, setToggled] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -115,6 +116,7 @@ const LessonPage = ({ lesson, lessonCounter, unitName }) => {
             <MCQ MCQ={lesson.MCQ} />
           </>
         )}
+        {edit && <MCQEditor id={lesson.id} />}
         {lesson.Question_answer.length > 0 && (
           <>
             <h2 className="text-center font-semibold m-2 text-3xl">
