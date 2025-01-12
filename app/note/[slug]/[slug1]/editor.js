@@ -199,7 +199,7 @@ const WYSIWYGEditor = ({ id }) => {
   };
 
   // Debounce the saveContent function
-  const debouncedSaveContent = debounce(saveContent, 1000);
+  const debouncedSaveContent = debounce(saveContent, 10);
 
   // Handle editor content changes
   const handleEditorChange = (newContent) => {
