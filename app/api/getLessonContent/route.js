@@ -1,27 +1,4 @@
-import { Pool } from "pg";
-
-let pool;
-
-async function connectToDatabase() {
-  if (!pool) {
-    pool = new Pool({
-      user: "avnadmin",
-      host: "gamechanger-academy1-gamechanger-academy.a.aivencloud.com",
-      database: "gamechanger_academy",
-      password: "AVNS_nI2zH78Uh-tzJMU1Egl",
-      port: 10459,
-      ssl: {
-        rejectUnauthorized: false, // Disable SSL verification (not recommended for production)
-      },
-    });
-
-    pool.on("error", (err) => {
-      console.error("Unexpected error on idle client", err);
-      process.exit(-1);
-    });
-  }
-  return pool;
-}
+import connectToDatabase from "@/lib/db";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
@@ -34,11 +11,12 @@ export async function GET(req) {
     });
   }
 
-  const pool = await connectToDatabase();
+  // const pool = await connectToDatabase();
+  const { client } = await connectToDatabase();
   try {
     const query =
       "SELECT lesson_content FROM components_jsonbook_lessons WHERE id = $1";
-    const result = await pool.query(query, [parseInt(id, 10)]);
+    const result = await client.query(query, [parseInt(id, 10)]);
 
     if (result.rows.length === 0) {
       return new Response(JSON.stringify({ error: "Lesson not found." }), {
