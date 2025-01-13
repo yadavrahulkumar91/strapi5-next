@@ -7,7 +7,7 @@ import Table from "./table";
 import Html from "./html";
 import Note from "./note";
 import Bullet from "./bullet";
-import OrgChart from "./OrgChart";
+import OrgChart from "./orgChart";
 import MCQ from "../mcq";
 import QA from "../qa";
 import AROC from "./aroc";
