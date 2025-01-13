@@ -39,7 +39,7 @@ export default async function Page({ params }) {
 
   const {
     data: { data: axiosData },
-  } = await axios.get(`http://127.0.0.1:3000/api/json/${slug}`);
+  } = await axios.get(`${process.env.FRONTEND_URL}/api/json/${slug}`);
   // const {
   //   data: { data: axiosData },
   // } = await axios.get(
