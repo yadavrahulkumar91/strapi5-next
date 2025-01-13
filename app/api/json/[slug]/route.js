@@ -5,30 +5,45 @@ import { NextResponse } from "next/server";
 export async function GET(req, { params }) {
   //   const { slug } = url;
   const slug = (await params).slug;
-  console.log(slug);
+
   try {
     // SQL query to fetch jsonbook details by slug with populated relations
     const query = `
     SELECT
       jsonbooks.id,
-      jsonb_build_object(
+      json_build_object(
       'book_name', jsonbooks.book_name,
       'created_at', jsonbooks.created_at,
       'updated_at', jsonbooks.updated_at,
-      'units', (
+      'unit', (
         SELECT jsonb_agg(
-        jsonb_build_object(
+        json_build_object(
           'id', units.id,
           'unit_name', units.unit_name,
-          'lessons', (
+          'Lesson', (
           SELECT jsonb_agg(
-            jsonb_build_object(
+            json_build_object(
             'id', lessons.id,
             'lesson_name', lessons.lesson_name,
             'lesson_content', lessons.lesson_content,
-            'mcqs', (
+                          'video_url', (
+                            SELECT COALESCE(jsonb_agg(
+                              json_build_object(
+                                'id', video.id,
+                                'video_url', video.video_url
+                              )
+                            ), '[]'::jsonb)
+                            FROM components_jsonbook_video_urls AS video
+                            WHERE video.id IN (
+                              SELECT component_id
+                              FROM components_jsonbook_lessons_components
+                              WHERE entity_id = video.id
+                              AND field = 'Asked_year'
+                            )
+                          ),
+            'MCQ', (
               SELECT COALESCE(jsonb_agg(
-              jsonb_build_object(
+              json_build_object(
                 'id', mcqs.id,
                 'hardness_level', NULL,
                 'category', NULL,
@@ -38,7 +53,22 @@ export async function GET(req, { params }) {
                 'c', mcqs.c,
                 'd', mcqs.d,
                 'ans', mcqs.ans,
-                'sol', mcqs.sol
+                'sol', mcqs.sol,
+                          'Asked_year', (
+                            SELECT COALESCE(jsonb_agg(
+                              json_build_object(
+                                'id', year.id,
+                                'year', year.asked_year
+                              )
+                            ), '[]'::jsonb)
+                            FROM components_jsonbook_asked_years AS year
+                            WHERE year.id IN (
+                              SELECT component_id
+                              FROM components_jsonbook_mcqs_components
+                              WHERE entity_id = year.id
+                              AND field = 'Asked_year'
+                            )
+                          )
               )
               ), '[]'::jsonb)
               FROM components_jsonbook_mcqs AS mcqs
@@ -49,12 +79,42 @@ export async function GET(req, { params }) {
               AND field = 'MCQ'
               )
             ),
-            'question_answers', (
+            'Question_answer', (
               SELECT COALESCE(jsonb_agg(
-              jsonb_build_object(
+              json_build_object(
                 'id', qa.id,
-                'question', qa.question,
-                'answer', qa.answer
+                'Question', qa.question,
+                'Asked_year', (
+                            SELECT COALESCE(jsonb_agg(
+                              json_build_object(
+                                'id', qayear.id,
+                                'year', qayear.asked_year
+                              )
+                            ), '[]'::jsonb)
+                            FROM components_jsonbook_asked_years AS qayear
+                            WHERE qayear.id IN (
+                              SELECT component_id
+                              FROM components_jsonbook_question_answers_components
+                              WHERE entity_id = qayear.id
+                              AND field = 'Asked_year'
+                            )
+                          ),
+                'Answer', qa.answer,
+                          'Marks', (
+                            SELECT COALESCE(jsonb_agg(
+                              json_build_object(
+                                'id', marks.id,
+                                'marks', marks.mark
+                              )
+                            ), '[]'::jsonb)
+                            FROM components_jsonbook_marks AS marks
+                            WHERE marks.id IN (
+                              SELECT component_id
+                              FROM components_jsonbook_question_answers_components
+                              WHERE entity_id = qa.id
+                              AND field = 'Marks'
+                            )
+                          )
               )
               ), '[]'::jsonb)
               FROM components_jsonbook_question_answers AS qa

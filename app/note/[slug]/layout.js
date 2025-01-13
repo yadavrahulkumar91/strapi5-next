@@ -3,31 +3,34 @@ import Page from "./page";
 import Sidebar from "./sidebar";
 import axios from "axios";
 
-export async function generateStaticParams() {
-  const {
-    data: { data: axiosData },
-  } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks`);
+// export async function generateStaticParams() {
+//   const {
+//     data: { data: axiosData },
+//   } = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks`);
 
-  const params = [];
+//   const params = [];
 
-  // Iterate through the fetched data to get all slugs and lessons
-  axiosData.forEach((book) => {
-    const bookSlug = book.id.toString();
-    params.push({
-      slug: bookSlug, // book id
-    });
-  });
+//   // Iterate through the fetched data to get all slugs and lessons
+//   axiosData.forEach((book) => {
+//     const bookSlug = book.id.toString();
+//     params.push({
+//       slug: bookSlug, // book id
+//     });
+//   });
 
-  return params;
-}
+//   return params;
+// }
 
 async function Layout({ children, params }) {
   const { slug } = params;
+  // const {
+  //   data: { data: axiosData },
+  // } = await axios.get(
+  //   `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks/${slug}?populate=unit.Lesson`
+  // );
   const {
     data: { data: axiosData },
-  } = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jsonbooks/${slug}?populate=unit.Lesson`
-  );
+  } = await axios.get(`http://127.0.0.1:3000/api/json/${slug}`);
 
   if (!axiosData) {
     return <div>Loading...</div>;
