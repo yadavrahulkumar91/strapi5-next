@@ -15,7 +15,7 @@ const photos = [
   //   legent: "",
   // },
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/gamechanger-drive-91.appspot.com/o/mbbs_carousel%2FIMG_1598.JPG?alt=media&token=38e20710-cc31-4f7e-b7f6-aa0ac045c496",
+    url: "https://storage.googleapis.com/gamechanger-drive-91.appspot.com/KTM%20TUTOR%20(4).png",
     legend: "Welcome program at Institute of Medicine (Dr. Milan Gaire)",
   },
   {

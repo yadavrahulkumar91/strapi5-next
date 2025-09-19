@@ -3,6 +3,7 @@ const nextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
+  staticPageGenerationTimeout: 1500, // default 60s
 };
 
 // const withPWA = require('next-pwa')({
